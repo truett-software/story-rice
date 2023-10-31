@@ -1,0 +1,37 @@
+
+/* SMALL DEVICES (Portrait phones, 320px and up) */
+@media only screen and (min-width: 320px) {.image-gradient {background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 40%);}
+.tap_button_left{float: left; margin: 0; top: 40%; position: relative; height: 35px; color: white; z-index: 1;}
+.tap_button_right{float: right; margin: 0; top: 40%; position: relative; height: 35px; color: white; z-index: 1;}
+.logo{display: inherit ; opacity:100;}
+.branding{opacity: 0;}
+.title_lower_third_cover {width:90%; margin: 0 auto;}
+.title_lower_third_cover h1 {/*padding-top: 42px;*/ font-size:38px;}
+.yellow_border_bottom {padding-top: 20px; width: 40px; margin: 0 auto;}}
+
+/* MEDIUM DEVICES (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {.logo{display: inline-block; width: 32px; opacity: 100;}
+.branding{opacity: 0;}
+.title_lower_third_cover {width:90%; margin: 0 auto;}
+.title_lower_third_cover h1 {/*padding-top: 42px;*/ font-size:38px;}
+.tap_button_left{float: left; margin: 0; top: 40%; position: relative; /*width: 10%;*/ color: white; z-index: 1;}
+.tap_button_right{float: right; margin: 0; top: 40%; position: relative; /*width: 10%;*/ color: white; z-index: 1;}
+.image-gradient {background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 40%);}
+.yellow_border_bottom {padding-top: 20px; width: 40px; margin: 0 auto;}}
+
+/* LARGE DEVICES (large laptops and desktop_ngps, 1024px and up) */
+@media only screen and (min-width: 1024px) {.logo{opacity: 0;}
+.branding{display: inherit ; opacity: 100;}
+.title_lower_third_cover {/*padding-top: 42px;*/ width:70%; margin:0 auto;}
+.title_lower_third_cover h1 {font-size:48px; /*font-weight:600;*/}
+.title_lower_third_cover h2 {width:75%; margin:0 auto;}
+.tap_button_left, .tap_button_right {display:none;}
+.title_lower_third {padding-top: 75px;}
+}
+
+/* EXTRA LARGE SCREENS */
+@media only screen and (min-width: 1600px) {.logo{opacity: 0;}
+.branding{display: inline-block; opacity: 100;}
+.title_lower_third_cover {/*padding-top: 42px;*/ width:70%; margin:0 auto;}
+.title_lower_third_cover h1 {font-size:48px; /*font-weight:600;*/}
+.title_lower_third_cover h2 {width:75%; margin:0 auto;}}

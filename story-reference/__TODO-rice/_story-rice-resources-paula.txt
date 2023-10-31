@@ -1,0 +1,168 @@
+
+++++++++
+PREAMBLE
+++++++++
+
+We don't "compete" with the following data sources
+Many specialized data sources are valuable
+We source the data and then organize it to work with graph technology
+The starting point for graph technology is:
+  identity (X isA Y)
+  organizing data
+then - relationships
+  A isUsedToImprove B
+then - queries
+  looking at similar and different data across studies
+  that's what is happening here for glucosinolates and brassica
+  https://wedge.ontomatica.io/Glucosinolates-Research_-_19-09-06/Wedge
+then - reasoning
+  discovering new information about X and B
+
+Our value-add is the organization of information from different sources and different formats
+Once organized, we can connect the dots
+
+You don't want to look too closely at the following resoures as each presents excessive detail
+But if you "sample" the resources (https://en.wikipedia.org/wiki/Sampling_(statistics)) a high level perspective may trigger Story-based ideas
+
+Having said that, if you want to feature any of the items below (to support your Story-line), we can repeat them in an Attachment or link to the site.
+
+Finally, we'll want to "reproduce" your process for Wheat
+Per earlier email, our Wheat data is 10-100x greater than Rice
+We need to deflate Wheat so the "baloon size" for Rice and Wheat is comparable
+It's perfectly fine that they are very similar
+
+=========
+BIOLOGIST
+=========
+Rice gene index
+https://riceome.hzau.edu.cn/
+
+note the Directed Graph on the home page
+
+From the Gene Ontology (referenced in KG)
+https://riceome.hzau.edu.cn/search/?q=GO%3A0005319
+
+This is a Newick diagram
+https://riceome.hzau.edu.cn/varieties.html
+
+Reference
+https://en.wikipedia.org/wiki/Newick_format
+
+Note: the Newick format is featured on the Structured Data timeline
+https://benetta.net/_supplier/_malvin/timeline-timeknots/
+top line
+
+Rice gene resource
+https://riceome.cn/en/
+
+Note link to PubMed (here refered to as National Library of Medicine)
+https://www.ncbi.nlm.nih.gov/nuccore?term=ZS97RS3&cmd=DetailsSearch
+
+PubMed also referenced in KG
+
+CRISPR!!
+https://www.newscientist.com/article/2313582-rice-and-maize-yields-boosted-up-to-10-per-cent-by-crispr-gene-editing/
+
+
+=======
+BREEDER
+=======
+
+main interest: phenotypes
+here are examples:
+http://ricevarmap.ncpgr.cn/phenos/
+
+link with biologist:
+http://www.xhhuanglab.cn/tool/RiceNavi.html
+specific cultivars
+
+broad collection of data
+http://www.mbkbase.org/rice
+
+very detailed (don't look at this too closely - it's overwhelming)
+https://www.nature.com/articles/s42003-018-0171-y
+
+
+======
+GROWER
+======
+
+http://www.knowledgebank.irri.org/
+
+https://www.irri.org/
+
+https://phys.org/news/2019-07-nutrient-deficiencies-rice-grown-higher.html
+
+https://www.theguardian.com/environment/2019/oct/26/gm-golden-rice-delay-cost-millions-of-lives-child-blindness
+
+https://www.atlasobscura.com/articles/indian-rice
+
+https://www.frontiersin.org/articles/10.3389/fagro.2022.806572/full
+
+
+==================
+FOOD MANUFACTURERS
+==================
+
+https://amp.theguardian.com/news/2019/jan/29/white-gold-the-unstoppable-rise-of-alternative-milks-oat-soy-rice-coconut-plant
+
+https://amp.theguardian.com/lifeandstyle/2017/may/04/inorganic-arsenic-rice-cakes-babies-queens-university-belfast
+
+https://www.cell.com/trends/biotechnology/fulltext/S0167-7799(22)00100-7?dgcid=raven_jbs_aip_email
+
+
+====
+CHEF
+====
+
+https://amp.theguardian.com/food/2019/may/02/still-boiling-rice-rather-than-steaming-it-how-old-fashioned
+
+https://arstechnica.com/science/2020/02/georgia-tech-physicists-unlock-the-secret-to-perfect-wok-tossed-fried-rice/
+
+https://www.atlasobscura.com/articles/rice-cooker-history
+
+https://www.nature.com/articles/nature.2015.18034
+
+https://www.seriouseats.com/carolina-gold-heirloom-rice-anson-mills
+
+https://www.splendidtable.org/story/2020/03/23/things-to-do-with-rice
+
+
+============
+NUTRITIONIST
+============
+
+https://world.openfoodfacts.org/category/rices
+
+https://www.mayoclinic.org/drugs-supplements-red-yeast-rice/art-20363074
+
+https://pubs.rsc.org/en/Content/ArticleLanding/2022/FO/D1FO03776E
+
+
+======
+TRADER
+======
+
+https://agridata.ec.europa.eu/extensions/DashboardRice/RiceProduction.html
+
+https://data.europa.eu/data/datasets/rice-production?locale=en
+
+https://www.ers.usda.gov/topics/crops/rice/
+
+
+=====================
+GOVERNMENT REGULATION
+=====================
+
+https://www.ecfr.gov/current/title-7/subtitle-B/chapter-VIII/subchapter-A/part-868/subpart-E
+
+https://www.ecfr.gov/current/title-7/subtitle-B/chapter-VIII/subchapter-A/part-868/subpart-D
+
+https://www.ecfr.gov/current/title-7/subtitle-B/chapter-VIII/subchapter-A/part-868/subpart-C#868.210
+
+
+=======================
+MACHINE READABLE SEARCH
+=======================
+https://angryloki.github.io/mreid-resolver/#/m/028lgz
+

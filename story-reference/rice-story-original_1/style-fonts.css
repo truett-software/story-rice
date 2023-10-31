@@ -1,0 +1,28 @@
+/*
+@font-face{font-family:'Noto Sans';font-style:normal;font-weight:400;font-display:swap;src:local("Noto Sans"),local("NotoSans"),url(https://amp.dev/static/fonts/noto-sans-v7-latin-regular.woff2) format("woff2"),url(https://amp.dev/static/fonts/noto-sans-v7-latin-regular.woff) format("woff")}
+@font-face{font-family:'Noto Sans';font-style:normal;font-weight:700;font-display:swap;src:local("Noto Sans Bold"),local("NotoSans-Bold"),url(https://amp.dev/static/fonts/noto-sans-v7-latin-700.woff2) format("woff2"),url(https://amp.dev/static/fonts/noto-sans-v7-latin-700.woff) format("woff")}
+
+@font-face{font-family:Poppins;font-style:normal;font-weight:700;font-display:swap;src:local("Poppins Bold"),local("Poppins-Bold"),url(https://amp.dev/static/fonts/poppins-v5-latin-700.woff2) format("woff2"),url(https://amp.dev/static/fonts/poppins-v5-latin-700.woff) format("woff")}
+
+@font-face{font-family:'Fira Mono';font-style:normal;font-weight:400;font-display:swap;src:local("Fira Mono"),local("FiraMono"),url(https://amp.dev/static/fonts/fira-mono-v7-latin-500.woff2) format("woff2"),url(https://amp.dev/static/fonts/fira-mono-v7-latin-500.woff) format("woff")}
+*/
+
+
+/*StyleGuide Fonts*/
+@font-face {font-family: 'GeoEditBold'; src: url("https://fonts.ngeo.com/ngp/geographeditweb-bold.eot"); src: url("https://fonts.ngeo.com/ngp/geographeditweb-bold.eot?#iefix") format("embedded-opentype"), url("https://fonts.ngeo.com/ngp/geographeditweb-bold.woff2") format("woff2"), url("https://fonts.ngeo.com/ngp/geographeditweb-bold.woff") format("woff"), url("https://fonts.ngeo.com/ngp/geographeditweb-bold.ttf") format("truetype");}
+
+@font-face {font-family: 'GeoEditBoldItalic'; src: url("https://fonts.ngeo.com/ngp/geographeditweb-bolditalic.eot"); src: url("https://fonts.ngeo.com/ngp/geographeditweb-bolditalic.eot?#iefix") format("embedded-opentype"), url("https://fonts.ngeo.com/ngp/geographeditweb-bolditalic.woff2") format("woff2"), url("https://fonts.ngeo.com/ngp/geographeditweb-bolditalic.woff") format("woff"), url("https://fonts.ngeo.com/ngp/geographeditweb-bolditalic.ttf") format("truetype");}
+
+@font-face {font-family: 'GeoEditMedium'; src: url("https://fonts.ngeo.com/ngp/geographeditweb-medium.eot"); src: url("https://fonts.ngeo.com/ngp/geographeditweb-medium.eot?#iefix") format("embedded-opentype"), url("https://fonts.ngeo.com/ngp/geographeditweb-medium.woff2") format("woff2"), url("https://fonts.ngeo.com/ngp/geographeditweb-medium.woff") format("woff"), url("https://fonts.ngeo.com/ngp/geographeditweb-medium.ttf") format("truetype");}
+
+@font-face {font-family: 'GeoEditMediumItalic'; src: url("https://fonts.ngeo.com/ngp/geographeditweb-mediumitalic.eot"); src: url("https://fonts.ngeo.com/ngp/geographeditweb-mediumitalic.eot?#iefix") format("embedded-opentype"), url("https://fonts.ngeo.com/ngp/geographeditweb-mediumitalic.woff2") format("woff2"), url("https://fonts.ngeo.com/ngp/geographeditweb-mediumitalic.woff") format("woff"), url("https://fonts.ngeo.com/ngp/geographeditweb-mediumitalic.ttf") format("truetype");}
+
+@font-face {font-family: 'GeoEditRegular'; src: url("https://fonts.ngeo.com/ngp/geographeditweb-regular.eot"); src: url("https://fonts.ngeo.com/ngp/geographeditweb-regular.eot?#iefix") format("embedded-opentype"), url("https://fonts.ngeo.com/ngp/geographeditweb-regular.woff2") format("woff2"), url("https://fonts.ngeo.com/ngp/geographeditweb-regular.woff") format("woff"), url("https://fonts.ngeo.com/ngp/geographeditweb-regular.ttf") format("truetype");}
+
+@font-face {font-family: 'GeoEditRegularItalic'; src: url("https://fonts.ngeo.com/ngp/geographeditweb-regularitalic.eot"); src: url("https://fonts.ngeo.com/ngp/geographeditweb-regularitalic.eot?#iefix") format("embedded-opentype"), url("https://fonts.ngeo.com/ngp/geographeditweb-regularitalic.woff2") format("woff2"), url("https://fonts.ngeo.com/ngp/geographeditweb-regularitalic.woff") format("woff"), url("https://fonts.ngeo.com/ngp/geographeditweb-regularitalic.ttf") format("truetype");}
+
+@font-face {font-family: 'GeoBrandBold'; src: url("https://fonts.ngeo.com/ngp/geographweb-bold.eot"); src: url("https://fonts.ngeo.com/ngp/geographweb-bold.eot?#iefix") format("embedded-opentype"), url("https://fonts.ngeo.com/ngp/geographweb-bold.woff2") format("woff2"), url("https://fonts.ngeo.com/ngp/geographweb-bold.woff") format("woff"), url("https://fonts.ngeo.com/ngp/geographweb-bold.ttf") format("truetype");}
+
+@font-face {font-family: 'GeoBrandBoldItalic'; src: url("https://fonts.ngeo.com/ngp/geographweb-bolditalic.eot"); src: url("https://fonts.ngeo.com/ngp/geographweb-bolditalic.eot?#iefix") format("embedded-opentype"), url("https://fonts.ngeo.com/ngp/geographweb-bolditalic.woff2") format("woff2"), url("https://fonts.ngeo.com/ngp/geographweb-bolditalic.woff") format("woff"), url("https://fonts.ngeo.com/ngp/geographweb-bolditalic.ttf") format("truetype");}
+
+@font-face {font-family: 'GeoBrandRegular'; src: url("https://fonts.ngeo.com/ngp/geographweb-regular.eot"); src: url("https://fonts.ngeo.com/ngp/geographweb-regular.eot?#iefix") format("embedded-opentype"), url("https://fonts.ngeo.com/ngp/geographweb-regular.woff2") format("woff2"), url("https://fonts.ngeo.com/ngp/geographweb-regular.woff") format("woff"), url("https://fonts.ngeo.com/ngp/geographweb-regular.ttf") format("truetype");}

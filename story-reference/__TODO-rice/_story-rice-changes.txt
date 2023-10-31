@@ -1,0 +1,33 @@
+
+CSS and SVG
+
+fix color assignments for fonts
+
+new
+.st3{fill:#c41622}
+style="fill:#f3f4a8"
+
+
+old
+.soc-st1{fill:var(--f3f4a8);stroke:none;stroke-linecap:butt;stroke-width:0.9;}
+.soc-st2{fill:var(--c41622);stroke:none;stroke-linecap:butt;stroke-width:2.25;}
+
+
+updated
+.soc-st1{fill:var(--f3f4a8)}
+.soc-st3{fill:var(--c41622)}
+
+
+.cns-st8 {
+    fill: var(--ffffff);
+    font-family: RobotoFlex;
+    font-size: 3.8em;
+}
+
+<!-- viewBox="0 -305.637 223.456 305.637" -->
+<svg id="persona-chef" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 -350 223.456 305.637" width="40%" height="40%" stroke-width="0.5" overflow="visible">
+
+/* not re-coded */
+.st2,.st3,.st4{fill:var(--e9ebeb);stroke:none;stroke-linecap:butt;stroke-width:2.25;}
+.st3,.st4{fill:var(--dfe0e2);}
+.st4{fill:var(--ffffff);}

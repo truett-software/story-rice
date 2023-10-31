@@ -1,0 +1,125 @@
+
+-------------
+font-handling
+-------------
+use hexadecimal notation because code is same as used by unicode code point
+e.g.
+&amp; --> &#x0026;
+(the unicode code point for the glyph labeled 'ampersand' is \u0026 or U+0026)
+
+--------
+Japanese
+--------
+rice
+ライス
+unicode code points: \u30e9\u30a4\u30b9
+hexadecimal for HTML/SVG: &#x30e9;&#x30a4;&#x30b9;
+
+------------------
+Punctuation glyphs
+------------------
+
+forward slash /
+	\u002F
+	&#x002F;
+
+three dots
+	\u2026
+	&#x2026;
+for 'Standards (RDF ... W3C)'
+
+
+-----------
+named fonts
+-----------
+
+my reasoning: for small font-size, a sans-serif font is easier to read.
+	when font-size is small, the serif properties of a glyph break-down.
+for larger font-size (e.g. title) a serif improves readability because it adds distinguishing properties
+
+headlines: Merriweather, serif
+content: Roboto, sans
+
+Roboto, sans-serif
+Merriweather, serif
+
+<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Roboto'/>
+@import url('https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700');
+
+<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Merriweather'/>
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+{ font-family: Roboto; font-size: NNpx; font-weight: NNN; }
+{ font-family: Merriweather; font-size: NNpx; font-weight: NNN; }
+
+===========
+CORRECTIONS
+
+-------
+  <text
+     id="text1461"
+     y="1662.0692"
+     x="36.480778"
+     style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:20px;line-height:1;font-family:Roboto;-inkscape-font-specification:'Roboto, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.28941882"
+     xml:space="preserve"><tspan
+       id="tspan1459"
+       x="36.480778"
+       y="1662.0692">Popular</tspan></text>
+
+Popular --> Cooking
+
+-------
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:20px;line-height:1;font-family:Roboto;-inkscape-font-specification:'Roboto, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.28941882"
+     x="31.978823"
+     y="1690.3021"
+     id="text1475"><tspan
+       y="1690.3021"
+       x="31.978823"
+       id="tspan1477">Methods</tspan></text>
+
+Methods --> methods
+
+-------
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:20px;line-height:1;font-family:Roboto;-inkscape-font-specification:'Roboto, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.28941882"
+     x="1097.2239"
+     y="613.26202"
+     id="text6381"><tspan
+       y="613.26202"
+       x="1097.2239"
+       id="tspan6379">Meterological</tspan></text>
+
+Meterological --> Meteorological
+
+-------
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:30.18800163px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:'Roboto, Heavy';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.33121407;"
+     x="914.35657"
+     y="2021.795"
+     id="text4576"><tspan
+       y="2021.795"
+       x="914.35657"
+       id="tspan4598">Ontologies $ skos resources</tspan></text>
+
+Ontologies $ skos resources --> Ontologies &#x0026; skos resources
+
+-------
+  <text
+     id="text4558"
+     y="2161.6401"
+     x="290.94336"
+     style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:30.18800163px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:'Roboto, Heavy';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.33121407;"
+     xml:space="preserve"><tspan
+       y="2161.6401"
+       x="290.94336"
+       id="tspan4566">Synonymy &amp; ambiguity</tspan></text>
+
+Synonymy &amp; ambiguity --> Synonymy &#x0026; ambiguity
+
+-------
+
+'MORE SERVICES FOR END USERS' is right justified

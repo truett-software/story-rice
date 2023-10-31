@@ -1,0 +1,143 @@
+
+==================================
+Unifying graphic for Story of Rice
+==================================
+	semantics_rice_poster_HD.pdf
+
+
+==========
+Government
+==========
+
+note: resources for sampling only; detailed rice information that must be part of an Electronic Label
+
+------------------------
+Government Specification
+------------------------
+https://www.ecfr.gov/current/title-7/subtitle-B/chapter-VIII/subchapter-A/part-868/subpart-E
+https://www.ecfr.gov/current/title-7/subtitle-B/chapter-VIII/subchapter-A/part-868/subpart-D
+https://www.ecfr.gov/current/title-7/subtitle-B/chapter-VIII/subchapter-A/part-868/subpart-C#868.210
+
+
+---------------
+Government Data
+---------------
+https://www.ers.usda.gov/topics/crops/rice/rice-sector-at-a-glance/
+
+----------------------------
+USDA Objective Desciption of
+----------------------------
+	Rice (Oryza sativa)
+	13 information groups
+	note: there is an equivalent for Wheat, Potato and other commodities
+
+---------------------------------------
+USDA-commodity-requirements-milled-rice
+---------------------------------------
+	PART 1 COMMODITY SPECIFICATIONS
+	PART 2 CONTAINER AND PACKAGING REQUIREMENTS
+	PART 3 MARKING REQUIREMENTS
+
+-----------------------------
+USDA-rice-inspection-handbook
+-----------------------------
+	CHAPTER 1: GENERAL INFORMATION
+	CHAPTER 2: SAMPLING
+	CHAPTER 3: ROUGH RICE
+	CHAPTER 4: BROWN RICE FOR PROCESSING
+	CHAPTER 5: MILLED RICE
+	CHAPTER 6: CERTIFICATION
+	CHAPTER 7: ROUND-LOT INSPECTION PLAN
+	CHAPTER 8: IDENTITY-PRESERVED INSPECTION PLAN
+	CHAPTER 9: WAREHOUSE-LOT INSPECTION PLAN
+	CHAPTER 10: COMMODITY PROCUREMENT LOT INSPECTIONS
+
+
+S&P Global Inc.; Commodity Insights
+Global Rice Specifications Guide
+example: Thai Long Grain White Rice 100% Grade B FOB
+	Quality:
+		min 60% whole kernels;
+		max 35.5% head rice;
+		80% of kernel classified as head rice;
+		max 4.5% to be brokens and small brokens C1;
+		3.9-4.5 brokens size 1;
+		50.00%-79.99% of kernel classified as brokens size 1;
+		0.0-0.5 brokens size 2;
+		>C1-49.99% of kernel classified as brokens size 2;
+		0.0-0.1 small brokens C1;
+		0.25% max damaged kernels;
+		0.2% max yellow kernels;
+		6% max chalky kernels;
+		0.5% red and/or under milled kernels;
+		max 0.2% underdeveloped kernels and foreign matter;
+		max 1.5% white glutinous rice;
+		max 5 paddy grains/kg;
+		max 14% moisture content;
+		≥40% of whole kernels having average length of >7.0mm;
+		55%-60% of whole kernels having average length of 6.2- 7.0mm;
+		0-5% of whole kernels having average length of ≤6.2mm;
+		minimum milling degree extra well milled.
+
+
+Rice Dishes/Meals
+https://en.wikipedia.org/wiki/List_of_rice_dishes
+https://arstechnica.com/science/2020/02/georgia-tech-physicists-unlock-the-secret-to-perfect-wok-tossed-fried-rice/
+
+Rice Varieties
+https://www.seriouseats.com/carolina-gold-heirloom-rice-anson-mills
+
+Rice Quality and Safety
+https://amp.theguardian.com/lifeandstyle/2017/may/04/inorganic-arsenic-rice-cakes-babies-queens-university-belfast
+https://phys.org/news/2019-07-nutrient-deficiencies-rice-grown-higher.html
+https://www.nature.com/articles/nature.2015.18034
+
+Rice Agriculture
+https://www.theguardian.com/environment/2019/oct/26/gm-golden-rice-delay-cost-millions-of-lives-child-blindness
+https://www.atlasobscura.com/articles/indian-rice
+
+[GMO and CRISPR]
+https://www.newscientist.com/article/2313582-rice-and-maize-yields-boosted-up-to-10-per-cent-by-crispr-gene-editing/
+
+Rice Nutraceutical
+https://www.mayoclinic.org/drugs-supplements-red-yeast-rice/art-20363074
+
+----------------------
+Google Knowledge Graph
+Brown Rice
+https://angryloki.github.io/mreid-resolver/#/m/028lgz
+
+DBpedia
+https://dbpedia.org/page/Rice
+
+Wikidata
+https://www.wikidata.org/wiki/Q5090
+https://www.wikidata.org/wiki/Q161426
+
+---------------------------
+Preparing Rice Dishes/Meals
+https://www.atlasobscura.com/articles/rice-cooker-history
+
+==========
+Rice Wedge
+==========
+
+https://wedge.ontomatica.io/USDA-FNDDS_-_19-09-05/Wedge?q=facet_A_FNDDS3_View:1/rice&group=facet_A_FNDDS3_View
+
+https://wedge.ontomatica.io/USDA-FNDDS_-_19-09-05/Wedge?q=facet_A_FCID_MPED:7/facet_A_FNDDS3_Food:6737&group=facet_A_FCID_MPED
+
+Food Data Kit (no nutrients)
+https://wedge.ontomatica.io/Food-Data-Kit_-_19-09-06/Wedge?q=facet_FCID_MPED:7
+
+Ref Lib
+https://wedge.ontomatica.io/Reference-Library_-_19-02-06/Wedge?q=facet_23_Taxa_Plantae:2117
+
+ChEFS
+starch = glucan
+https://wedge.ontomatica.io/ChEFS_-_19-09-06/Wedge?q=facet_ChEBI_R105:127313
+
+ChEMATIC
+starch
+https://wedge.ontomatica.io/ChEMATIC_-_19-09-06/Wedge?q=facet_MD_09:68298101&group=facet_MD_09
+
+

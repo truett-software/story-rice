@@ -1,0 +1,34 @@
+{
+  "id": "Magnoliopsida",
+  "rank": "root",
+  "children": [
+    {
+      "id": "Amborella trichopoda",
+      "rank": "species",
+      "color": "#00d0d",
+      "pangenome": false,
+      "code": "AMBTC",
+      "common_name": "",
+      "taxonomy_id": 13333,
+      "url_picture": "https://www.greenphyl.org/img/species/ambtc.png",
+      "children": [
+        {
+          "id": "AMBTC_v1.0",
+          "rank": "genome",
+          "sequence_count": 0,
+          "chromosome_count": 26,
+          "ploidy": 2,
+          "genome_size": 706,
+          "complete_busco": 94.7,
+          "fragment_busco": 3.6,
+          "missing_busco": 1.7,
+          "url_institute": "",
+          "url_fasta": "http://www.amborella.org/",
+          "version": "1.0",
+          "version_notes": "Albert et al, 2013"
+        }
+
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+
+/* SMALL DEVICES (Portrait phones, 320px and up) */
+@media only screen and (min-width: 320px) {
+#front{padding-top:300px;}
+}
+
+/* re-position onto logo in mozilla -moz*/
+@-moz-document url-prefix() {
+  #onto-logo{left:14%;}
+}

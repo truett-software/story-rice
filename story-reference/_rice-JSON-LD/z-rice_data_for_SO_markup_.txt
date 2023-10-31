@@ -1,0 +1,156 @@
+
+-------------------------------
+note to self: update SIOC roles
+-------------------------------
+
+Biologist
+https://en.wikipedia.org/wiki/Biologist
+http://dbpedia.org/page/Biologist
+https://www.wikidata.org/wiki/Q864503
+scientist who studies living organisms and their relationship to their environment
+
+Information Manager
+https://en.wikipedia.org/wiki/Information_technology_management
+http://dbpedia.org/page/Information_technology_management
+https://www.wikidata.org/wiki/Q1473265
+IT management is the discipline whereby all of the information technology resources of a firm are managed in accordance with its needs and priorities. These resources may include tangible investments like computer hardware, software, data, networks and data centre facilities, as well as the staff who are hired to maintain them. Managing this responsibility within a company entails many of the basic management functions, like budgeting, staffing, change management, and organizing and controlling, along with other aspects that are unique to technology, like software design, network planning, tech support etc.
+
+Sociologist
+https://en.wikipedia.org/wiki/Sociology
+http://dbpedia.org/page/Sociology
+https://www.wikidata.org/wiki/Q21201
+Sociologists study society and social behavior by examining the groups, cultures, organizations, social institutions, and processes that develop when people interact and work together.
+
+Nutritionist
+https://en.wikipedia.org/wiki/Nutritionist
+http://dbpedia.org/page/Nutritionist
+https://www.wikidata.org/wiki/Q2576499
+person who advises on matters of food and nutrition impacts on health
+
+Breeder
+https://en.wikipedia.org/wiki/Breeder
+http://dbpedia.org/page/Breeder
+https://www.wikidata.org/wiki/Q1368409
+A breeder is a person who selectively breeds carefully selected mates, normally of the same breed to sexually reproduce offspring with specific, consistently replicable qualities and characteristics. 
+
+Chef
+https://en.wikipedia.org/wiki/Chef
+http://dbpedia.org/page/Chef
+https://www.wikidata.org/wiki/Q3499072
+person that directs preparation of meals
+
+Farmer
+https://en.wikipedia.org/wiki/Farmer
+http://dbpedia.org/page/Farmer
+https://www.wikidata.org/wiki/Q131512
+person that undertakes agriculture
+
+Trader
+https://en.wikipedia.org/wiki/Merchant
+http://dbpedia.org/page/Merchant
+https://www.wikidata.org/wiki/Q215536
+businessperson who trades in commodities that were produced by others
+
+Food Manufacturer
+https://en.wikipedia.org/wiki/Food_processing
+http://dbpedia.org/page/Food_processing
+https://www.wikidata.org/wiki/Q627371
+Organization that transforms raw ingredients into food, or of food into other forms
+
+Consumer
+https://en.wikipedia.org/wiki/Consumer
+http://dbpedia.org/page/Consumer
+https://www.wikidata.org/wiki/Q22855
+person or group of people that are the final users of products and or services; one who pays something to consume goods and services produced
+
+========
+IDENTITY
+========
+
+Rice
+https://en.wikipedia.org/wiki/Rice
+http://dbpedia.org/page/Rice
+https://www.wikidata.org/wiki/Q5090
+cereal grain and seed of Oryza sativa
+image
+https://commons.wikimedia.org/wiki/File:Oryza_sativa_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-232.jpg
+https://commons.wikimedia.org/wiki/Rice
+Oryza sativa
+https://www.wikidata.org/wiki/Q161426
+NCBI
+https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=4530
+ITIS
+https://www.wikidata.org/wiki/Property:P815
+EOL
+http://eol.org/pages/1115098/overview
+USDA PLANTS
+https://plants.usda.gov/core/profile?symbol=ORSA
+GBIF
+https://www.gbif.org/species/2703459
+NALT Oryza sativa
+http://lod.nal.usda.gov/nalt/56277
+NALT rice
+http://lod.nal.usda.gov/nalt/56293
+Open Food Facts
+https://world.openfoodfacts.org/category/rices
+
+
+supersededBy
+https://www.wikidata.org/wiki/Q12117
+cereal
+https://www.wikidata.org/wiki/Q736427
+staple food
+https://www.wikidata.org/wiki/Q40763
+seed
+https://www.wikidata.org/wiki/Q506139
+caryopsis
+https://www.wikidata.org/wiki/Q27643250
+food ingredient
+
+------------------
+National languages
+------------------
+	ar أرز أسيوي
+	cs Rýže setá
+	de Reis
+	en Oryza sativa
+	es Oryza sativa
+	fr Oryza sativa
+	hi धान
+	it Oryza sativa
+	ja イネ
+	ko 벼
+	pl Ryż siewny
+	pt Arroz
+	ru Рис посевной
+	zh 水稻
+
+---
+use
+---
+porridge
+https://www.wikidata.org/wiki/Q186817
+
+frikadeller
+https://www.wikidata.org/wiki/Q251265
+
+risotto
+https://www.wikidata.org/wiki/Q208105
+
+----------
+References
+----------
+
+https://agclass.nal.usda.gov/irri/rice_search.shtml
+https://agclass.nal.usda.gov/mtwdk.exe?k=rice&l=60&s=1&t=1&op=b&w=A&w2=AFRGM%20%28African%20rice%20gall%20midge%29&h=Search%20results&cp=1&x=1&tt=&n=50
+
+https://www.ers.usda.gov/topics/crops/rice/
+https://www.ers.usda.gov/data-products/rice-yearbook/
+
+https://www.ars.usda.gov/research/publications/publication/?seqNo115=312793
+
+https://nifa.usda.gov/sites/default/files/resources/Whitepaper_finalUSDA.PDF
+
+http://irri.org/
+http://ricelib.irri.cgiar.org/
+
