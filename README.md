@@ -1,3 +1,4 @@
 # Story - Rice
 
-not yet updated
+
+![Visualization of the codebase](./diagram.svg)
