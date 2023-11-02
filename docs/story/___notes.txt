@@ -1,0 +1,15 @@
+
+12:41 9/20/2022
+update to use new grid
+======================
+
+reference version for update grid-based version
+
+
+test files here
+E:\content\_main\___projects\____story-generation-ewb\____v4
+
+preview-story-page-rice-22-08-05.html
+
+generated from ewb but has offset issues
+story-rice-22-08-05.html

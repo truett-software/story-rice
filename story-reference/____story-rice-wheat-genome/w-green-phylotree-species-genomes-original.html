@@ -1,0 +1,3508 @@
+<!doctype html>
+<html itemscope="" itemtype="http://schema.org/WebPage" lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- <title>GreenPhyl v5</title> -->
+<title>
+GreenPhyl
+</title>
+<link rel="shortcut icon" href="https://www.greenphyl.org/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="https://www.greenphyl.org/css/reset.css" />
+<link rel="stylesheet" type="text/css" href="https://www.greenphyl.org/css/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="https://www.greenphyl.org/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="https://www.greenphyl.org/css/bootstrap-table.min.css" />
+<link rel="stylesheet" type="text/css" href="https://www.greenphyl.org/css/cookieconsent.min.css" />
+<link rel="stylesheet" type="text/css" href="https://www.greenphyl.org/css/greenphyl.css" />
+<link rel="stylesheet" type="text/css" href="https://www.greenphyl.org/css/tree.css" />
+<script src="https://www.greenphyl.org/js/jquery.min.js" type="text/JavaScript"></script>
+<script src="https://www.greenphyl.org/js/jquery-ui.min.js" type="text/JavaScript"></script>
+<script src="https://www.greenphyl.org/js/jquery.scrollTo.min.js" type="text/JavaScript"></script>
+<script src="https://www.greenphyl.org/js/popper.min.js" type="text/JavaScript"></script>
+<script src="https://www.greenphyl.org/js/bootstrap.min.js" type="text/JavaScript"></script>
+<script src="https://www.greenphyl.org/js/fontawesome.all.min.js" type="text/JavaScript"></script>
+<script src="https://www.greenphyl.org/js/bootstrap-table.min.js" type="text/JavaScript"></script>
+<script src="https://www.greenphyl.org/js/d3.min.js" type="text/JavaScript"></script>
+<script src="https://www.greenphyl.org/js/msa.min.js" type="text/JavaScript"></script>
+<script src="https://www.greenphyl.org/js/greenphyl.js" type="text/JavaScript"></script>
+</head>
+<body id="greenphyl_website" class="default">
+<div id="page">
+<nav id="nav" class="navbar navbar-expand-md navbar-light sticky-top">
+<a id="nav_brand" class="navbar-brand d-md-none" href="#"><span class="green-color">Green</span><span class="phyl-color">Phyl</span></a>
+<button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div id="navbar" class="collapse navbar-collapse">
+<ul class="navbar-nav mr-auto d-none d-md-flex d-lg-none">
+<li class="nav-item">
+<a href="https://www.greenphyl.org/cgi-bin/index.cgi" title="GreenPhyl Homepage with species tree" class="nav-link fa-sm">
+<i class="fas fa-home"></i></a>
+</li>
+<li class="nav-item">
+<a href="https://www.greenphyl.org/cgi-bin/quick_search.cgi" title="Performs a text search on the database (genes and families)" class="nav-link fa-sm">
+<i class="fab fa-lg fa-searchengin"></i></a>
+</li>
+<li class="nav-item dropdown"><a  id="navFamilyLists" href="#" title="Lists of sets of gene families." class="nav-link dropdown-toggle fa-sm" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<i class="fas fa-coins"></i></a>
+<div class="dropdown-menu" aria-labelledby="navFamilyLists">
+<a href="https://www.greenphyl.org/cgi-bin/families.cgi?p=list&amp;cp=6&amp;type=annotated&amp;epp=50" title="Displays a list of annotated gene families" class="dropdown-item fa-sm">
+<span class="fa-stack" style="width: 1.2em; height:1em; vertical-align: middle;">
+<i class="fas fa-database fa-stack-1x" data-fa-transform="grow-4 left-2" style="color: darkgrey"></i>
+<i class="fas fa-pencil-alt fa-stack-1x" data-fa-transform="shrink-4 up-4 right-6" style="color: green;"></i>
+</span></a>
+<a href="https://www.greenphyl.org/cgi-bin/families.cgi?p=specific" title="Lets you find phylum or species specific families" class="dropdown-item fa-sm">
+<span class="fa-stack" style="width: 1.2em; height:1em; vertical-align: middle;">
+<i class="fas fa-database fa-stack-1x" data-fa-transform="grow-4 left-2" style="color: darkgrey;"></i>
+<i class="fas fa-project-diagram fa-stack-1x" data-fa-transform="shrink-4 up-4 right-6" style="color: green"></i>
+</span></a>
+<a href="https://www.greenphyl.org/cgi-bin/orphans.cgi" title="Lists unclassified sequences" class="dropdown-item fa-sm">
+<span class="fa-stack" style="width: 1.2em; height:1em; vertical-align: middle;">
+<i class="fas fa-ring fa-stack-1x" data-fa-transform="grow-2 left-2" style="color: darksalmon;"></i>
+<i class="fas fa-bacon fa-stack-1x" data-fa-transform="grow-4" style="color: limegreen"></i>
+</span></a>
+<a href="https://www.greenphyl.org/cgi-bin/custom_families.cgi?p=list&amp;no_gp=1&amp;listed=1" title="List of available custom families" class="dropdown-item fa-sm">
+<i class="fas fa-database" data-fa-transform="grow-4" style="color: darkgoldenrod;"></i></a>
+</div>
+</li>
+<li class="nav-item dropdown"><a  id="navTools" href="#" title="GreenPhyl Tools." class="nav-link dropdown-toggle fa-sm" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<i class="fas fa-toolbox"></i></a>
+<div class="dropdown-menu" aria-labelledby="navTools">
+<a href="https://www.greenphyl.org/cgi-bin/diamond.cgi" title="Find gene families using a Diamond search against GreenPhyl genomes" class="dropdown-item fa-sm">
+<span class="fa-stack" style="width: 1.2em; height:1em; vertical-align: middle;">
+<i class="fas fa-bacon fa-stack-1x" data-fa-transform="up-6 left-6" style="color: limegreen"></i>
+<i class="fas fa-search fa-stack-1x" style="color: darkblue;"></i>
+</span></a>
+<a href="https://www.greenphyl.org/cgi-bin/seq2families.cgi" title="Finds the families related to a list of sequence ID" class="dropdown-item fa-sm">
+<span class="fa-stack" style="width: 1.2em; height:1em; vertical-align: middle;">
+<i class="fas fa-database fa-stack-1x" data-fa-transform="right-2" style="color: darkblue;"></i>
+<i class="fas fa-bacon fa-stack-1x" data-fa-transform="left-6" style="color: limegreen"></i>
+</span></a>
+<a href="https://www.greenphyl.org/cgi-bin/get_homologs.cgi" title="Finds homolog genes of a given list of sequence ID" class="dropdown-item fa-sm">
+<span class="fa-stack" style="width: 1.2em; height:1em; vertical-align: middle;">
+<i class="fas fa-bacon fa-stack-1x" data-fa-transform="down-2" style="color: darkblue;"></i>
+<i class="fas fa-bacon fa-stack-1x" data-fa-transform="left-6 up-6" style="color: limegreen"></i>
+</span></a>
+<a href="https://www.greenphyl.org/cgi-bin/ipr2genomes.cgi" title="Finds for each species its genes related to a list of interpro domains and lets you view their distribution against gene families" class="dropdown-item fa-sm">
+<span class="fa-stack" style="width: 1.2em; height:1em; vertical-align: middle;">
+<i class="fas fa-bacon fa-stack-1x" data-fa-transform="grow-6" style="color: limegreen"></i>
+<span class="fa-layers-text" data-fa-transform="shrink-4" style="font-weight: 900; color: darkblue;">IPR</span>
+</span></a>
+<a href="https://www.greenphyl.org/cgi-bin/treepattern.cgi" title="Use TreePattern to find family phylogeny trees matching a given pattern" class="dropdown-item fa-sm">
+<i class="fas fa-random"></i></a>
+<a href="https://www.greenphyl.org/cgi-bin/export_sequences.cgi" title="Lets you export a list of sequences into several file format" class="dropdown-item fa-sm">
+<span class="fa-stack" style="width: 1.2em; height:1em; vertical-align: middle;">
+<i class="fas fa-bacon fa-stack-1x" data-fa-transform="up-6 left-6" style="color: limegreen"></i>
+<i class="fas fa-file-import fa-stack-1x" style="color: darkblue;"></i>
+</span></a>
+<a href="https://www.greenphyl.org/cgi-bin/custom_family.cgi?p=create" title="Creates a new custom family" class="dropdown-item fa-sm">
+<span class="fa-stack" style="width: 1.2em; height:1em; vertical-align: middle;">
+<i class="fas fa-hockey-puck fa-stack-1x" data-fa-transform="left-4" style="color: darkgoldenrod;"></i>
+<i class="fas fa-square fa-stack-1x" data-fa-transform="shrink-4 right-4 up-6" style="color: white;"></i>
+<i class="fas fa-plus-square fa-stack-1x" data-fa-transform="shrink-4 right-4 up-6"  style="color: darkblue;"></i>
+</span></a>
+</div>
+</li>
+<li class="nav-item dropdown"><a  id="navDocumentation" href="#" title="GreenPhyl methodology and documentation." class="nav-link dropdown-toggle fa-sm" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<i class="fas fa-book"></i></a>
+<div class="dropdown-menu" aria-labelledby="navDocumentation">
+<a href="https://www.greenphyl.org/cgi-bin/documentation.cgi?page=team" title="About GreenPhyl website" class="dropdown-item fa-sm">
+<i class="fab fa-diaspora"></i></a>
+<a href="https://www.greenphyl.org/cgi-bin/documentation.cgi?page=datasource" title="List of database sources (genom versions, IPR, GO,...)" class="dropdown-item fa-sm">
+<i class="fas fa-server"></i></a>
+<a href="https://www.greenphyl.org/cgi-bin/documentation.cgi?page=methodology" title="Details about the way families are created" class="dropdown-item fa-sm">
+<i class="fas fa-wrench"></i></a>
+<a href="https://www.greenphyl.org/cgi-bin/documentation.cgi?page=faq" title="Frequently Asked Questions" class="dropdown-item fa-sm">
+<i class="fas fa-question-circle"></i></a>
+</div>
+</li>
+<li class="nav-item">
+<a href="https://www.greenphyl.org/cgi-bin/statistics.cgi" title="GreenPhyl database statistics" class="nav-link fa-sm">
+<i class="fas fa-chart-bar"></i></a>
+</li>
+ <li class="nav-item">
+<a href="https://www.greenphyl.org/cgi-bin/downloads.cgi" title="Download GreenPhyl v5 datasets" class="nav-link fa-sm">
+<i class="fas fa-file-archive"></i></a>
+</li>
+<li class="nav-item dropdown"><a  id="navFamilyLists" href="#" title="Archvies gene families." class="nav-link dropdown-toggle fa-sm" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<i class="fas fa-coins"></i></a>
+<div class="dropdown-menu" aria-labelledby="navFamilyLists">
+<a href="https://www.greenphyl.org/cgi-bin/custom_families.cgi?p=list&amp;level=1&amp;user_id=2" title="List of old GreenPhyl v1 families" class="dropdown-item fa-sm">
+<i class="fas fa-database" data-fa-transform="grow-4" style="color: darkgreen;"></i></a>
+<a href="https://www.greenphyl.org/cgi-bin/custom_families.cgi?p=list&amp;level=1&amp;user_id=3" title="List of old GreenPhyl v2 families" class="dropdown-item fa-sm">
+<i class="fas fa-database" data-fa-transform="grow-4" style="color: darkgreen;"></i></a>
+<a href="https://www.greenphyl.org/cgi-bin/custom_families.cgi?p=list&amp;level=1&amp;user_id=4" title="List of old GreenPhyl v3 families" class="dropdown-item fa-sm">
+<i class="fas fa-database" data-fa-transform="grow-4" style="color: darkgreen;"></i></a>
+<a href="https://www.greenphyl.org/cgi-bin/custom_families.cgi?p=list&amp;level=1&amp;user_id=5" title="List of old GreenPhyl v4 families" class="dropdown-item fa-sm">
+<i class="fas fa-database" data-fa-transform="grow-4" style="color: darkgreen;"></i></a>
+</div>
+</li>
+<li class="nav-item dropdown"><a  id="navMySpace" href="#" title="My Space." class="nav-link dropdown-toggle fa-sm" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<i class="fas fa-user-circle"></i></a>
+<div class="dropdown-menu" aria-labelledby="navMySpace">
+<a href="https://www.greenphyl.org/cgi-bin/register.cgi" title="Create your own GreenPhyl account" class="dropdown-item fa-sm">
+<i class="fas fa-user-plus"></i></a>
+<a href="https://www.greenphyl.org/cgi-bin/login.cgi" title="Login with your GreenPhyl account if you have one already" class="dropdown-item fa-sm">
+<i class="fas fa-sign-in-alt" style="color: darkgreen;"></i></a>
+<a href="https://www.greenphyl.org/cgi-bin/mylist.cgi" title="Displays the 'My List' page with the list of sequences and/or families you selected" class="dropdown-item fa-sm">
+<i class="fas fa-list-alt" style="color: darkgreen;"></i></a>
+</div>
+</li>
+</ul>
+<ul class="navbar-nav mr-auto d-flex d-md-none d-lg-flex">
+<li class="nav-item">
+<a href="https://www.greenphyl.org/cgi-bin/index.cgi" title="GreenPhyl Homepage with species tree" class="nav-link fa-sm">
+<i class="fas fa-home"></i>&nbsp;Home</a>
+</li>
+<li class="nav-item">
+<a href="https://www.greenphyl.org/cgi-bin/quick_search.cgi" title="Performs a text search on the database (genes and families)" class="nav-link fa-sm">
+<i class="fab fa-lg fa-searchengin"></i>&nbsp;Search</a>
+</li>
+<li class="nav-item dropdown"><a  id="navFamilyLists" href="#" title="Lists of sets of gene families." class="nav-link dropdown-toggle fa-sm" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<i class="fas fa-coins"></i>&nbsp;Gene Family lists</a>
+<div class="dropdown-menu" aria-labelledby="navFamilyLists">
+<a href="https://www.greenphyl.org/cgi-bin/families.cgi?p=list&amp;cp=6&amp;type=annotated&amp;epp=50" title="Displays a list of annotated gene families" class="dropdown-item fa-sm">
+<span class="fa-stack" style="width: 1.2em; height:1em; vertical-align: middle;">
+<i class="fas fa-database fa-stack-1x" data-fa-transform="grow-4 left-2" style="color: darkgrey"></i>
+<i class="fas fa-pencil-alt fa-stack-1x" data-fa-transform="shrink-4 up-4 right-6" style="color: green;"></i>
+</span>&nbsp;Annotated families</a>
+<a href="https://www.greenphyl.org/cgi-bin/families.cgi?p=specific" title="Lets you find phylum or species specific families" class="dropdown-item fa-sm">
+<span class="fa-stack" style="width: 1.2em; height:1em; vertical-align: middle;">
+<i class="fas fa-database fa-stack-1x" data-fa-transform="grow-4 left-2" style="color: darkgrey;"></i>
+<i class="fas fa-project-diagram fa-stack-1x" data-fa-transform="shrink-4 up-4 right-6" style="color: green"></i>
+</span>&nbsp;Phylum/species specific</a>
+<a href="https://www.greenphyl.org/cgi-bin/orphans.cgi" title="Lists unclassified sequences" class="dropdown-item fa-sm">
+<span class="fa-stack" style="width: 1.2em; height:1em; vertical-align: middle;">
+<i class="fas fa-ring fa-stack-1x" data-fa-transform="grow-2 left-2" style="color: darksalmon;"></i>
+<i class="fas fa-bacon fa-stack-1x" data-fa-transform="grow-4" style="color: limegreen"></i>
+</span>&nbsp;Orphans</a>
+<a href="https://www.greenphyl.org/cgi-bin/custom_families.cgi?p=list&amp;no_gp=1&amp;listed=1" title="List of available custom families" class="dropdown-item fa-sm">
+<i class="fas fa-database" data-fa-transform="grow-4" style="color: darkgoldenrod;"></i>&nbsp;Custom Families</a>
+</div>
+</li>
+<li class="nav-item dropdown"><a  id="navTools" href="#" title="GreenPhyl Tools." class="nav-link dropdown-toggle fa-sm" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<i class="fas fa-toolbox"></i>&nbsp;Toolbox</a>
+<div class="dropdown-menu" aria-labelledby="navTools">
+<a href="https://www.greenphyl.org/cgi-bin/diamond.cgi" title="Find gene families using a Diamond search against GreenPhyl genomes" class="dropdown-item fa-sm">
+<span class="fa-stack" style="width: 1.2em; height:1em; vertical-align: middle;">
+<i class="fas fa-bacon fa-stack-1x" data-fa-transform="up-6 left-6" style="color: limegreen"></i>
+<i class="fas fa-search fa-stack-1x" style="color: darkblue;"></i>
+</span>&nbsp;Match sequences</a>
+<a href="https://www.greenphyl.org/cgi-bin/seq2families.cgi" title="Finds the families related to a list of sequence ID" class="dropdown-item fa-sm">
+<span class="fa-stack" style="width: 1.2em; height:1em; vertical-align: middle;">
+<i class="fas fa-database fa-stack-1x" data-fa-transform="right-2" style="color: darkblue;"></i>
+<i class="fas fa-bacon fa-stack-1x" data-fa-transform="left-6" style="color: limegreen"></i>
+</span>&nbsp;Sequences to families</a>
+<a href="https://www.greenphyl.org/cgi-bin/get_homologs.cgi" title="Finds homolog genes of a given list of sequence ID" class="dropdown-item fa-sm">
+<span class="fa-stack" style="width: 1.2em; height:1em; vertical-align: middle;">
+<i class="fas fa-bacon fa-stack-1x" data-fa-transform="down-2" style="color: darkblue;"></i>
+<i class="fas fa-bacon fa-stack-1x" data-fa-transform="left-6 up-6" style="color: limegreen"></i>
+</span>&nbsp;Homolog sequences</a>
+<a href="https://www.greenphyl.org/cgi-bin/ipr2genomes.cgi" title="Finds for each species its genes related to a list of interpro domains and lets you view their distribution against gene families" class="dropdown-item fa-sm">
+<span class="fa-stack" style="width: 1.2em; height:1em; vertical-align: middle;">
+<i class="fas fa-bacon fa-stack-1x" data-fa-transform="grow-6" style="color: limegreen"></i>
+<span class="fa-layers-text" data-fa-transform="shrink-4" style="font-weight: 900; color: darkblue;">IPR</span>
+</span>&nbsp;Interpro domains</a>
+<a href="https://www.greenphyl.org/cgi-bin/treepattern.cgi" title="Use TreePattern to find family phylogeny trees matching a given pattern" class="dropdown-item fa-sm">
+<i class="fas fa-random"></i>&nbsp;TreePattern</a>
+<a href="https://www.greenphyl.org/cgi-bin/export_sequences.cgi" title="Lets you export a list of sequences into several file format" class="dropdown-item fa-sm">
+<span class="fa-stack" style="width: 1.2em; height:1em; vertical-align: middle;">
+<i class="fas fa-bacon fa-stack-1x" data-fa-transform="up-6 left-6" style="color: limegreen"></i>
+<i class="fas fa-file-import fa-stack-1x" style="color: darkblue;"></i>
+</span>&nbsp;Export sequences</a>
+<a href="https://www.greenphyl.org/cgi-bin/custom_family.cgi?p=create" title="Creates a new custom family" class="dropdown-item fa-sm">
+<span class="fa-stack" style="width: 1.2em; height:1em; vertical-align: middle;">
+<i class="fas fa-hockey-puck fa-stack-1x" data-fa-transform="left-4" style="color: darkgoldenrod;"></i>
+<i class="fas fa-square fa-stack-1x" data-fa-transform="shrink-4 right-4 up-6" style="color: white;"></i>
+<i class="fas fa-plus-square fa-stack-1x" data-fa-transform="shrink-4 right-4 up-6"  style="color: darkblue;"></i>
+</span>&nbsp;Create your own family</a>
+</div>
+</li>
+<li class="nav-item dropdown"><a  id="navDocumentation" href="#" title="GreenPhyl methodology and documentation." class="nav-link dropdown-toggle fa-sm" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<i class="fas fa-book"></i>&nbsp;Documentation</a>
+<div class="dropdown-menu" aria-labelledby="navDocumentation">
+<a href="https://www.greenphyl.org/cgi-bin/documentation.cgi?page=team" title="About GreenPhyl website" class="dropdown-item fa-sm">
+<i class="fab fa-diaspora"></i>&nbsp;About</a>
+<a href="https://www.greenphyl.org/cgi-bin/documentation.cgi?page=datasource" title="List of database sources (genom versions, IPR, GO,...)" class="dropdown-item fa-sm">
+<i class="fas fa-server"></i>&nbsp;Data source</a>
+<a href="https://www.greenphyl.org/cgi-bin/documentation.cgi?page=methodology" title="Details about the way families are created" class="dropdown-item fa-sm">
+<i class="fas fa-wrench"></i>&nbsp;Methodology</a>
+<a href="https://www.greenphyl.org/cgi-bin/documentation.cgi?page=faq" title="Frequently Asked Questions" class="dropdown-item fa-sm">
+<i class="fas fa-question-circle"></i>&nbsp;FAQ</a>
+</div>
+</li>
+<li class="nav-item">
+<a href="https://www.greenphyl.org/cgi-bin/statistics.cgi" title="GreenPhyl database statistics" class="nav-link fa-sm">
+<i class="fas fa-chart-bar"></i>&nbsp;Statistics</a>
+</li>
+ <li class="nav-item">
+<a href="https://www.greenphyl.org/cgi-bin/downloads.cgi" title="Download GreenPhyl v5 datasets" class="nav-link fa-sm">
+<i class="fas fa-file-archive"></i>&nbsp;Download</a>
+</li>
+<li class="nav-item dropdown"><a  id="navFamilyLists" href="#" title="Archvies gene families." class="nav-link dropdown-toggle fa-sm" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<i class="fas fa-coins"></i>&nbsp;Archives</a>
+<div class="dropdown-menu" aria-labelledby="navFamilyLists">
+<a href="https://www.greenphyl.org/cgi-bin/custom_families.cgi?p=list&amp;level=1&amp;user_id=2" title="List of old GreenPhyl v1 families" class="dropdown-item fa-sm">
+<i class="fas fa-database" data-fa-transform="grow-4" style="color: darkgreen;"></i>&nbsp;GreenPhyl v1 Families</a>
+<a href="https://www.greenphyl.org/cgi-bin/custom_families.cgi?p=list&amp;level=1&amp;user_id=3" title="List of old GreenPhyl v2 families" class="dropdown-item fa-sm">
+<i class="fas fa-database" data-fa-transform="grow-4" style="color: darkgreen;"></i>&nbsp;GreenPhyl v2 Families</a>
+<a href="https://www.greenphyl.org/cgi-bin/custom_families.cgi?p=list&amp;level=1&amp;user_id=4" title="List of old GreenPhyl v3 families" class="dropdown-item fa-sm">
+<i class="fas fa-database" data-fa-transform="grow-4" style="color: darkgreen;"></i>&nbsp;GreenPhyl v3 Families</a>
+<a href="https://www.greenphyl.org/cgi-bin/custom_families.cgi?p=list&amp;level=1&amp;user_id=5" title="List of old GreenPhyl v4 families" class="dropdown-item fa-sm">
+<i class="fas fa-database" data-fa-transform="grow-4" style="color: darkgreen;"></i>&nbsp;GreenPhyl v4 Families</a>
+</div>
+</li>
+<li class="nav-item dropdown"><a  id="navMySpace" href="#" title="My Space." class="nav-link dropdown-toggle fa-sm" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<i class="fas fa-user-circle"></i>&nbsp;My Space</a>
+<div class="dropdown-menu" aria-labelledby="navMySpace">
+<a href="https://www.greenphyl.org/cgi-bin/register.cgi" title="Create your own GreenPhyl account" class="dropdown-item fa-sm">
+<i class="fas fa-user-plus"></i>&nbsp;New account</a>
+<a href="https://www.greenphyl.org/cgi-bin/login.cgi" title="Login with your GreenPhyl account if you have one already" class="dropdown-item fa-sm">
+<i class="fas fa-sign-in-alt" style="color: darkgreen;"></i>&nbsp;Login</a>
+<a href="https://www.greenphyl.org/cgi-bin/mylist.cgi" title="Displays the 'My List' page with the list of sequences and/or families you selected" class="dropdown-item fa-sm">
+<i class="fas fa-list-alt" style="color: darkgreen;"></i>&nbsp;My list</a>
+</div>
+</li>
+</ul>
+</div>
+<div id="login_block"><a href="https://www.greenphyl.org/cgi-bin/login.cgi" title="Login with your GreenPhyl account if you have one already">
+<i class="fas fa-sign-in-alt" style="color: darkgreen;"></i></a>
+</div>
+</nav>
+<main>
+<div id="content">
+<h1 class="text-center"><span class="green-color">Green</span><span class="phyl-color">Phyl</span> species, genomes and pan-genomes</h1>
+<div class="d-flex flex-wrap">
+<!-- <div class="col-md-5 text-justify" style="margin-top: 5em;"> -->
+<div class="col-md-5" style="margin-top: 5em;">
+<p>
+<strong>
+GreenPhylDB</strong> is a web resource designed for <b>comparative and functional genomics</b> in plants.
+</p>
+<p>
+The version 5 contains now a catalogue of clusters / gene families combining <b>19&nbsp; </b><b>pangenomes&nbsp; </b>(e.g. rice, maize, banana, grape, cacao) and <b>27 reference genomes</b> for a total of <b>46 </b><b>species </b>as illustrated on the right.
+</p>
+<p>
+All clusters are functionally annotated with InterPro, Uniprot and NCBI and provide the following information:
+</p>
+<ul>
+<li>Species composition</li>
+<li>Cluster sublevel structure</li>
+<li>Protein domain specificity</li>
+<li>Plant kingdom specificity</li>
+</ul>
+<p>
+Clusters were analysed by a phylogenetic-based approach to predict homologous relationships.
+</p>
+<p>
+Manual curation is done manually on Gene family names that were obtained automatically and users can submit name suggestions or their own gene family.
+</p>
+</div> 
+<div class="col-md-7">
+<div id="homepage_tree" class="col-auto"></div>
+<figcaption class="figure-caption">
+Click on nodes to expand or collapse subtrees.
+Internal nodes represent taxonomic classifications.
+Bold nodes are Pangenes.
+Leaves are genomes.
+</figcaption>
+</div>
+</div>
+<script>
+
+jQuery(function () {
+
+  var greenphyl_tree = {
+  "id": "Magnoliopsida",
+  "rank": "root",
+  "children": [
+    {
+      "id": "Amborella trichopoda",
+      "rank": "species",
+      "color": "#00d0d",
+      "pangenome": false,
+      "code": "AMBTC",
+      "common_name": "",
+      "taxonomy_id": 13333,
+      "url_picture": "/img/species/ambtc.png",
+      "children": [
+        {
+          "id": "AMBTC_v1.0",
+          "rank": "genome",
+          "sequence_count": 0,
+          "chromosome_count": 26,
+          "ploidy": 2,
+          "genome_size": 706,
+          "complete_busco": 94.7,
+          "fragment_busco": 3.6,
+          "missing_busco": 1.7,
+          "url_institute": "",
+          "url_fasta": "http://www.amborella.org/",
+          "version": "1.0",
+          "version_notes": "Albert et al, 2013"
+        }
+
+      ]
+    },
+    {
+      "id": "Mesangiospermae",
+      "rank": "",
+      "children": [
+        {
+          "id": "Petrosaviidae",
+          "rank": "",
+          "children": [
+            {
+              "id": "Dioscorea rotundata",
+              "rank": "species",
+              "color": "#80808",
+              "pangenome": false,
+              "code": "DIORT",
+              "common_name": "White Guinea yam",
+              "taxonomy_id": 55577,
+              "url_picture": "/img/species/diort.png",
+              "children": [
+                {
+                  "id": "DIORT_TDr96_F1_v1.0",
+                  "rank": "genome",
+                  "sequence_count": 0,
+                  "chromosome_count": 40,
+                  "ploidy": 2,
+                  "genome_size": 594,
+                  "complete_busco": 79.6,
+                  "fragment_busco": 6,
+                  "missing_busco": 14.4,
+                  "url_institute": "",
+                  "url_fasta": "http://genome-e.ibrc.or.jp/home/bioinformatics-team/yam",
+                  "version": "1.0",
+                  "version_notes": "Tamiru et al, 2017"
+                }
+
+              ]
+            },
+            {
+              "id": "commelinids",
+              "rank": "",
+              "children": [
+                {
+                  "id": "Arecaceae",
+                  "rank": "",
+                  "children": [
+                    {
+                      "id": "Phoenix dactylifera",
+                      "rank": "species",
+                      "color": "ff00ff",
+                      "pangenome": false,
+                      "code": "PHODC",
+                      "common_name": "Date palm",
+                      "taxonomy_id": 42345,
+                      "url_picture": "/img/species/phodc.png",
+                      "children": [
+                        {
+                          "id": "PHODC_v3.0",
+                          "rank": "genome",
+                          "sequence_count": 0,
+                          "chromosome_count": 36,
+                          "ploidy": 2,
+                          "genome_size": 658,
+                          "complete_busco": 95.2,
+                          "fragment_busco": 2.8,
+                          "missing_busco": 2,
+                          "url_institute": "",
+                          "url_fasta": "ftp://ftp.ncbi.nih.gov/genomes/Phoenix_dactylifera/protein/",
+                          "version": "3.0",
+                          "version_notes": "Al-Mssallem et al, 2013"
+                        }
+
+                      ]
+                    },
+                    {
+                      "id": "Cocoseae",
+                      "rank": "",
+                      "children": [
+                        {
+                          "id": "Elaeis guineensis",
+                          "rank": "species",
+                          "color": "ff0080",
+                          "pangenome": false,
+                          "code": "ELAGV",
+                          "common_name": "Oil palm",
+                          "taxonomy_id": 51953,
+                          "url_picture": "/img/species/elagv.png",
+                          "children": [
+                            {
+                              "id": "ELAGV_RefSeq_v1.0",
+                              "rank": "genome",
+                              "sequence_count": 0,
+                              "chromosome_count": 32,
+                              "ploidy": 2,
+                              "genome_size": 1800,
+                              "complete_busco": 99,
+                              "fragment_busco": 0.4,
+                              "missing_busco": 0.6,
+                              "url_institute": "",
+                              "url_fasta": "ftp://ftp.ncbi.nlm.nih.gov/genomes/Elaeis_guineensis/protein/",
+                              "version": "1.0",
+                              "version_notes": "Singh et al, 2013"
+                            }
+
+                          ]
+                        },
+                        {
+                          "id": "Cocos nucifera",
+                          "rank": "species",
+                          "color": "#80808",
+                          "pangenome": true,
+                          "code": "COCNU",
+                          "common_name": "Coconut palm",
+                          "taxonomy_id": 13894,
+                          "url_picture": "/img/species/cocnu.png",
+                          "children": [
+                            {
+                              "id": "COCNU_C3B02_v2.0",
+                              "rank": "genome",
+                              "sequence_count": 0,
+                              "chromosome_count": 32,
+                              "ploidy": 2,
+                              "genome_size": 2150,
+                              "complete_busco": 87.8,
+                              "fragment_busco": 5.2,
+                              "missing_busco": 7,
+                              "url_institute": "",
+                              "url_fasta": "",
+                              "version": "2.0",
+                              "version_notes": ""
+                            },
+                            {
+                              "id": "COCNU_CATD",
+                              "rank": "genome",
+                              "sequence_count": 0,
+                              "chromosome_count": 32,
+                              "ploidy": 2,
+                              "genome_size": 2150,
+                              "complete_busco": 86.3,
+                              "fragment_busco": 8.7,
+                              "missing_busco": 5,
+                              "url_institute": "",
+                              "url_fasta": "",
+                              "version": "Catigan Green Dwarf",
+                              "version_notes": "Lantican et al, 2019"
+                            },
+
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "Musa",
+                  "rank": "",
+                  "children": [
+                    {
+                      "id": "Musa balbisiana",
+                      "rank": "species",
+                      "color": "#80400",
+                      "pangenome": false,
+                      "code": "MUSBA",
+                      "common_name": "Wild banana",
+                      "taxonomy_id": 52838,
+                      "url_picture": "/img/species/musba.png",
+                      "children": [
+                        {
+                          "id": "MUSBA_Mba1.1",
+                          "rank": "genome",
+                          "sequence_count": 0,
+                          "chromosome_count": 22,
+                          "ploidy": 2,
+                          "genome_size": 650,
+                          "complete_busco": 88.3,
+                          "fragment_busco": 4,
+                          "missing_busco": 7.7,
+                          "url_institute": "",
+                          "url_fasta": "https://banana-genome-hub.southgreen.fr/organism/Musa/balbisiana",
+                          "version": "1.1",
+                          "version_notes": "Wang et al, 2019"
+                        }
+
+                      ]
+                    },
+                    {
+                      "id": "Musa acuminata",
+                      "rank": "species",
+                      "color": "c09000",
+                      "pangenome": true,
+                      "code": "MUSAC",
+                      "common_name": "Wild banana",
+                      "taxonomy_id": 4641,
+                      "url_picture": "/img/species/musac.png",
+                      "children": [
+                        {
+                          "id": "MUSAC_Macba2",
+                          "rank": "genome",
+                          "sequence_count": 0,
+                          "chromosome_count": 22,
+                          "ploidy": 2,
+                          "genome_size": 650,
+                          "complete_busco": 71.2,
+                          "fragment_busco": 8.4,
+                          "missing_busco": 20.4,
+                          "url_institute": "",
+                          "url_fasta": "https://banana-genome-hub.southgreen.fr/",
+                          "version": "2.0",
+                          "version_notes": "Rouard et al, 2018"
+                        },
+                        {
+                          "id": "MUSAC_Macbu1",
+                          "rank": "genome",
+                          "sequence_count": 0,
+                          "chromosome_count": 22,
+                          "ploidy": 2,
+                          "genome_size": 650,
+                          "complete_busco": 71.9,
+                          "fragment_busco": 14.5,
+                          "missing_busco": 13.6,
+                          "url_institute": "",
+                          "url_fasta": "https://banana-genome-hub.southgreen.fr/node/263185",
+                          "version": "1.0",
+                          "version_notes": "Rouard et al, 2018"
+                        },
+                        {
+                          "id": "MUSAC_Macma2",
+                          "rank": "genome",
+                          "sequence_count": 0,
+                          "chromosome_count": 22,
+                          "ploidy": 2,
+                          "genome_size": 650,
+                          "complete_busco": 98.5,
+                          "fragment_busco": 0.9,
+                          "missing_busco": 0.6,
+                          "url_institute": "",
+                          "url_fasta": "https://banana-genome-hub.southgreen.fr/download",
+                          "version": "2.0",
+                          "version_notes": "Martin et al, 2016"
+                        },
+                        {
+                          "id": "MUSAC_Macze1",
+                          "rank": "genome",
+                          "sequence_count": 0,
+                          "chromosome_count": 22,
+                          "ploidy": 2,
+                          "genome_size": 650,
+                          "complete_busco": 60.3,
+                          "fragment_busco": 23.2,
+                          "missing_busco": 16.5,
+                          "url_institute": "",
+                          "url_fasta": "https://banana-genome-hub.southgreen.fr/node/263184",
+                          "version": "1.0",
+                          "version_notes": "Rouard et al, 2018"
+                        },
+
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "Poaceae",
+                  "rank": "",
+                  "children": [
+                    {
+                      "id": "Andropogoneae",
+                      "rank": "",
+                      "children": [
+                        {
+                          "id": "Saccharum spontaneum",
+                          "rank": "species",
+                          "color": "#80808",
+                          "pangenome": false,
+                          "code": "SACSP",
+                          "common_name": "Wild sugarcane",
+                          "taxonomy_id": 62335,
+                          "url_picture": "/img/species/sacsp.png",
+                          "children": [
+                            {
+                              "id": "SACSP_AP85_441_v1.0",
+                              "rank": "genome",
+                              "sequence_count": 0,
+                              "chromosome_count": 64,
+                              "ploidy": 8,
+                              "genome_size": 843,
+                              "complete_busco": 91.9,
+                              "fragment_busco": 3.8,
+                              "missing_busco": 4.3,
+                              "url_institute": "",
+                              "url_fasta": "http://www.life.illinois.edu/ming/downloads/Spontaneum_genome/",
+                              "version": "1.0",
+                              "version_notes": "Zhang et al, 2018"
+                            }
+
+                          ]
+                        },
+                        {
+                          "id": "Zea mays",
+                          "rank": "species",
+                          "color": "e06030",
+                          "pangenome": true,
+                          "code": "MAIZE",
+                          "common_name": "Maize",
+                          "taxonomy_id": 4577,
+                          "url_picture": "/img/species/maize.png",
+                          "children": [
+                            {
+                              "id": "MAIZE_B73_v4.0",
+                              "rank": "genome",
+                              "sequence_count": 0,
+                              "chromosome_count": 20,
+                              "ploidy": 2,
+                              "genome_size": 2400,
+                              "complete_busco": 94.6,
+                              "fragment_busco": 3.9,
+                              "missing_busco": 1.5,
+                              "url_institute": "",
+                              "url_fasta": "ftp://ftp.gramene.org/pub/gramene/release-60/fasta/zea_mays/cds/",
+                              "version": "4.0",
+                              "version_notes": "Schnable et al, 2009?"
+                            },
+                            {
+                              "id": "MAIZE_CML247_v1.0",
+                              "rank": "genome",
+                              "sequence_count": 0,
+                              "chromosome_count": 20,
+                              "ploidy": 2,
+                              "genome_size": 2400,
+                              "complete_busco": 87.8,
+                              "fragment_busco": 7.6,
+                              "missing_busco": 4.6,
+                              "url_institute": "",
+                              "url_fasta": "https://ftp.maizegdb.org/MaizeGDB/FTP/Zm-CML247-DRAFT-PANZEA-1.0/",
+                              "version": "1.0",
+                              "version_notes": "Lu et al, 2015"
+                            },
+                            {
+                              "id": "MAIZE_Mo17_v1.0",
+                              "rank": "genome",
+                              "sequence_count": 0,
+                              "chromosome_count": 20,
+                              "ploidy": 2,
+                              "genome_size": 2400,
+                              "complete_busco": 92.6,
+                              "fragment_busco": 3.3,
+                              "missing_busco": 4.1,
+                              "url_institute": "",
+                              "url_fasta": "http://mmgdb.hzau.edu.cn/cgi-bin/maize/download_ext",
+                              "version": "1.0",
+                              "version_notes": "Yang et al, 2017"
+                            },
+                            {
+                              "id": "MAIZE_PH207_v1.0",
+                              "rank": "genome",
+                              "sequence_count": 0,
+                              "chromosome_count": 20,
+                              "ploidy": 2,
+                              "genome_size": 2400,
+                              "complete_busco": 87.3,
+                              "fragment_busco": 8.1,
+                              "missing_busco": 4.6,
+                              "url_institute": "",
+                              "url_fasta": "https://datadryad.org/resource/doi:10.5061/dryad.8vj84",
+                              "version": "1.0",
+                              "version_notes": "Hirsch et al, 2016"
+                            },
+
+                          ]
+                        },
+                        {
+                          "id": "Sorghum bicolor",
+                          "rank": "species",
+                          "color": "c00000",
+                          "pangenome": true,
+                          "code": "SORBI",
+                          "common_name": "Sorghum",
+                          "taxonomy_id": 4558,
+                          "url_picture": "/img/species/sorbi.png",
+                          "children": [
+                            {
+                              "id": "SORBI_BTx623_v3.1.1",
+                              "rank": "genome",
+                              "sequence_count": 0,
+                              "chromosome_count": 20,
+                              "ploidy": 2,
+                              "genome_size": 730,
+                              "complete_busco": 99.2,
+                              "fragment_busco": 0.4,
+                              "missing_busco": 0.4,
+                              "url_institute": "",
+                              "url_fasta": "https://phytozome.jgi.doe.gov/pz/portal.html#!info?alias=Org_Sbicolor",
+                              "version": "3.1.1",
+                              "version_notes": "McCormick RF, 2017"
+                            },
+                            {
+                              "id": "SORBI_Tx430_v1.0",
+                              "rank": "genome",
+                              "sequence_count": 0,
+                              "chromosome_count": 20,
+                              "ploidy": 2,
+                              "genome_size": 730,
+                              "complete_busco": 97.4,
+                              "fragment_busco": 1.2,
+                              "missing_busco": 1.4,
+                              "url_institute": "",
+                              "url_fasta": "",
+                              "version": "1.0",
+                              "version_notes": "Deschamp et al, 2018"
+                            },
+
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "BOP clade",
+                      "rank": "",
+                      "children": [
+                        {
+                          "id": "Oryza",
+                          "rank": "",
+                          "children": [
+                            {
+                              "id": "Oryza glaberrima",
+                              "rank": "species",
+                              "color": "#80808",
+                              "pangenome": false,
+                              "code": "ORYGL",
+                              "common_name": "African rice",
+                              "taxonomy_id": 4538,
+                              "url_picture": "/img/species/orygl.png",
+                              "children": [
+                                {
+                                  "id": "ORYGL_v1.0",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 24,
+                                  "ploidy": 2,
+                                  "genome_size": 358,
+                                  "complete_busco": 87.7,
+                                  "fragment_busco": 3.3,
+                                  "missing_busco": 9,
+                                  "url_institute": "",
+                                  "url_fasta": "http://datacommons.cyverse.org/browse/iplant/home/shared/commons_repo/curated/IOMAP_Genomes_Data_2017/MAKER_genome_annotations",
+                                  "version": "1.0",
+                                  "version_notes": "Wang et al, 2014 ;stein et al, 2018"
+                                }
+
+                              ]
+                            },
+                            {
+                              "id": "Oryza sativa",
+                              "rank": "species",
+                              "color": "#e0000",
+                              "pangenome": true,
+                              "code": "ORYSA",
+                              "common_name": "Rice",
+                              "taxonomy_id": 4530,
+                              "url_picture": "/img/species/orysa.png",
+                              "children": [
+                                {
+                                  "id": "ORYSA_IR8_v1.0",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 24,
+                                  "ploidy": 2,
+                                  "genome_size": 500,
+                                  "complete_busco": 89.9,
+                                  "fragment_busco": 3.2,
+                                  "missing_busco": 6.9,
+                                  "url_institute": "",
+                                  "url_fasta": "http://datacommons.cyverse.org/browse/iplant/home/shared/commons_repo/curated/IOMAP_Genomes_Data_2017",
+                                  "version": "1.0",
+                                  "version_notes": "Stein et al, 2018"
+                                },
+                                {
+                                  "id": "ORYSA_Kitaake_v3.1",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 24,
+                                  "ploidy": 2,
+                                  "genome_size": 500,
+                                  "complete_busco": 99.3,
+                                  "fragment_busco": 0.6,
+                                  "missing_busco": 0.1,
+                                  "url_institute": "",
+                                  "url_fasta": "https://phytozome.jgi.doe.gov/pz/portal.html#!info?alias=Org_OsativaKitaake_er",
+                                  "version": "3.1",
+                                  "version_notes": ""
+                                },
+                                {
+                                  "id": "ORYSA_MH63_v1.0",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 24,
+                                  "ploidy": 2,
+                                  "genome_size": 500,
+                                  "complete_busco": 89.4,
+                                  "fragment_busco": 2.6,
+                                  "missing_busco": 8,
+                                  "url_institute": "",
+                                  "url_fasta": "http://rice.hzau.edu.cn/cgi-bin/rice/download_ext",
+                                  "version": "1.0",
+                                  "version_notes": "Zhang et al, 2017"
+                                },
+                                {
+                                  "id": "ORYSA_N22_v1.0",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 24,
+                                  "ploidy": 2,
+                                  "genome_size": 500,
+                                  "complete_busco": 87.8,
+                                  "fragment_busco": 2.7,
+                                  "missing_busco": 9.5,
+                                  "url_institute": "",
+                                  "url_fasta": "http://datacommons.cyverse.org/browse/iplant/home/shared/commons_repo/curated/IOMAP_Genomes_Data_2017",
+                                  "version": "1.0",
+                                  "version_notes": "Stein et al, 2018"
+                                },
+                                {
+                                  "id": "ORYSA_Nipponbare_v7.0",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 24,
+                                  "ploidy": 2,
+                                  "genome_size": 500,
+                                  "complete_busco": 95.1,
+                                  "fragment_busco": 3.6,
+                                  "missing_busco": 1.3,
+                                  "url_institute": "",
+                                  "url_fasta": "http://rice.plantbiology.msu.edu/pub/data/Eukaryotic_Projects/o_sativa/annotation_dbs/pseudomolecules/version_7.0/all.dir/",
+                                  "version": "7.0",
+                                  "version_notes": "Goff et al, 2002"
+                                },
+                                {
+                                  "id": "ORYSA_R498_IGDB_v3.0",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 24,
+                                  "ploidy": 2,
+                                  "genome_size": 500,
+                                  "complete_busco": 96.1,
+                                  "fragment_busco": 1.6,
+                                  "missing_busco": 2.3,
+                                  "url_institute": "",
+                                  "url_fasta": "http://www.mbkbase.org/R498/",
+                                  "version": "3.0",
+                                  "version_notes": "Du et al, 2017"
+                                },
+                                {
+                                  "id": "ORYSA_ZS97_v1.0",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 24,
+                                  "ploidy": 2,
+                                  "genome_size": 500,
+                                  "complete_busco": 93.7,
+                                  "fragment_busco": 2,
+                                  "missing_busco": 4.3,
+                                  "url_institute": "",
+                                  "url_fasta": "http://rice.hzau.edu.cn/cgi-bin/rice/download_ext",
+                                  "version": "1.0",
+                                  "version_notes": "Zhang et al, 2017"
+                                },
+
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Pooideae",
+                          "rank": "",
+                          "children": [
+                            {
+                              "id": "Brachypodium distachyon",
+                              "rank": "species",
+                              "color": "#80000",
+                              "pangenome": true,
+                              "code": "BRADI",
+                              "common_name": "Purple false brome",
+                              "taxonomy_id": 15368,
+                              "url_picture": "/img/species/bradi.png",
+                              "children": [
+                                {
+                                  "id": "BRADI_ABR2_337_v1.ABR2",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 98.3,
+                                  "fragment_busco": 1.3,
+                                  "missing_busco": 0.4,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.ABR2",
+                                  "version_notes": "Gordon et al, 2026"
+                                },
+                                {
+                                  "id": "BRADI_ABR3_343_v1.ABR3",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 97.9,
+                                  "fragment_busco": 1.5,
+                                  "missing_busco": 0.6,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.ABR3",
+                                  "version_notes": "Gordon et al, 2034"
+                                },
+                                {
+                                  "id": "BRADI_ABR4_364_v1.ABR4",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 98.1,
+                                  "fragment_busco": 1.3,
+                                  "missing_busco": 0.6,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.ABR4",
+                                  "version_notes": "Gordon et al, 2030"
+                                },
+                                {
+                                  "id": "BRADI_ABR5_379_v1.ABR5",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 97.1,
+                                  "fragment_busco": 1.7,
+                                  "missing_busco": 1.2,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.ABR5",
+                                  "version_notes": "Gordon et al, 2046"
+                                },
+                                {
+                                  "id": "BRADI_ABR6_336_v1.ABR6_r",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 98.5,
+                                  "fragment_busco": 1.2,
+                                  "missing_busco": 0.3,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.ABR6_r",
+                                  "version_notes": "Gordon et al, 2021"
+                                },
+                                {
+                                  "id": "BRADI_ABR7_369_v1.ABR7",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 98.7,
+                                  "fragment_busco": 0.9,
+                                  "missing_busco": 0.4,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.ABR7",
+                                  "version_notes": "Gordon et al, 2020"
+                                },
+                                {
+                                  "id": "BRADI_ABR8_356_v1.ABR8",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 90.2,
+                                  "fragment_busco": 7.3,
+                                  "missing_busco": 2.5,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.ABR8",
+                                  "version_notes": "Gordon et al, 2065"
+                                },
+                                {
+                                  "id": "BRADI_ABR9_333_v1.ABR9_r",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 98.3,
+                                  "fragment_busco": 1.1,
+                                  "missing_busco": 0.6,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.ABR9_r",
+                                  "version_notes": "Gordon et al, 2029"
+                                },
+                                {
+                                  "id": "BRADI_Adi_10_381_v1.Adi-10",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 88,
+                                  "fragment_busco": 8,
+                                  "missing_busco": 4,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Adi-10",
+                                  "version_notes": "Gordon et al, 2067"
+                                },
+                                {
+                                  "id": "BRADI_Adi_12_359_v1.Adi-12",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 96,
+                                  "fragment_busco": 2.7,
+                                  "missing_busco": 1.3,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Adi-12",
+                                  "version_notes": "Gordon et al, 2055"
+                                },
+                                {
+                                  "id": "BRADI_Adi_2_372_v1.Adi-2",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 98.4,
+                                  "fragment_busco": 1,
+                                  "missing_busco": 0.6,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Adi-2",
+                                  "version_notes": "Gordon et al, 2023"
+                                },
+                                {
+                                  "id": "BRADI_Arn1_355_v1.Arn1",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 98.4,
+                                  "fragment_busco": 0.9,
+                                  "missing_busco": 0.7,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Arn1",
+                                  "version_notes": "Gordon et al, 2024"
+                                },
+                                {
+                                  "id": "BRADI_Bd18_1_362_v1.Bd18-1",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 98.7,
+                                  "fragment_busco": 0.9,
+                                  "missing_busco": 0.4,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Bd18-1",
+                                  "version_notes": "Gordon et al, 2019"
+                                },
+                                {
+                                  "id": "BRADI_Bd1_1_349_v1.Bd1-1",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 96.5,
+                                  "fragment_busco": 2,
+                                  "missing_busco": 1.5,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Bd1-1",
+                                  "version_notes": "Gordon et al, 2053"
+                                },
+                                {
+                                  "id": "BRADI_Bd21_3_378_v1.Bd21-3_r",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 97.1,
+                                  "fragment_busco": 1.9,
+                                  "missing_busco": 1,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Bd21-3_r",
+                                  "version_notes": "Gordon et al, 2045"
+                                },
+                                {
+                                  "id": "BRADI_Bd21v2_1_283_Bd21v2",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 99.4,
+                                  "fragment_busco": 0.5,
+                                  "missing_busco": 0.1,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "2.0",
+                                  "version_notes": "Gordon et al, 2017"
+                                },
+                                {
+                                  "id": "BRADI_Bd29_1_346_v1.Bd29-1",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 93.3,
+                                  "fragment_busco": 4.6,
+                                  "missing_busco": 2.1,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Bd29-1",
+                                  "version_notes": "Gordon et al, 2064"
+                                },
+                                {
+                                  "id": "BRADI_Bd2_3_353_v1.Bd2-3",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 95.2,
+                                  "fragment_busco": 3.3,
+                                  "missing_busco": 1.5,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Bd2-3",
+                                  "version_notes": "Gordon et al, 2057"
+                                },
+                                {
+                                  "id": "BRADI_Bd30_1_344_v1.Bd30-1",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 96.9,
+                                  "fragment_busco": 2,
+                                  "missing_busco": 1.1,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Bd30-1",
+                                  "version_notes": "Gordon et al, 2048"
+                                },
+                                {
+                                  "id": "BRADI_Bd3_1_328_v1.Bd3-1_r",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 88.4,
+                                  "fragment_busco": 7.6,
+                                  "missing_busco": 4,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Bd3-1_r",
+                                  "version_notes": "Gordon et al, 2066"
+                                },
+                                {
+                                  "id": "BRADI_BdTR10c_374_v1.BdTR10C",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 93.7,
+                                  "fragment_busco": 4.4,
+                                  "missing_busco": 1.9,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.BdTR10C",
+                                  "version_notes": "Gordon et al, 2062"
+                                },
+                                {
+                                  "id": "BRADI_BdTR11a_380_v1.BdTR11A",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 95.3,
+                                  "fragment_busco": 3.5,
+                                  "missing_busco": 1.2,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.BdTR11A",
+                                  "version_notes": "Gordon et al, 2056"
+                                },
+                                {
+                                  "id": "BRADI_BdTR11g_357_v1.BdTR11G",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 97.8,
+                                  "fragment_busco": 1.7,
+                                  "missing_busco": 0.5,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.BdTR11G",
+                                  "version_notes": "Gordon et al, 2035"
+                                },
+                                {
+                                  "id": "BRADI_BdTR11i_363_v1.BdTR11I",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 97.3,
+                                  "fragment_busco": 1.9,
+                                  "missing_busco": 0.8,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.BdTR11I",
+                                  "version_notes": "Gordon et al, 2043"
+                                },
+                                {
+                                  "id": "BRADI_BdTR12c_352_v1.BdTR12c",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 95,
+                                  "fragment_busco": 3.6,
+                                  "missing_busco": 1.4,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.BdTR12c",
+                                  "version_notes": "Gordon et al, 2058"
+                                },
+                                {
+                                  "id": "BRADI_BdTR13a_334_v1.BdTR13a",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 98.3,
+                                  "fragment_busco": 1.4,
+                                  "missing_busco": 0.3,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.BdTR13a",
+                                  "version_notes": "Gordon et al, 2025"
+                                },
+                                {
+                                  "id": "BRADI_BdTR13c_365_v1.BdTR13C",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 94.9,
+                                  "fragment_busco": 3.9,
+                                  "missing_busco": 1.2,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.BdTR13C",
+                                  "version_notes": "Gordon et al, 2059"
+                                },
+                                {
+                                  "id": "BRADI_BdTR1i_345_v1.BdTR1i",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 98.3,
+                                  "fragment_busco": 1.2,
+                                  "missing_busco": 0.5,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.BdTR1i",
+                                  "version_notes": "Gordon et al, 2027"
+                                },
+                                {
+                                  "id": "BRADI_BdTR2b_376_v1.BdTR2B",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 96.9,
+                                  "fragment_busco": 2,
+                                  "missing_busco": 1.1,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.BdTR2B",
+                                  "version_notes": "Gordon et al, 2050"
+                                },
+                                {
+                                  "id": "BRADI_BdTR2g_367_v1.BdTR2G",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 94.9,
+                                  "fragment_busco": 3.4,
+                                  "missing_busco": 1.7,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.BdTR2G",
+                                  "version_notes": "Gordon et al, 2060"
+                                },
+                                {
+                                  "id": "BRADI_BdTR3c_354_v1.BdTR3C",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 98.7,
+                                  "fragment_busco": 1,
+                                  "missing_busco": 0.3,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.BdTR3C",
+                                  "version_notes": "Gordon et al, 2018"
+                                },
+                                {
+                                  "id": "BRADI_BdTR5i_370_v1.BdTR5I",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 93.6,
+                                  "fragment_busco": 4.7,
+                                  "missing_busco": 1.7,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.BdTR5I",
+                                  "version_notes": "Gordon et al, 2063"
+                                },
+                                {
+                                  "id": "BRADI_BdTR7a_329_v1.BdTR7a",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 97,
+                                  "fragment_busco": 1.8,
+                                  "missing_busco": 1.2,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.BdTR7a",
+                                  "version_notes": "Gordon et al, 2047"
+                                },
+                                {
+                                  "id": "BRADI_BdTR8i_348_v1.BdTR8i",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 97.8,
+                                  "fragment_busco": 1.3,
+                                  "missing_busco": 0.9,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.BdTR8i",
+                                  "version_notes": "Gordon et al, 2037"
+                                },
+                                {
+                                  "id": "BRADI_BdTR9k_358_v1.BdTR9K",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 94.3,
+                                  "fragment_busco": 3.9,
+                                  "missing_busco": 1.8,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.BdTR9K",
+                                  "version_notes": "Gordon et al, 2061"
+                                },
+                                {
+                                  "id": "BRADI_Bis_1_338_v1.Bis-1",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 97.2,
+                                  "fragment_busco": 1.9,
+                                  "missing_busco": 0.9,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Bis-1",
+                                  "version_notes": "Gordon et al, 2044"
+                                },
+                                {
+                                  "id": "BRADI_Foz1_366_v1.Foz1",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 97.5,
+                                  "fragment_busco": 1.6,
+                                  "missing_busco": 0.9,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Foz1",
+                                  "version_notes": "Gordon et al, 2042"
+                                },
+                                {
+                                  "id": "BRADI_Gaz_8_339_v1.Gaz-8",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 76.7,
+                                  "fragment_busco": 15.9,
+                                  "missing_busco": 7.4,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Gaz-8",
+                                  "version_notes": "Gordon et al, 2069"
+                                },
+                                {
+                                  "id": "BRADI_Jer1_375_v1.Jer1",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 96.9,
+                                  "fragment_busco": 2,
+                                  "missing_busco": 1.1,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Jer1",
+                                  "version_notes": "Gordon et al, 2049"
+                                },
+                                {
+                                  "id": "BRADI_Kah_1_351_v1.Kah-1",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 83.8,
+                                  "fragment_busco": 12,
+                                  "missing_busco": 4.2,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Kah-1",
+                                  "version_notes": "Gordon et al, 2068"
+                                },
+                                {
+                                  "id": "BRADI_Kah_5_342_v1.Kah-5",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 97.8,
+                                  "fragment_busco": 1.6,
+                                  "missing_busco": 0.6,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Kah-5",
+                                  "version_notes": "Gordon et al, 2036"
+                                },
+                                {
+                                  "id": "BRADI_Koz_1_330_v1.Koz-1",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 98.3,
+                                  "fragment_busco": 1.1,
+                                  "missing_busco": 0.6,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Koz-1",
+                                  "version_notes": "Gordon et al, 2028"
+                                },
+                                {
+                                  "id": "BRADI_Koz_3_368_v1.Koz-3",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 96.7,
+                                  "fragment_busco": 2.1,
+                                  "missing_busco": 1.2,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Koz-3",
+                                  "version_notes": "Gordon et al, 2051"
+                                },
+                                {
+                                  "id": "BRADI_Luc1_347_v1.Luc1",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 98.5,
+                                  "fragment_busco": 1.1,
+                                  "missing_busco": 0.4,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Luc1",
+                                  "version_notes": "Gordon et al, 2022"
+                                },
+                                {
+                                  "id": "BRADI_Mig3_377_v1.Mig3",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 97.6,
+                                  "fragment_busco": 2,
+                                  "missing_busco": 0.4,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Mig3",
+                                  "version_notes": "Gordon et al, 2039"
+                                },
+                                {
+                                  "id": "BRADI_Mon3_350_v1.Mon3",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 98,
+                                  "fragment_busco": 1.5,
+                                  "missing_busco": 0.5,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Mon3",
+                                  "version_notes": "Gordon et al, 2033"
+                                },
+                                {
+                                  "id": "BRADI_Mur1_373_v1.Mur1",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 96.2,
+                                  "fragment_busco": 3.2,
+                                  "missing_busco": 0.6,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Mur1",
+                                  "version_notes": "Gordon et al, 2054"
+                                },
+                                {
+                                  "id": "BRADI_Per1_326_v1.Per1",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 98.1,
+                                  "fragment_busco": 1.3,
+                                  "missing_busco": 0.6,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Per1",
+                                  "version_notes": "Gordon et al, 2031"
+                                },
+                                {
+                                  "id": "BRADI_Ron2_360_v1.RON2",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 98.1,
+                                  "fragment_busco": 1.2,
+                                  "missing_busco": 0.7,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.RON2",
+                                  "version_notes": "Gordon et al, 2032"
+                                },
+                                {
+                                  "id": "BRADI_S8iiC_340_v1.S8iiC",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 97.6,
+                                  "fragment_busco": 1.7,
+                                  "missing_busco": 0.7,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.S8iiC",
+                                  "version_notes": "Gordon et al, 2040"
+                                },
+                                {
+                                  "id": "BRADI_Sig2_371_v1.Sig2",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 97.6,
+                                  "fragment_busco": 1.7,
+                                  "missing_busco": 0.7,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Sig2",
+                                  "version_notes": "Gordon et al, 2041"
+                                },
+                                {
+                                  "id": "BRADI_Tek_2_341_v1.Tek-2",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 96.5,
+                                  "fragment_busco": 2.6,
+                                  "missing_busco": 0.9,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Tek-2",
+                                  "version_notes": "Gordon et al, 2052"
+                                },
+                                {
+                                  "id": "BRADI_Tek_4_332_v1.Tek-4",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 69.5,
+                                  "fragment_busco": 23.8,
+                                  "missing_busco": 6.7,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Tek-4",
+                                  "version_notes": "Gordon et al, 2070"
+                                },
+                                {
+                                  "id": "BRADI_Uni2_327_v1.Uni2",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 10,
+                                  "ploidy": 2,
+                                  "genome_size": 270,
+                                  "complete_busco": 97.7,
+                                  "fragment_busco": 1.7,
+                                  "missing_busco": 0.6,
+                                  "url_institute": "",
+                                  "url_fasta": "https://brachypan.jgi.doe.gov/",
+                                  "version": "1.Uni2",
+                                  "version_notes": "Gordon et al, 2038"
+                                },
+
+                              ]
+                            },
+                            {
+                              "id": "Triticeae",
+                              "rank": "",
+                              "children": [
+                                {
+                                  "id": "Triticum turgidum",
+                                  "rank": "species",
+                                  "color": "#80808",
+                                  "pangenome": true,
+                                  "code": "TRITU",
+                                  "common_name": "Poulard wheat",
+                                  "taxonomy_id": 4571,
+                                  "url_picture": "/img/species/tritu.png",
+                                  "children": [
+                                    {
+                                      "id": "TRITU_Svevo_v2.0",
+                                      "rank": "genome",
+                                      "sequence_count": 0,
+                                      "chromosome_count": 28,
+                                      "ploidy": 4,
+                                      "genome_size": 12000,
+                                      "complete_busco": 98.9,
+                                      "fragment_busco": 0.5,
+                                      "missing_busco": 0.6,
+                                      "url_institute": "",
+                                      "url_fasta": "https://doi.ipk-gatersleben.de/DOI/f084c72b-4639-4012-bf63-6069526186d9/de5ce0c5-4690-4cd6-917a-8918e0bbf175/2",
+                                      "version": "2.0",
+                                      "version_notes": "Maccaferri et al, 2019"
+                                    },
+                                    {
+                                      "id": "TRITU_Zavitan_v1.1",
+                                      "rank": "genome",
+                                      "sequence_count": 0,
+                                      "chromosome_count": 28,
+                                      "ploidy": 4,
+                                      "genome_size": 12000,
+                                      "complete_busco": 99.6,
+                                      "fragment_busco": 0.1,
+                                      "missing_busco": 0.3,
+                                      "url_institute": "",
+                                      "url_fasta": "https://urgi.versailles.inra.fr/download/iwgsc/IWGSC_RefSeq_Annotations/v1.1/",
+                                      "version": "1.1",
+                                      "version_notes": "IWGSC"
+                                    },
+
+                                  ]
+                                },
+                                {
+                                  "id": "Hordeum vulgare",
+                                  "rank": "species",
+                                  "color": "ff4040",
+                                  "pangenome": false,
+                                  "code": "HORVU",
+                                  "common_name": "Barley",
+                                  "taxonomy_id": 4513,
+                                  "url_picture": "/img/species/horvu.png",
+                                  "children": [
+                                    {
+                                      "id": "HORVU_IBSC_v2.0",
+                                      "rank": "genome",
+                                      "sequence_count": 0,
+                                      "chromosome_count": 14,
+                                      "ploidy": 2,
+                                      "genome_size": 5300,
+                                      "complete_busco": 88.7,
+                                      "fragment_busco": 3.3,
+                                      "missing_busco": 8,
+                                      "url_institute": "",
+                                      "url_fasta": "ftp://ftp.ensemblgenomes.org/pub/plants/release-43/fasta/hordeum_vulgare/pep/",
+                                      "version": "2.0",
+                                      "version_notes": "IBGC, 2012"
+                                    }
+
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Pentapetalae",
+          "rank": "",
+          "children": [
+            {
+              "id": "Chenopodiaceae",
+              "rank": "",
+              "children": [
+                {
+                  "id": "Beta vulgaris",
+                  "rank": "species",
+                  "color": "#80808",
+                  "pangenome": false,
+                  "code": "BETVU",
+                  "common_name": "Beet",
+                  "taxonomy_id": 161934,
+                  "url_picture": "/img/species/betvu.png",
+                  "children": [
+                    {
+                      "id": "BETVU_RefBeet_v1.2",
+                      "rank": "genome",
+                      "sequence_count": 0,
+                      "chromosome_count": 18,
+                      "ploidy": 2,
+                      "genome_size": 517,
+                      "complete_busco": 98.2,
+                      "fragment_busco": 1.1,
+                      "missing_busco": 0.7,
+                      "url_institute": "",
+                      "url_fasta": "http://bvseq.molgen.mpg.de/Genome/Download/RefBeet-1.2/",
+                      "version": "1.2",
+                      "version_notes": "Minoche et al. 2015"
+                    }
+
+                  ]
+                },
+                {
+                  "id": "Chenopodium quinoa",
+                  "rank": "species",
+                  "color": "#80808",
+                  "pangenome": false,
+                  "code": "CHEQI",
+                  "common_name": "Quinoa",
+                  "taxonomy_id": 63459,
+                  "url_picture": "/img/species/cheqi.png",
+                  "children": [
+                    {
+                      "id": "CHEQI_JGI_v1.0",
+                      "rank": "genome",
+                      "sequence_count": 0,
+                      "chromosome_count": 36,
+                      "ploidy": 4,
+                      "genome_size": 1500,
+                      "complete_busco": 95.4,
+                      "fragment_busco": 2.6,
+                      "missing_busco": 2,
+                      "url_institute": "",
+                      "url_fasta": "https://phytozome.jgi.doe.gov/pz/portal.html#!info?alias=Org_Cquinoa_er",
+                      "version": "1.0",
+                      "version_notes": "Jarvis et al, 2017"
+                    }
+
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "asterids",
+              "rank": "",
+              "children": [
+                {
+                  "id": "lamiids",
+                  "rank": "",
+                  "children": [
+                    {
+                      "id": "Coffea",
+                      "rank": "",
+                      "children": [
+                        {
+                          "id": "Coffea canephora",
+                          "rank": "species",
+                          "color": "#80808",
+                          "pangenome": false,
+                          "code": "COFCA",
+                          "common_name": "Robusta coffee",
+                          "taxonomy_id": 49390,
+                          "url_picture": "/img/species/cofca.png",
+                          "children": [
+                            {
+                              "id": "COFCA_v1.0",
+                              "rank": "genome",
+                              "sequence_count": 0,
+                              "chromosome_count": 22,
+                              "ploidy": 2,
+                              "genome_size": 471,
+                              "complete_busco": 95.5,
+                              "fragment_busco": 2.8,
+                              "missing_busco": 1.7,
+                              "url_institute": "",
+                              "url_fasta": "http://coffee-genome.org/download",
+                              "version": "1.0",
+                              "version_notes": "Denoeud et al, 2014"
+                            }
+
+                          ]
+                        },
+                        {
+                          "id": "Coffea arabica",
+                          "rank": "species",
+                          "color": "#80808",
+                          "pangenome": false,
+                          "code": "COFAR",
+                          "common_name": "Arabian coffee",
+                          "taxonomy_id": 13443,
+                          "url_picture": "/img/species/cofar.png",
+                          "children": [
+                            {
+                              "id": "COFAR_RB_v1.0",
+                              "rank": "genome",
+                              "sequence_count": 0,
+                              "chromosome_count": 44,
+                              "ploidy": 4,
+                              "genome_size": 1300,
+                              "complete_busco": 90,
+                              "fragment_busco": 5.5,
+                              "missing_busco": 4.5,
+                              "url_institute": "",
+                              "url_fasta": "https://worldcoffeeresearch.org/work/coffea-arabica-genome/",
+                              "version": "1.0",
+                              "version_notes": "unpublished"
+                            }
+
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "Olea europaea",
+                      "rank": "species",
+                      "color": "#80808",
+                      "pangenome": false,
+                      "code": "OLEEU",
+                      "common_name": "Common olive",
+                      "taxonomy_id": 4146,
+                      "url_picture": "/img/species/oleeu.png",
+                      "children": [
+                        {
+                          "id": "OLEEU_v1.0",
+                          "rank": "genome",
+                          "sequence_count": 0,
+                          "chromosome_count": 46,
+                          "ploidy": 2,
+                          "genome_size": 1460,
+                          "complete_busco": 78.6,
+                          "fragment_busco": 8.4,
+                          "missing_busco": 13,
+                          "url_institute": "",
+                          "url_fasta": "http://olivegenome.org/downloads/",
+                          "version": "1.0",
+                          "version_notes": "Unver et al, 2017"
+                        }
+
+                      ]
+                    },
+                    {
+                      "id": "Solanales",
+                      "rank": "",
+                      "children": [
+                        {
+                          "id": "Ipomoea",
+                          "rank": "",
+                          "children": [
+                            {
+                              "id": "Ipomoea triloba",
+                              "rank": "species",
+                              "color": "#80808",
+                              "pangenome": false,
+                              "code": "IPOTR",
+                              "common_name": "Trilobed morning glory",
+                              "taxonomy_id": 35885,
+                              "url_picture": "/img/species/ipotr.png",
+                              "children": [
+                                {
+                                  "id": "IPOTR_NSP323",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 30,
+                                  "ploidy": 2,
+                                  "genome_size": 496,
+                                  "complete_busco": 97.1,
+                                  "fragment_busco": 1.2,
+                                  "missing_busco": 1.7,
+                                  "url_institute": "",
+                                  "url_fasta": "http://sweetpotato.plantbiology.msu.edu/gt4sp_download.shtml",
+                                  "version": "NSP323",
+                                  "version_notes": "Wu et al, 2018"
+                                }
+
+                              ]
+                            },
+                            {
+                              "id": "Ipomoea trifida",
+                              "rank": "species",
+                              "color": "#80808",
+                              "pangenome": true,
+                              "code": "IPOTF",
+                              "common_name": "Morning glory",
+                              "taxonomy_id": 35884,
+                              "url_picture": "/img/species/ipotf.png",
+                              "children": [
+                                {
+                                  "id": "IPOTF_NSP306",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 30,
+                                  "ploidy": 2,
+                                  "genome_size": 526,
+                                  "complete_busco": 96.6,
+                                  "fragment_busco": 1.5,
+                                  "missing_busco": 1.9,
+                                  "url_institute": "",
+                                  "url_fasta": "https://datadryad.org/resource/doi:10.5061/dryad.b9m61cg",
+                                  "version": "NSP306",
+                                  "version_notes": "Wu et al, 2018"
+                                },
+                                {
+                                  "id": "IPOTF_Y22",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 30,
+                                  "ploidy": 2,
+                                  "genome_size": 476,
+                                  "complete_busco": 94.4,
+                                  "fragment_busco": 2.5,
+                                  "missing_busco": 3.1,
+                                  "url_institute": "",
+                                  "url_fasta": "https://www.ipomoea-genome.org/download_genome.html",
+                                  "version": "Y22",
+                                  "version_notes": "Li et al, 2019"
+                                },
+
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Solanoideae",
+                          "rank": "",
+                          "children": [
+                            {
+                              "id": "Solanum",
+                              "rank": "",
+                              "children": [
+                                {
+                                  "id": "Solanum tuberosum",
+                                  "rank": "species",
+                                  "color": "#00fff",
+                                  "pangenome": false,
+                                  "code": "SOLTU",
+                                  "common_name": "Potato",
+                                  "taxonomy_id": 4113,
+                                  "url_picture": "/img/species/soltu.png",
+                                  "children": [
+                                    {
+                                      "id": "SOLTU_PGSC_v4.03",
+                                      "rank": "genome",
+                                      "sequence_count": 0,
+                                      "chromosome_count": 24,
+                                      "ploidy": 2,
+                                      "genome_size": 840,
+                                      "complete_busco": 79.3,
+                                      "fragment_busco": 6.3,
+                                      "missing_busco": 14.4,
+                                      "url_institute": "",
+                                      "url_fasta": "ftp://ftp.solgenomics.net/genomes/Solanum_tuberosum/annotation/PGSC_4.03/",
+                                      "version": "4.03",
+                                      "version_notes": "PGSC"
+                                    }
+
+                                  ]
+                                },
+                                {
+                                  "id": "Solanum lycopersicum",
+                                  "rank": "species",
+                                  "color": "#00c08",
+                                  "pangenome": false,
+                                  "code": "SOLLC",
+                                  "common_name": "Tomato",
+                                  "taxonomy_id": 4081,
+                                  "url_picture": "/img/species/sollc.png",
+                                  "children": [
+                                    {
+                                      "id": "SOLLC_ITAG3.2",
+                                      "rank": "genome",
+                                      "sequence_count": 0,
+                                      "chromosome_count": 24,
+                                      "ploidy": 2,
+                                      "genome_size": 827,
+                                      "complete_busco": 97.6,
+                                      "fragment_busco": 2,
+                                      "missing_busco": 0.4,
+                                      "url_institute": "",
+                                      "url_fasta": "ftp://ftp.solgenomics.net/genomes/Solanum_lycopersicum/annotation/ITAG3.2_release/",
+                                      "version": "3.2",
+                                      "version_notes": ""
+                                    }
+
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "Capsicum annuum",
+                              "rank": "species",
+                              "color": "#80808",
+                              "pangenome": true,
+                              "code": "CAPAN",
+                              "common_name": "Capsicum pepper",
+                              "taxonomy_id": 4072,
+                              "url_picture": "/img/species/capan.png",
+                              "children": [
+                                {
+                                  "id": "CAPAN_CM334_v2.0",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 24,
+                                  "ploidy": 2,
+                                  "genome_size": 3063,
+                                  "complete_busco": 88.9,
+                                  "fragment_busco": 4.1,
+                                  "missing_busco": 7,
+                                  "url_institute": "",
+                                  "url_fasta": "http://peppergenome.snu.ac.kr/download.php",
+                                  "version": "2.0",
+                                  "version_notes": "Kim et al, 2014"
+                                },
+                                {
+                                  "id": "CAPAN_Glabriusculum_Chiltepin_v2.0",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 24,
+                                  "ploidy": 2,
+                                  "genome_size": 3063,
+                                  "complete_busco": 84.6,
+                                  "fragment_busco": 9.1,
+                                  "missing_busco": 6.3,
+                                  "url_institute": "",
+                                  "url_fasta": "ftp://ftp.solgenomics.net/genomes/Capsicum_annuum/",
+                                  "version": "2.0",
+                                  "version_notes": "Qin et al, 2014"
+                                },
+                                {
+                                  "id": "CAPAN_Zunla_1_v2.0",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 24,
+                                  "ploidy": 2,
+                                  "genome_size": 3063,
+                                  "complete_busco": 90.6,
+                                  "fragment_busco": 7.2,
+                                  "missing_busco": 2.2,
+                                  "url_institute": "",
+                                  "url_fasta": "ftp://ftp.solgenomics.net/genomes/Capsicum_annuum/",
+                                  "version": "2.0",
+                                  "version_notes": "Qin et al, 2014"
+                                },
+
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "campanulids",
+                  "rank": "",
+                  "children": [
+                    {
+                      "id": "Helianthus annuus",
+                      "rank": "species",
+                      "color": "#80808",
+                      "pangenome": false,
+                      "code": "HELAN",
+                      "common_name": "Common sunflower",
+                      "taxonomy_id": 4232,
+                      "url_picture": "/img/species/helan.png",
+                      "children": [
+                        {
+                          "id": "HELAN_XRQ_v1.2",
+                          "rank": "genome",
+                          "sequence_count": 0,
+                          "chromosome_count": 34,
+                          "ploidy": 2,
+                          "genome_size": 2925,
+                          "complete_busco": 97.2,
+                          "fragment_busco": 1.2,
+                          "missing_busco": 1.6,
+                          "url_institute": "",
+                          "url_fasta": "https://www.heliagene.org/HanXRQ-SUNRISE/",
+                          "version": "1.2",
+                          "version_notes": "Badouin et al, 2017"
+                        }
+
+                      ]
+                    },
+                    {
+                      "id": "Daucus carota",
+                      "rank": "species",
+                      "color": "#80808",
+                      "pangenome": false,
+                      "code": "DAUCA",
+                      "common_name": "Wild carrot",
+                      "taxonomy_id": 4039,
+                      "url_picture": "/img/species/dauca.png",
+                      "children": [
+                        {
+                          "id": "DAUCA_JGI_v2.0",
+                          "rank": "genome",
+                          "sequence_count": 0,
+                          "chromosome_count": 18,
+                          "ploidy": 2,
+                          "genome_size": 421,
+                          "complete_busco": 90.8,
+                          "fragment_busco": 4.1,
+                          "missing_busco": 5.1,
+                          "url_institute": "",
+                          "url_fasta": "https://phytozome.jgi.doe.gov/pz/portal.html#!info?alias=Org_Dcarota",
+                          "version": "2.0",
+                          "version_notes": "Iorizzo et al, 2016"
+                        }
+
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "rosids",
+              "rank": "",
+              "children": [
+                {
+                  "id": "Vitis vinifera",
+                  "rank": "species",
+                  "color": "#70a0a",
+                  "pangenome": true,
+                  "code": "VITVI",
+                  "common_name": "Grape",
+                  "taxonomy_id": 29760,
+                  "url_picture": "/img/species/vitvi.png",
+                  "children": [
+                    {
+                      "id": "VITVI_12X.2",
+                      "rank": "genome",
+                      "sequence_count": 0,
+                      "chromosome_count": 38,
+                      "ploidy": 2,
+                      "genome_size": 500,
+                      "complete_busco": 98.4,
+                      "fragment_busco": 1.2,
+                      "missing_busco": 0.4,
+                      "url_institute": "",
+                      "url_fasta": "https://urgi.versailles.inra.fr/files/Vini/Vitis%2012X.2%20annotations/vitviv2.pep.fasta.zip",
+                      "version": "2.0",
+                      "version_notes": "Canaguier et al, 2017"
+                    },
+                    {
+                      "id": "VITVI_CabernetSauvignon_v1.0",
+                      "rank": "genome",
+                      "sequence_count": 0,
+                      "chromosome_count": 38,
+                      "ploidy": 2,
+                      "genome_size": 500,
+                      "complete_busco": 92.4,
+                      "fragment_busco": 4.9,
+                      "missing_busco": 2.7,
+                      "url_institute": "",
+                      "url_fasta": "https://cantulab.github.io/data.html",
+                      "version": "1.0",
+                      "version_notes": "Minio et al, 2018"
+                    },
+                    {
+                      "id": "VITVI_Carmenere_v1.0",
+                      "rank": "genome",
+                      "sequence_count": 0,
+                      "chromosome_count": 38,
+                      "ploidy": 2,
+                      "genome_size": 500,
+                      "complete_busco": 95.9,
+                      "fragment_busco": 2.5,
+                      "missing_busco": 1.6,
+                      "url_institute": "",
+                      "url_fasta": "https://cantulab.github.io/data.html",
+                      "version": "1.0",
+                      "version_notes": "Minio et al, 2019"
+                    },
+
+                  ]
+                },
+                {
+                  "id": "fabids",
+                  "rank": "",
+                  "children": [
+                    {
+                      "id": "Manihot esculenta",
+                      "rank": "species",
+                      "color": "ffa000",
+                      "pangenome": false,
+                      "code": "MANES",
+                      "common_name": "Cassava",
+                      "taxonomy_id": 3983,
+                      "url_picture": "/img/species/manes.png",
+                      "children": [
+                        {
+                          "id": "MANES_AM560_2_v6.1",
+                          "rank": "genome",
+                          "sequence_count": 0,
+                          "chromosome_count": 36,
+                          "ploidy": 2,
+                          "genome_size": 495,
+                          "complete_busco": 97.6,
+                          "fragment_busco": 1.5,
+                          "missing_busco": 0.9,
+                          "url_institute": "",
+                          "url_fasta": "https://genome.jgi.doe.gov/portal/pages/dynamicOrganismDownload.jsf?organism=Mesculenta",
+                          "version": "6.1",
+                          "version_notes": "Bredeson et al, 2016"
+                        }
+
+                      ]
+                    },
+                    {
+                      "id": "NPAAA clade",
+                      "rank": "",
+                      "children": [
+                        {
+                          "id": "IRL clade",
+                          "rank": "",
+                          "children": [
+                            {
+                              "id": "Medicago truncatula",
+                              "rank": "species",
+                              "color": "#00800",
+                              "pangenome": true,
+                              "code": "MEDTR",
+                              "common_name": "Barrel medic",
+                              "taxonomy_id": 3880,
+                              "url_picture": "/img/species/medtr.png",
+                              "children": [
+                                {
+                                  "id": "MEDTR_A17_r5.0",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 16,
+                                  "ploidy": 2,
+                                  "genome_size": 412,
+                                  "complete_busco": 98.8,
+                                  "fragment_busco": 0.7,
+                                  "missing_busco": 0.5,
+                                  "url_institute": "",
+                                  "url_fasta": "https://medicago.toulouse.inra.fr/MtrunA17r5.0-ANR/",
+                                  "version": "5.0",
+                                  "version_notes": "Pecrix et al, 2018"
+                                },
+                                {
+                                  "id": "MEDTR_Mt4.0v2",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 16,
+                                  "ploidy": 2,
+                                  "genome_size": 412,
+                                  "complete_busco": 96.6,
+                                  "fragment_busco": 1.1,
+                                  "missing_busco": 2.3,
+                                  "url_institute": "",
+                                  "url_fasta": "http://www.medicagogenome.org/downloads",
+                                  "version": "4.0.2",
+                                  "version_notes": "Tang et al, 2014"
+                                },
+
+                              ]
+                            },
+                            {
+                              "id": "Cicer arietinum",
+                              "rank": "species",
+                              "color": "#00c00",
+                              "pangenome": true,
+                              "code": "CICAR",
+                              "common_name": "Chickpea",
+                              "taxonomy_id": 3827,
+                              "url_picture": "/img/species/cicar.png",
+                              "children": [
+                                {
+                                  "id": "CICAR_CDC_Frontier_kabuli",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 16,
+                                  "ploidy": 2,
+                                  "genome_size": 738,
+                                  "complete_busco": 94.8,
+                                  "fragment_busco": 3.2,
+                                  "missing_busco": 2,
+                                  "url_institute": "",
+                                  "url_fasta": "https://legumeinfo.org/data/public/Cicer_arietinum/",
+                                  "version": "Kabuli",
+                                  "version_notes": "Varshney et al, 2013"
+                                },
+                                {
+                                  "id": "CICAR_ICC_4958_desi",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 16,
+                                  "ploidy": 2,
+                                  "genome_size": 738,
+                                  "complete_busco": 93,
+                                  "fragment_busco": 3.6,
+                                  "missing_busco": 3.4,
+                                  "url_institute": "",
+                                  "url_fasta": "https://legumeinfo.org/data/public/Cicer_arietinum/",
+                                  "version": "Desi",
+                                  "version_notes": "Parween et al, 2015"
+                                },
+
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Phaseoleae",
+                          "rank": "",
+                          "children": [
+                            {
+                              "id": "Phaseolus vulgaris",
+                              "rank": "species",
+                              "color": "#20e02",
+                              "pangenome": false,
+                              "code": "PHAVU",
+                              "common_name": "Kidney bean",
+                              "taxonomy_id": 3885,
+                              "url_picture": "/img/species/phavu.png",
+                              "children": [
+                                {
+                                  "id": "PHAVU_v2.0",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 22,
+                                  "ploidy": 2,
+                                  "genome_size": 472,
+                                  "complete_busco": 99.1,
+                                  "fragment_busco": 0.7,
+                                  "missing_busco": 0.2,
+                                  "url_institute": "",
+                                  "url_fasta": "https://legumeinfo.org/data/public/Phaseolus_vulgaris/",
+                                  "version": "2.0",
+                                  "version_notes": "Schmutz et al. 2014"
+                                }
+
+                              ]
+                            },
+                            {
+                              "id": "Glycine max",
+                              "rank": "species",
+                              "color": "a0c040",
+                              "pangenome": true,
+                              "code": "SOYBN",
+                              "common_name": "Soybean",
+                              "taxonomy_id": 3847,
+                              "url_picture": "/img/species/soybn.png",
+                              "children": [
+                                {
+                                  "id": "SOYBN_Wm82_a2_v1.0",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 40,
+                                  "ploidy": 2,
+                                  "genome_size": 1100,
+                                  "complete_busco": 99.5,
+                                  "fragment_busco": 0.4,
+                                  "missing_busco": 0.1,
+                                  "url_institute": "",
+                                  "url_fasta": "https://phytozome.jgi.doe.gov/pz/portal.html#!info?alias=Org_Gmax",
+                                  "version": "1.0",
+                                  "version_notes": "Schmutz et al, 2010"
+                                },
+                                {
+                                  "id": "SOYBN_ZH13",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 40,
+                                  "ploidy": 2,
+                                  "genome_size": 1100,
+                                  "complete_busco": 99.3,
+                                  "fragment_busco": 0.4,
+                                  "missing_busco": 0.3,
+                                  "url_institute": "",
+                                  "url_fasta": "http://bigd.big.ac.cn/gwh/Assembly/125/show",
+                                  "version": "ZH13",
+                                  "version_notes": "Shen et al, 2018"
+                                },
+
+                              ]
+                            },
+                            {
+                              "id": "Cajanus cajan",
+                              "rank": "species",
+                              "color": "c0c000",
+                              "pangenome": false,
+                              "code": "CAJCA",
+                              "common_name": "Pigeon pea",
+                              "taxonomy_id": 3821,
+                              "url_picture": "/img/species/cajca.png",
+                              "children": [
+                                {
+                                  "id": "CAJCA_Asha_v1.0",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 22,
+                                  "ploidy": 2,
+                                  "genome_size": 808,
+                                  "complete_busco": 92.2,
+                                  "fragment_busco": 4.4,
+                                  "missing_busco": 3.4,
+                                  "url_institute": "",
+                                  "url_fasta": "https://legumeinfo.org/data/public/Cajanus_cajan/",
+                                  "version": "1.0",
+                                  "version_notes": "Varshney et al, 2012"
+                                }
+
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "Rosaceae",
+                      "rank": "",
+                      "children": [
+                        {
+                          "id": "Fragaria vesca",
+                          "rank": "species",
+                          "color": "#80808",
+                          "pangenome": false,
+                          "code": "FRAVE",
+                          "common_name": "Woodland strawberry",
+                          "taxonomy_id": 57918,
+                          "url_picture": "/img/species/frave.png",
+                          "children": [
+                            {
+                              "id": "FRAVE_v4.0a1",
+                              "rank": "genome",
+                              "sequence_count": 0,
+                              "chromosome_count": 14,
+                              "ploidy": 2,
+                              "genome_size": 813,
+                              "complete_busco": 94.6,
+                              "fragment_busco": 1.3,
+                              "missing_busco": 4.1,
+                              "url_institute": "",
+                              "url_fasta": "ftp://ftp.bioinfo.wsu.edu/species/Fragaria_vesca/Fvesca-genome.v4.0.a1/genes/",
+                              "version": "4.0a1",
+                              "version_notes": "Ã¢Â€ÂŽShulaev et al, 2011"
+                            }
+
+                          ]
+                        },
+                        {
+                          "id": "Malus domestica",
+                          "rank": "species",
+                          "color": "c0f000",
+                          "pangenome": true,
+                          "code": "MALDO",
+                          "common_name": "Apple",
+                          "taxonomy_id": 3750,
+                          "url_picture": "/img/species/maldo.png",
+                          "children": [
+                            {
+                              "id": "MALDO_Borkh_v3.0.a1",
+                              "rank": "genome",
+                              "sequence_count": 0,
+                              "chromosome_count": 34,
+                              "ploidy": 2,
+                              "genome_size": 750,
+                              "complete_busco": 91,
+                              "fragment_busco": 4.9,
+                              "missing_busco": 4.1,
+                              "url_institute": "",
+                              "url_fasta": "ftp://ftp.bioinfo.wsu.edu/species/Malus_x_domestica/Malus_x_domestica-genome.v3.0.a1/genes/",
+                              "version": "3.0.a1",
+                              "version_notes": "Velasco et al, 2010; Li et al, 2016"
+                            },
+                            {
+                              "id": "MALDO_GDDH13_v1.1",
+                              "rank": "genome",
+                              "sequence_count": 0,
+                              "chromosome_count": 34,
+                              "ploidy": 2,
+                              "genome_size": 750,
+                              "complete_busco": 98.3,
+                              "fragment_busco": 0.8,
+                              "missing_busco": 0.9,
+                              "url_institute": "",
+                              "url_fasta": "ftp://ftp.bioinfo.wsu.edu/species/Malus_x_domestica/Malus_x_domestica-genome_GDDH13_v1.1/genes/",
+                              "version": "1.1",
+                              "version_notes": "Daccord et al, 2017"
+                            },
+                            {
+                              "id": "MALDO_HFTH1",
+                              "rank": "genome",
+                              "sequence_count": 0,
+                              "chromosome_count": 34,
+                              "ploidy": 2,
+                              "genome_size": 750,
+                              "complete_busco": 95.2,
+                              "fragment_busco": 1.1,
+                              "missing_busco": 3.7,
+                              "url_institute": "",
+                              "url_fasta": "https://github.com/moold/Genome-data-of-Hanfu-apple",
+                              "version": "HFTH1",
+                              "version_notes": "Zhang et al, 2019"
+                            },
+
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "Cucumis",
+                      "rank": "",
+                      "children": [
+                        {
+                          "id": "Cucumis sativus",
+                          "rank": "species",
+                          "color": "#00400",
+                          "pangenome": true,
+                          "code": "CUCSA",
+                          "common_name": "Cucumber",
+                          "taxonomy_id": 3659,
+                          "url_picture": "/img/species/cucsa.png",
+                          "children": [
+                            {
+                              "id": "CUCSA_ASM407_v2.0",
+                              "rank": "genome",
+                              "sequence_count": 0,
+                              "chromosome_count": 14,
+                              "ploidy": 2,
+                              "genome_size": 193,
+                              "complete_busco": 94.8,
+                              "fragment_busco": 2.4,
+                              "missing_busco": 2.8,
+                              "url_institute": "",
+                              "url_fasta": "ftp://ftp.ensemblgenomes.org/pub/plants/release-41/fasta/cucumis_sativus/",
+                              "version": "2.0",
+                              "version_notes": "Huang et al, 2009"
+                            },
+                            {
+                              "id": "CUCSA_Gy14_v2.0",
+                              "rank": "genome",
+                              "sequence_count": 0,
+                              "chromosome_count": 14,
+                              "ploidy": 2,
+                              "genome_size": 193,
+                              "complete_busco": 89.5,
+                              "fragment_busco": 4.1,
+                              "missing_busco": 6.4,
+                              "url_institute": "",
+                              "url_fasta": "http://cucurbitgenomics.org/organism/16",
+                              "version": "2.0",
+                              "version_notes": "unpublished"
+                            },
+                            {
+                              "id": "CUCSA_PI183967",
+                              "rank": "genome",
+                              "sequence_count": 0,
+                              "chromosome_count": 14,
+                              "ploidy": 2,
+                              "genome_size": 193,
+                              "complete_busco": 94.8,
+                              "fragment_busco": 2.5,
+                              "missing_busco": 2.7,
+                              "url_institute": "",
+                              "url_fasta": "http://cucurbitgenomics.org/organism/6",
+                              "version": "PI183967",
+                              "version_notes": "Qi et al, 2013"
+                            },
+
+                          ]
+                        },
+                        {
+                          "id": "Cucumis melo",
+                          "rank": "species",
+                          "color": "#80808",
+                          "pangenome": false,
+                          "code": "CUCME",
+                          "common_name": "Muskmelon",
+                          "taxonomy_id": 3656,
+                          "url_picture": "/img/species/cucme.png",
+                          "children": [
+                            {
+                              "id": "CUCME_DHL92_v3.6.1",
+                              "rank": "genome",
+                              "sequence_count": 0,
+                              "chromosome_count": 24,
+                              "ploidy": 2,
+                              "genome_size": 450,
+                              "complete_busco": 92,
+                              "fragment_busco": 5.7,
+                              "missing_busco": 2.3,
+                              "url_institute": "",
+                              "url_fasta": "ftp://cucurbitgenomics.org/pub/cucurbit/genome/melon/v3.6.1",
+                              "version": "3.6.1",
+                              "version_notes": "Garcia-Mas et al. 2012"
+                            }
+
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "malvids",
+                  "rank": "",
+                  "children": [
+                    {
+                      "id": "Brassicaceae",
+                      "rank": "",
+                      "children": [
+                        {
+                          "id": "Brassica",
+                          "rank": "",
+                          "children": [
+                            {
+                              "id": "Brassica rapa subsp. rapa",
+                              "rank": "species",
+                              "color": "#80808",
+                              "pangenome": true,
+                              "code": "BRARR",
+                              "common_name": "Turnip",
+                              "taxonomy_id": 51350,
+                              "url_picture": "/img/species/brarr.png",
+                              "children": [
+                                {
+                                  "id": "BRARR_Z1",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 20,
+                                  "ploidy": 2,
+                                  "genome_size": 283,
+                                  "complete_busco": 97,
+                                  "fragment_busco": 0.7,
+                                  "missing_busco": 2.3,
+                                  "url_institute": "",
+                                  "url_fasta": "http://www.genoscope.cns.fr/externe/plants/data/Brapa_proteins.fasta",
+                                  "version": "Z1",
+                                  "version_notes": "Belsner et al, 2018"
+                                },
+                                {
+                                  "id": "BRARR_v3.0",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 20,
+                                  "ploidy": 2,
+                                  "genome_size": 283,
+                                  "complete_busco": 98.1,
+                                  "fragment_busco": 0.6,
+                                  "missing_busco": 1.3,
+                                  "url_institute": "",
+                                  "url_fasta": "http://brassicadb.org/brad/datasets/pub/BrassicaceaeGenome/Brassica_rapa/V3.0/",
+                                  "version": "3.0",
+                                  "version_notes": "Wang et al. (2011); Zhang et al,2018"
+                                },
+
+                              ]
+                            },
+                            {
+                              "id": "Brassica oleracea",
+                              "rank": "species",
+                              "color": "#80808",
+                              "pangenome": true,
+                              "code": "BRAOL",
+                              "common_name": "Wild cabbage",
+                              "taxonomy_id": 3712,
+                              "url_picture": "/img/species/braol.png",
+                              "children": [
+                                {
+                                  "id": "BRAOL_A2_v1.0",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 18,
+                                  "ploidy": 2,
+                                  "genome_size": 488,
+                                  "complete_busco": 80.7,
+                                  "fragment_busco": 3.1,
+                                  "missing_busco": 16.2,
+                                  "url_institute": "",
+                                  "url_fasta": "http://www.ocri-genomics.org/bolbase/login.htm",
+                                  "version": "1.0",
+                                  "version_notes": "Liu et al. (2014)"
+                                },
+                                {
+                                  "id": "BRAOL_HDEM",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 18,
+                                  "ploidy": 2,
+                                  "genome_size": 488,
+                                  "complete_busco": 96.9,
+                                  "fragment_busco": 1,
+                                  "missing_busco": 2.1,
+                                  "url_institute": "",
+                                  "url_fasta": "http://www.genoscope.cns.fr/externe/plants/data/Boleracea_proteins.fasta",
+                                  "version": "HDEM",
+                                  "version_notes": "Belsner et al, 2018"
+                                },
+                                {
+                                  "id": "BRAOL_TO1000",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 18,
+                                  "ploidy": 2,
+                                  "genome_size": 488,
+                                  "complete_busco": 99.5,
+                                  "fragment_busco": 0.1,
+                                  "missing_busco": 0.4,
+                                  "url_institute": "",
+                                  "url_fasta": "ftp://mirrors.vbi.vt.edu/ftp.ncbi.nih.gov/genomes/refseq/plant/Brassica_oleracea/latest_assembly_versions/GCF_000695525.1_BOL",
+                                  "version": "TO1000",
+                                  "version_notes": "Parkin et al. (2014) "
+                                },
+
+                              ]
+                            },
+                            {
+                              "id": "Brassica napus",
+                              "rank": "species",
+                              "color": "#80808",
+                              "pangenome": true,
+                              "code": "BRANA",
+                              "common_name": "Rape",
+                              "taxonomy_id": 3708,
+                              "url_picture": "/img/species/brana.png",
+                              "children": [
+                                {
+                                  "id": "BRANA_Darmor_v8.1",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 38,
+                                  "ploidy": 4,
+                                  "genome_size": 738,
+                                  "complete_busco": 91.2,
+                                  "fragment_busco": 6,
+                                  "missing_busco": 2.8,
+                                  "url_institute": "",
+                                  "url_fasta": "http://appliedbioinformatics.com.au/index.php/Darmor_Tapidor",
+                                  "version": "8.1",
+                                  "version_notes": "Bayer et al. (2017)"
+                                },
+                                {
+                                  "id": "BRANA_Tapidor_v6.3",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 38,
+                                  "ploidy": 4,
+                                  "genome_size": 738,
+                                  "complete_busco": 96.2,
+                                  "fragment_busco": 2.3,
+                                  "missing_busco": 1.5,
+                                  "url_institute": "",
+                                  "url_fasta": "http://appliedbioinformatics.com.au/index.php/Darmor_Tapidor",
+                                  "version": "6.3",
+                                  "version_notes": "Bayer et al. (2017)"
+                                },
+                                {
+                                  "id": "BRANA_v5.0",
+                                  "rank": "genome",
+                                  "sequence_count": 0,
+                                  "chromosome_count": 38,
+                                  "ploidy": 4,
+                                  "genome_size": 738,
+                                  "complete_busco": 98.3,
+                                  "fragment_busco": 0.5,
+                                  "missing_busco": 1.2,
+                                  "url_institute": "",
+                                  "url_fasta": "http://brassicadb.org/brad/datasets/pub/Genomes/Brassica_napus/",
+                                  "version": "5.0",
+                                  "version_notes": "Chalhoub et al. 2014. Science"
+                                },
+
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Arabidopsis thaliana",
+                          "rank": "species",
+                          "color": "#0020f",
+                          "pangenome": false,
+                          "code": "ARATH",
+                          "common_name": "Thale-cress",
+                          "taxonomy_id": 3702,
+                          "url_picture": "/img/species/arath.png",
+                          "children": [
+                            {
+                              "id": "ARATH_Araport11",
+                              "rank": "genome",
+                              "sequence_count": 0,
+                              "chromosome_count": 10,
+                              "ploidy": 2,
+                              "genome_size": 135,
+                              "complete_busco": 99.9,
+                              "fragment_busco": 0,
+                              "missing_busco": 0.1,
+                              "url_institute": "",
+                              "url_fasta": "http://datacommons.cyverse.org/browse/iplant/home/araport/public_data/Araport11_Release_201606/annotation",
+                              "version": "Araport11",
+                              "version_notes": "AGI, 2000"
+                            }
+
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "Theobroma cacao",
+                      "rank": "species",
+                      "color": "#00b0f",
+                      "pangenome": true,
+                      "code": "THECC",
+                      "common_name": "Cacao",
+                      "taxonomy_id": 3641,
+                      "url_picture": "/img/species/thecc.png",
+                      "children": [
+                        {
+                          "id": "THECC_Criollo_v2.0",
+                          "rank": "genome",
+                          "sequence_count": 0,
+                          "chromosome_count": 20,
+                          "ploidy": 2,
+                          "genome_size": 452,
+                          "complete_busco": 99.2,
+                          "fragment_busco": 0.3,
+                          "missing_busco": 0.5,
+                          "url_institute": "",
+                          "url_fasta": "http://cocoa-genome-hub.southgreen.fr/download",
+                          "version": "2.0",
+                          "version_notes": "Argout et al, 2018"
+                        },
+                        {
+                          "id": "THECC_Matina1_6_v1.1",
+                          "rank": "genome",
+                          "sequence_count": 0,
+                          "chromosome_count": 20,
+                          "ploidy": 2,
+                          "genome_size": 452,
+                          "complete_busco": 99.6,
+                          "fragment_busco": 0.1,
+                          "missing_busco": 0.3,
+                          "url_institute": "",
+                          "url_fasta": "https://www.cacaogenomedb.org/Tcacao_genome_v1.1",
+                          "version": "1.1",
+                          "version_notes": "Motamayor et al, 2013"
+                        },
+
+                      ]
+                    },
+                    {
+                      "id": "Citrus",
+                      "rank": "",
+                      "children": [
+                        {
+                          "id": "Citrus medica",
+                          "rank": "species",
+                          "color": "#80808",
+                          "pangenome": false,
+                          "code": "CITME",
+                          "common_name": "Citron",
+                          "taxonomy_id": 171251,
+                          "url_picture": "/img/species/citme.png",
+                          "children": [
+                            {
+                              "id": "CITME_v1.0",
+                              "rank": "genome",
+                              "sequence_count": 0,
+                              "chromosome_count": 18,
+                              "ploidy": 2,
+                              "genome_size": 398,
+                              "complete_busco": 96,
+                              "fragment_busco": 2,
+                              "missing_busco": 2,
+                              "url_institute": "",
+                              "url_fasta": "http://citrus.hzau.edu.cn/orange/download/index.php",
+                              "version": "1.0",
+                              "version_notes": "Wang et al, 2017"
+                            }
+
+                          ]
+                        },
+                        {
+                          "id": "Citrus maxima",
+                          "rank": "species",
+                          "color": "#80808",
+                          "pangenome": false,
+                          "code": "CITMA",
+                          "common_name": "Pomelo",
+                          "taxonomy_id": 37334,
+                          "url_picture": "/img/species/citma.png",
+                          "children": [
+                            {
+                              "id": "CITMA_v1.0",
+                              "rank": "genome",
+                              "sequence_count": 0,
+                              "chromosome_count": 18,
+                              "ploidy": 2,
+                              "genome_size": 380,
+                              "complete_busco": 95.4,
+                              "fragment_busco": 1.5,
+                              "missing_busco": 3.1,
+                              "url_institute": "",
+                              "url_fasta": "http://citrus.hzau.edu.cn/orange/download/index.php",
+                              "version": "1.0",
+                              "version_notes": "Wang et al, 2017"
+                            }
+
+                          ]
+                        },
+                        {
+                          "id": "Citrus sinensis",
+                          "rank": "species",
+                          "color": "#0060f",
+                          "pangenome": false,
+                          "code": "CITSI",
+                          "common_name": "Sweet orange",
+                          "taxonomy_id": 2711,
+                          "url_picture": "/img/species/citsi.png",
+                          "children": [
+                            {
+                              "id": "CITSI_v2.0",
+                              "rank": "genome",
+                              "sequence_count": 0,
+                              "chromosome_count": 18,
+                              "ploidy": 2,
+                              "genome_size": 372,
+                              "complete_busco": 97.4,
+                              "fragment_busco": 1.7,
+                              "missing_busco": 0.9,
+                              "url_institute": "",
+                              "url_fasta": "http://citrus.hzau.edu.cn/orange/download/index.php",
+                              "version": "2.0",
+                              "version_notes": "Xu et al, 2013"
+                            }
+
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+  var node_size = 4, transition_duration = 750, ids = 1;
+
+  var svg_container = d3.select("#homepage_tree");
+
+  var height = 720, width = 720, padding = 20;
+
+  var svg = svg_container.append("svg:svg")
+        .attr("viewBox", "0 0 " + width + " " + height),
+      g = svg.append("g")
+        .attr("transform", "translate(" + (width / 2) + "," + (height / 2) + ")");
+
+  // Define the div for the species popup.
+  var species_popup = d3.select("body").append("div")
+    .attr("class", "species-popup")
+    .style("opacity", 0);
+
+  var zoom = d3.zoom()
+    .scaleExtent([0.5, 40])
+    .translateExtent([[-100, -100], [width + 100, height + 100]])
+    .on("zoom", doZoom);
+
+  svg.call(zoom);
+
+  var tree_layout = d3.cluster()
+    .size([360, (height / 3)])
+    .separation(function(a, b) { return (a.parent == b.parent ? 1 : 1.5) / a.depth; });
+
+  var continue_random_toggle = true;
+
+  function doZoom() {
+    g.attr("transform", "translate(" + (d3.event.transform.k * width / 2) + "," + (d3.event.transform.k * height / 2) + ") " + d3.event.transform);
+  }
+
+  function resetZoom() {
+    svg.transition()
+      .duration(750)
+      .call(zoom.transform, d3.zoomIdentity);
+  }
+
+  // Sort nodes.
+  function sort_greenphyl_tree(json_tree_node) {
+    if (json_tree_node.children) {
+      json_tree_node.children.sort(function (a, b) {
+        return a.id.localeCompare(b.id);
+      });
+      json_tree_node.children.forEach(function (node) {
+        sort_greenphyl_tree(node);
+      });
+    }
+  }
+  sort_greenphyl_tree(greenphyl_tree);
+
+  var tree_data = d3.hierarchy(greenphyl_tree);
+
+  // Compute radial coordinates of a point.
+  function project_radial(x, y) {
+    var angle = (x - 90) / 180 * Math.PI, radius = y;
+    return [radius * Math.cos(angle), radius * Math.sin(angle)];
+  }
+
+  // Returns the path of a link between a node and its parent.
+  function draw_link(d) {
+    if (!d.parent) {
+      console.log("Warning: invalid data for draw_link().");
+      console.log(d);
+      return "";
+    }
+    else if (!d.parent.parent) {
+      // Root node, draw straight lines.
+      return "M" + project_radial(d.parent.x, d.parent.y) + " " + project_radial(d.x, d.y);
+    }
+    else {
+      // Regular node.
+      return "M" + project_radial(d.x, d.y)
+          + " " + project_radial(d.parent.x, d.parent.y);
+//      return "M" + project_radial(d.x, d.y)
+//          + "C" + project_radial(d.x, (d.y + d.parent.y) / 2)
+//          + " " + project_radial(d.parent.x, (d.y + d.parent.y) / 2)
+//          + " " + project_radial(d.parent.x, d.parent.y);
+    }
+  }
+
+  // Hide genomes.
+  function collapse_species(d) {
+    function _collapse_species(d) {
+      if (d.children) {
+        d.children.forEach(function(element) {
+          if (element.data.rank && ("species" == element.data.rank)) {
+            if (element.children) {
+              element._children = element.children;
+              element.children = null;
+            }
+          }
+          else {
+            _collapse_species(element);
+          }
+        });
+      }
+    }
+    _collapse_species(d);
+    update_tree(tree_data);
+  }
+
+  // Toggle children on click.
+  function toggle_node(d) {
+    stop_random_node_switch();
+    if ("root" == d.data.rank) {
+      return;
+    }
+    if (d.children) {
+        d._children = d.children;
+        d.children = null;
+    }
+    else {
+      d.children = d._children;
+      d._children = null;
+    }
+    // Redraw tree.
+    update_tree(tree_data);
+  }
+
+  function get_visible_parent(d) {
+    var lineage = [];
+    var e = d;
+    var x = 0;
+    while (e.parent && (++x < 10000)) {
+      lineage.push(e);
+      e = e.parent;
+    }
+    var parent = d;
+    while (lineage.length) {
+      e = lineage.pop();
+      if (!e.children) {
+        parent = e;
+        lineage = [];
+      }
+    }
+    return parent;
+  }
+
+  function find_node_class(d) {
+    return "node"
+      + (d.children ? " node-internal" : " node-leaf")
+      + (d.data.rank ? " node-" + d.data.rank : "")
+      + ((("species" == d.data.rank) && d.data.pangenome) ? " node-pangenome" : "")
+    ;
+  }
+
+
+  function update_tree(data) {
+
+    var root = tree_layout(data);
+    var nodes = root.descendants(),
+        links = root.descendants().slice(1);
+
+    // Store the old positions for transition.
+    nodes.forEach(function(d) {
+      d.x0 = d.x0 || d.x;
+      d.y0 = d.y0 || d.y;
+      // Keep initial distance to center.
+      d.y = d.y0;
+    });
+
+    var node = g.selectAll(".node").data(nodes, function(d) {
+      // return d.id || (d.id = ++ids);
+      return d.id || (d.id = d.data.id);
+    });
+    var link = g.selectAll(".link").data(links, function(d) { return d.id; });
+
+    var link_enter = link.enter()
+      .append("path")
+        .attr("class", "link")
+        .attr("d", draw_link);
+
+    var node_enter = node.enter()
+      .append("g")
+        .attr("class", find_node_class)
+        .attr("transform", function(d) {
+          return "translate(" + project_radial(d.x, d.y) + ")";
+        })
+        .on('click', toggle_node)
+    ;
+
+    node_enter.append('circle')
+      .attr('r', node_size)
+      .on("mouseover", function(d) {
+        if ("species" == d.data.rank) {
+          species_popup
+            .transition()
+            .duration(200)
+            .style("opacity", .9)
+          ;
+          species_popup
+            .html(
+              (d.data.url_picture ? '<img src="' + d.data.url_picture + '" alt="" class="mx-auto d-block" />' : '')
+              + '<div><span class="header">' + d.data.id + '</span> (species)</div>'
+              + (d.data.common_name ?  'Common name: ' + d.data.common_name  + '<br/>' : '')
+              + 'has a pangenome: ' + (d.data.pangenome ? 'yes' : 'no') + '<br/>'
+            )
+            .style("left", (d3.event.pageX + 10) + "px")
+            .style("top", (d3.event.pageY - 10) + "px")
+          ;
+        }
+        else if ("genome" == d.data.rank) {
+          species_popup
+            .transition()
+            .duration(200)
+            .style("opacity", .9)
+          ;
+          species_popup
+            .html(
+              '<div><span class="header">' + d.data.id + '</span></div>'
+              + 'Ploidy: ' + d.data.ploidy + 'x<br/>'
+              + 'Chromosome Count: ' + d.data.chromosome_count + '<br/>'
+              + 'Genome size: ' + d.data.genome_size + 'Mbp<br/>'
+              + 'Version: ' + d.data.version + '<br/>'
+            )
+            .style("left", (d3.event.pageX + 10) + "px")
+            .style("top", (d3.event.pageY - 10) + "px")
+          ;
+        }
+        else {
+          species_popup
+            .transition()
+            .duration(200)
+            .style("opacity", .9)
+          ;
+          species_popup
+            .html(
+              '<div>' + d.data.id + '</div>'
+            )
+            .style("left", (d3.event.pageX + 10) + "px")
+            .style("top", (d3.event.pageY - 10) + "px")
+          ;
+        }
+      })
+      .on("mouseout", function(d) {
+        species_popup
+          .transition()
+          .duration(500)
+          .style("opacity", 0)
+        ;
+      })
+    ;
+
+    node_enter.append("text")
+      .attr("dy", ".35em")
+      .attr("x", function(d) {
+        return d.x < 180 === !d.children ? 6 : -6;
+      })
+      .style("text-anchor", function(d) {
+        return d.x < 180 === !d.children ? "start" : "end";
+      })
+      .attr("transform", function(d) {
+        return "rotate(" + (d.x < 180 ? d.x - 90 : d.x + 90) + ")";
+      })
+      .text(function(d) {
+        return (
+          d.data.rank.match(/^(species|genome)$/) ?
+            d.data.id
+            : (d.children ? "" : d.data.id)
+        );
+      });
+
+    // Update on changes.
+    var link_update = link_enter.merge(link);
+
+    // Transition back to the parent element position
+    link_update.transition()
+        .duration(transition_duration)
+        .attr('d', function(d) { return draw_link(d) });
+
+    // Remove any exiting links.
+    var link_exit = link.exit().transition()
+        .duration(transition_duration)
+        .attr('d', function(d) {
+          var parent = get_visible_parent(d);
+          var center = {
+            "x": parent.x0,
+            "y": parent.y0,
+            "parent": {
+              "x": parent.x0,
+              "y": parent.y0
+            }
+          };
+          return draw_link(center)
+        })
+        .remove();
+
+    var node_update = node_enter.merge(node);
+
+    // Transition to the proper position for the node.
+    node_update.transition()
+      .duration(transition_duration)
+      .attr("class", find_node_class)
+      .attr("transform", function(d) {
+          return "translate(" + project_radial(d.x, d.y) + ")";
+       });
+
+    // Update the node attributes and style.
+    node_update.select('.node circle')
+      .attr('r', node_size)
+      .attr('cursor', 'pointer');
+
+    node_update.select('.node text')
+      .transition()
+      .duration(transition_duration)
+      .style("text-anchor", function(d) {
+        return d.x < 180 === !d.children ? "start" : "end";
+      })
+      .attr("x", function(d) {
+        return d.x < 180 === !d.children ? 6 : -6;
+      })
+      .attr("transform", function(d) {
+        return "rotate(" + (d.x < 180 ? d.x - 90 : d.x + 90) + ")";
+      })
+      .text(function(d) {
+        return (
+          d.data.rank.match(/^(species|genome)$/) ?
+            d.data.id
+            : (d.children ? "" : d.data.id)
+        );
+      });
+
+
+    // Remove any exiting nodes
+    var node_exit = node.exit().transition()
+        .duration(transition_duration)
+        .attr("transform", function(d) {
+            return "translate(" + project_radial(d.parent.x, d.parent.y) + ")";
+        })
+        .remove();
+
+    // On exit reduce the node circles size to 0
+    node_exit.select('circle')
+      .attr('r', 1e-6);
+
+    // On exit reduce the opacity of text labels
+    node_exit.select('text')
+      .style('fill-opacity', 1e-6);
+
+    // Store the old positions for transitions.
+    nodes.forEach(function(d) {
+      d.x0 = d.x;
+      d.y0 = d.y;
+    });
+
+  }
+
+  // Lists available pangenomes.
+  var pangenome_nodes = [];
+  function collect_pangenomes(d) {
+    if (d.children) {
+      d.children.forEach(function(element) {
+        // Exclude BRADI as it has too many children for a nice display.
+        if (element.data.pangenome && ('BRADI' != element.data.code)) {
+          pangenome_nodes.push(element);
+        }
+        else {
+          collect_pangenomes(element);
+        }
+      });
+    }
+  }
+
+  var random_node_switch_callback;
+  function stop_random_node_switch() {
+    continue_random_toggle = false;
+    clearTimeout(random_node_switch_callback);
+  }
+  // Randomly closes and opens nodes.
+  function random_node_switch() {
+    var expand_node = pangenome_nodes[Math.floor(Math.random() * pangenome_nodes.length)];
+    if (expand_node._children) {
+      expand_node.children = expand_node._children;
+      expand_node._children = null;
+    }
+    expand_node = pangenome_nodes[Math.floor(Math.random() * pangenome_nodes.length)];
+    if (expand_node._children) {
+      expand_node.children = expand_node._children;
+      expand_node._children = null;
+    }
+    update_tree(tree_data);
+    if (continue_random_toggle) {
+      random_node_switch_callback = setTimeout(function() {
+          collapse_species(tree_data);
+          random_node_switch();
+        },
+        2000
+      );
+    }
+  }
+
+  // Init display.
+  update_tree(tree_data);
+  collapse_species(tree_data);
+  // Expand 2 random nodes after 2 seconds.
+  collect_pangenomes(tree_data);
+  random_node_switch_callback = setTimeout(random_node_switch, 2000);
+
+});
+
+
+</script>
+</div>
+
+</main>
+
+</div>
+</body>
+</html>

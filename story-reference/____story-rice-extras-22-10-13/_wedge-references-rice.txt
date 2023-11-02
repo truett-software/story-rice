@@ -1,0 +1,34 @@
+Rice Wedge
+
+https://wedge.ontomatica.io/USDA-FNDDS_-_19-09-05/Wedge?q=facet_A_FNDDS3_View:1/rice&group=facet_A_FNDDS3_View
+
+https://wedge.ontomatica.io/USDA-FNDDS_-_19-09-05/Wedge?q=facet_A_FCID_MPED:7/facet_A_FNDDS3_Food:6737&group=facet_A_FCID_MPED
+
+
+! NO rice
+https://wedge.ontomatica.io/Specialty-Foods_-_19-09-05/Wedge
+
+Food Data Kit (no nutrients)
+https://wedge.ontomatica.io/Food-Data-Kit_-_19-09-06/Wedge?q=facet_FCID_MPED:7
+
+Ref Lib
+https://wedge.ontomatica.io/Reference-Library_-_19-02-06/Wedge?q=facet_23_Taxa_Plantae:2117
+
+ChEFS
+starch = glucan
+https://wedge.ontomatica.io/ChEFS_-_19-09-06/Wedge?q=facet_ChEBI_R105:127313
+
+ChEMATIC
+starch
+https://wedge.ontomatica.io/ChEMATIC_-_19-09-06/Wedge?q=facet_MD_09:68298101&group=facet_MD_09
+
+
+DBpedia
+https://dbpedia.org/page/Rice
+
+Wikidata
+https://www.wikidata.org/wiki/Q5090
+
+https://www.wikidata.org/wiki/Q161426
+
+

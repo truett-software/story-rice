@@ -1,0 +1,1393 @@
+<!--
+opportunities:
+add service worker
+use amp-list-mustache and amp-ads for customized ads
+improve sidebar - see E:\Google-Drive\jaideep-projects\_Story___Rice-Wheat\___story-rice\__sample-new\index.html
+see https://visualstories.com/@swaralijambhale and 'Effective Ayurvedic Herbs for Hair Growth' for background shading for text
+-->
+<!DOCTYPE html><html amp lang="en-US"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+
+<link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
+<link rel="preload" as="image"  href="_front_w-4945_h-3601_.svg">
+
+<link rel="preload" href="https://amp.dev/static/fonts/noto-sans-v7-latin-regular.woff2" as="font" crossorigin="">
+<link rel="preload" href="https://amp.dev/static/fonts/noto-sans-v7-latin-700.woff2"     as="font" crossorigin="">
+<link rel="preload" href="https://amp.dev/static/fonts/poppins-v5-latin-700.woff2"       as="font" crossorigin="">
+<link rel="preload" href="https://amp.dev/static/fonts/fira-mono-v7-latin-500.woff2"     as="font" crossorigin="">
+
+<meta name="name" content="Story of Rice">
+<meta name="description" content="More about the Story of Rice">
+
+<link rel="shortcut icon" itemprop="image" href="https://ontomatica.io/static/image/onto_symb_w421_h421.png">
+
+<script async                               src="https://cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-story"    src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+<script async custom-element="amp-sidebar"  src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+<script async custom-element="amp-bind"     src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+<script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+<script async custom-element="amp-gist"     src="https://cdn.ampproject.org/v0/amp-gist-0.1.js"></script>
+<script async custom-element="amp-twitter"  src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
+<script async custom-element="amp-video"    src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+<script async custom-element="amp-gist"     src="https://cdn.ampproject.org/v0/amp-gist-0.1.js"></script
+
+<!-- invalid in amp-story -->
+<script async custom-element="amp-iframe"   src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+<script async custom-element="amp-google-document-embed" src="https://cdn.ampproject.org/v0/amp-google-document-embed-0.1.js"></script>
+
+<style amp-custom>
+
+@font-face{font-family:"Noto Sans";font-style:normal;font-weight:400;font-display:swap;src:local("Noto Sans"),local("NotoSans"),url(https://amp.dev/static/fonts/noto-sans-v7-latin-regular.woff2) format("woff2"),url(https://amp.dev/static/fonts/noto-sans-v7-latin-regular.woff) format("woff")}
+
+@font-face{font-family:"Noto Sans";font-style:normal;font-weight:700;font-display:swap;src:local("Noto Sans Bold"),local("NotoSans-Bold"),url(https://amp.dev/static/fonts/noto-sans-v7-latin-700.woff2) format("woff2"),url(https://amp.dev/static/fonts/noto-sans-v7-latin-700.woff) format("woff")}
+
+@font-face{font-family:Poppins;font-style:normal;font-weight:700;font-display:swap;src:local("Poppins Bold"),local("Poppins-Bold"),url(https://amp.dev/static/fonts/poppins-v5-latin-700.woff2) format("woff2"),url(https://amp.dev/static/fonts/poppins-v5-latin-700.woff) format("woff")}
+
+@font-face{font-family:"Fira Mono";font-style:normal;font-weight:400;font-display:swap;src:local("Fira Mono"),local("FiraMono"),url(https://amp.dev/static/fonts/fira-mono-v7-latin-500.woff2) format("woff2"),url(https://amp.dev/static/fonts/fira-mono-v7-latin-500.woff) format("woff")}
+
+*{font-family: "Noto Sans", Helvetica, Arial, sans-serif; font-weight: 400;}
+
+.logo-1 {display:flex;justify-content:center;}
+/* .logo{max-width: 32px; min-height: 44px; margin: -50px 0px 0px 10px; box-shadow: 0px 0px 22px -8px rgba(0,0,0,0.75);} */
+
+.center {display:block; margin-left:auto; margin-right: auto; width:50%;}
+
+.gradient--top {background:linear-gradient(to top, transparent, transparent 50%, rgba(0, 0, 0, 0.5) 60%, #000);}
+.gradient--top {background:linear-gradient(to top, transparent, transparent 50%, rgba(0, 0, 0, 0.5) 60%, #000);}
+
+amp-story {font-family: "Noto Sans",serif; color: #fff;}
+amp-story-page {background-color: #000;}
+amp-story-grid-layer{padding: 68px 10px 32px;}
+
+.yellow_border_bottom {border-bottom: 5px solid #fc0; width: 10%; margin: 0px 45%; padding: 5% 0px 0px;}
+
+.tap_button_left {float: left; margin: 0; top:40%; position:relative; width: 19px; height:35px; color: white; z-index:1;}
+.tap_button_right {float: right; margin: 0; top:40%; position:relative; width: 19px; height:35px; color: white; z-index:1;}
+
+.pad18 {padding-bottom:18px;}
+.tpad20 {padding-top:20px;}
+
+/*
+.chevron-right {background-image: url(chevron-right.svg); filter: brightness(0) invert(1);}
+.chevron-left {background-image: url(chevron-left.svg); filter: brightness(0) invert(1);}
+*/
+
+/*
+Permalink - use to edit and share this gradient:
+http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+1,0.65+99
+*/
+.{
+background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.65) 99%, rgba(0,0,0,0.65) 100%);
+/* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0.65) 99%,rgba(0,0,0,0.65) 100%);
+/* Chrome10-25, Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0.65) 99%,rgba(0,0,0,0.65) 100%);
+/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#00000000", endColorstr="#a6000000",GradientType=0 );
+/* IE6-9 */
+margin: 0px -30% -40%; padding: 0px 30% 40%;
+}
+
+.center{text-align: center;}
+/* #popup-text > div > div {display: flex; align-items: center; justify-content: center;} */
+h1 {padding-bottom: 2.5%}
+h2 {}
+p {}
+amp-story-grid-layer.bottom {align-content:end;}
+p.popup {color:black; margin:15px 10%;}
+
+.onto-edit-regular--18, .onto-edit-regular--16, .onto-edit-regular--14 {font-family: "Noto Sans", Helvetica, Arial, sans-serif; font-weight: 400;}
+.onto-edit-regular--18 {font-size: 18px; letter-spacing: .5px; line-height: 1.5;}
+.onto-edit-regular--16 {font-size: 16px; letter-spacing: .5px; line-height: 1.5;}
+.onto-edit-regular--14 {font-size: 14px; letter-spacing: .3px; line-height: 1.429;}
+
+.onto-edit-medium--48 {font-family: "Noto Sans", Helvetica, Arial, sans-serif; font-weight: 400;}
+.onto-edit-medium--48 {font-size: 48px; letter-spacing: .5px; line-height: 1.211;}
+.onto-brand-bold--22, .onto-brand-bold--12 {font-family: "Noto Sans", sans-serif; text-transform: uppercase; font-weight: 400;}
+.onto-brand-bold--22 {font-size: 22px; letter-spacing: 3px; line-height: 1.273;}
+.onto-brand-bold--12 {font-size: 12px; letter-spacing: 3px; line-height: 1.5;}
+
+amp-story-grid-layer[template="vertical"].logo-layer {padding: 20px; justify-items: normal; -ms-flex-line-pack: start; align-content: start;}
+
+amp-story-grid-layer[template="vertical"].logo-layer .logo-wrapper {max-width: 30px;}
+@media (max-width: 768px){amp-story-grid-layer[template="vertical"].logo-layer .logo-wrapper {max-width: 25px;}}
+
+amp-story-grid-layer[template="vertical"].logo-layer amp-img {opacity: 0.5;}
+
+amp-story-grid-layer[template="vertical"].credit-layer {padding: 0 30px 0px 5px; -ms-flex-line-pack: end; align-content: end;}
+@media (max-width: 480px){amp-story-grid-layer[template="vertical"].credit-layer {padding: 0 20px 0px 5px; }}
+
+amp-story-grid-layer[template="vertical"].credit-layer p.credit {padding: 0; color: #ddd; text-shadow: 1px 1px 0px #000; font-size: 15px; line-height: 20px; /* text-transform: uppercase; */ font-family: "Noto Sans", Arial, sans-serif; text-align: left; max-width: inherit; font-style: normal; font-weight: bold;}
+@media (max-width: 480px){amp-story-grid-layer[template="vertical"].credit-layer p.credit {font-size: 9px; line-height: 16px; }}
+
+/* SMALL DEVICES (Portrait phones, 320px and up) */
+@media only screen and (min-width: 320px){#front{padding-top:300px;}}
+
+/* SMALL DEVICES (Portrait phones, 320px and up) */
+@media only screen and (min-width: 320px){.image-gradient {background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 40%);}
+.tap_button_left{float: left; margin: 0; top: 40%; position: relative; height: 35px; color: white; z-index: 1;}
+.tap_button_right{float: right; margin: 0; top: 40%; position: relative; height: 35px; color: white; z-index: 1;}
+.title_lower_third_cover {width:90%; margin: 0 auto;}
+.title_lower_third_cover h1 {/*padding-top: 42px;*/ font-size:38px;}
+.yellow_border_bottom {padding-top: 20px; width: 40px; margin: 0 auto;}}
+
+/* MEDIUM DEVICES (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px){
+.title_lower_third_cover {width:90%; margin: 0 auto;}
+.title_lower_third_cover h1 {/*padding-top: 42px;*/ font-size:38px;}
+.tap_button_left{float: left; margin: 0; top: 40%; position: relative; /*width: 10%;*/ color: white; z-index: 1;}
+.tap_button_right{float: right; margin: 0; top: 40%; position: relative; /*width: 10%;*/ color: white; z-index: 1;}
+.image-gradient {background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 40%);}
+.yellow_border_bottom {padding-top: 20px; width: 40px; margin: 0 auto;}}
+
+/* LARGE DEVICES (large laptops and desktop_ngps, 1024px and up) */
+@media only screen and (min-width: 1024px){
+.title_lower_third_cover {/*padding-top: 42px;*/ width:70%; margin:0 auto;}
+.title_lower_third_cover h1 {font-size:48px; /*font-weight:600;*/}
+.title_lower_third_cover h2 {width:75%; margin:0 auto;}
+.tap_button_left, .tap_button_right {display:none;}
+}
+
+/* EXTRA LARGE SCREENS */
+@media only screen and (min-width: 1600px){
+.title_lower_third_cover {/*padding-top: 42px;*/ width:70%; margin:0 auto;}
+.title_lower_third_cover h1 {font-size:48px; /*font-weight:600;*/}
+.title_lower_third_cover h2 {width:75%; margin:0 auto;}}
+
+@keyframes circleArrowPath{from{stroke-dashoffset:1000}to{stroke-dashoffset:0}}
+@keyframes circleArrowPathTwo{from{stroke-dashoffset:1000}to{stroke-dashoffset:0}}
+
+@media(max-width:749px){amp-story-page[active] .zoomInMobile{-webkit-animation:"zoomIn" 18s forwards;animation:"zoomIn" 18s forwards}amp-story-page[active] .zoomOutMobile{-webkit-animation:"zoomOut" 18s forwards;animation:"zoomOut" 18s forwards}}
+
+@keyframes fadeInDesktop{0%{opacity:.2}100%{opacity:1}}
+
+amp-story-page[active] .fadeInDesktop{-webkit-animation:"fadeInDesktop" 5s forwards; animation:"fadeInDesktop" 5s forwards;}
+.extraPad {padding:0 10px; max-width:600px;}
+
+/* control specific slide */
+#slide-02 .grid-area {grid-area:middle-third / middle-third / middle-third / middle-third}
+
+.sideBarNav {width:300px}
+.sideBarNav {background-color:black; padding:20px}
+.sideBarNav h3 {font-size:17px; line-height:25px}
+.sideBarNav .bottom-menu {border-top:1px solid #fff; margin-top:20px; padding-top:10px}
+.sideBarNav ul {margin:20px 0 0 0; padding:0}
+.sideBarNav ul li {font-size:15px; line-height:20px; list-style:none; margin:0 0 20px 0}
+.sideBarNav ul li a {color:white; font-size:15px; line-height:20px; text-decoration:none}
+
+.sideBarNav ul li a:before {display:inline-block; content:""; width:12px; height:12px; background-image:url("https://ontomatica.io/static/image/onto_symb_w421_h421.png"); background-size:contain; background-repeat:no-repeat; vertical-align:middle; margin-left:7px; padding-right:5px;}
+
+.sideBarNav .close {position:absolute; right:0; top:0; width:48px; height:48px; opacity:1; background:transparent; border:0; cursor:pointer}
+.sideBarNav .close:before,.sideBarNav .close:after {position:absolute; right:22px; top:20px; content:" "; height:24px; width:2px; background-color:#fff}
+.sideBarNav .close:focus {outline:0}
+.sideBarNav .close:before {transform:rotate(45deg)}
+.sideBarNav .close:after {transform:rotate(-45deg)}
+@media(max-height:620px) {.menu {width:100%}
+
+.ap--sampler{margin-bottom:7em;}
+@media (min-width:768px){.ap--sampler{margin-bottom:8vw;}}
+
+.ap--sampler .ap-m-copy{grid-column:3/13;padding:0 20px;margin-bottom:1.5em;}
+@media (min-width:768px){.ap--sampler .ap-m-copy{padding-left:20px;margin-bottom:3em;}}
+@media (min-width:1680px){.ap--sampler .ap-m-copy{grid-column:5/13;}}
+
+.ap--sampler .ap-m-copy-center{grid-column:6/20;}
+.ap--sampler .ap-m-copy-center h2{font-size:2.5rem;margin:0;}
+@media (min-width:768px){.ap--sampler .ap-m-copy-center h2{font-size:3.5rem;}}
+
+.ap--sampler .ap-m-copy-center .ap-a-ico{width:4em;height:4em;margin:0 auto .5em;}
+.ap-o-sampler{grid-column:3/-1;width:100%;max-width:1024px;padding-left:20px;}
+@media (min-width:1680px){.ap-o-sampler{grid-column:5/-3;padding-left:0;}}
+
+.ap-o-sampler-header{background:linear-gradient(225deg,#29323c,#485563 75%);font-size:.8125rem;font-family:Poppins,sans-serif;font-weight:700;color:#fff;padding:1.125em 1.75em;}
+.ap-o-sampler-tab-bar{display:flex;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:nowrap;background:#29323c;}
+.ap-o-sampler-tab{cursor:pointer;padding:1.125em 1.75em;border-right:1px solid #3d444d;background:#29323c;}
+.ap-o-sampler-tab.active{background:#3d444d;}
+.ap-o-sampler-tab.active span{opacity:1;}
+.ap-o-sampler-tab-title{font-size:.8125rem;font-family:Poppins,sans-serif;font-weight:700;color:#fff;opacity:.5;}
+.ap-o-sampler-iframe{width:100%;height:auto;background:linear-gradient(45deg,#48525c,#101923);box-shadow:0 15px 50px 0 rgba(0,0,0,.4);}
+.ap-o-sampler-iframe [placeholder]{display:flex;}
+[placeholder] .ap-o-sampler-iframe-source{width:calc(50% - 4px);}
+.ap-o-sampler-link{margin-top:1em;display:inline-block;}
+
+/* .-ox fails */
+.-ox{background:linear-gradient(225deg,#00dcc0 0,#1F64FF 75%); grid-column:1/-1; position:relative; width:100%; margin-left:10px; border-bottom-left-radius:4em;-webkit-clip-path:polygon(0 0,100% 0,100% calc(100% - 2em),4em 100%,0 100%);clip-path:polygon(0 0,100% 0,100% calc(100% - 2em),4em 100%,0 100%)}
+
+@media (min-width:768px){.-ox{margin-left:64px; border-bottom-left-radius:6.25em; -webkit-clip-path:polygon(0 0,100% 0,100% calc(100% - 3em),6.25em 100%,0 100%); clip-path:polygon(0 0,100% 0,100% calc(100% - 3em),6.25em 100%,0 100%)}}
+
+amp-story {color: white;border: none;}
+.opacity {opacity: 0.7;}
+.opacity2 {opacity: 0.6;}
+.opacity3 {opacity: 0.3;}
+amp-story-page {background-color: #000;}
+.key {text-align: center;}
+.logo{display: inline-block;margin-top: 10%;}
+.titles_page{text-align: center;}
+.heading {width: 100%;font-size: 50px;font-weight: 300;display: inline-block;}
+.subheading {display: inline-block;font-size: 30px;color: white;font-weight: normal;width: 100%;}
+.titles {text-align: center;}
+.author {display: flex;width: 100%;justify-content: center;align-items: center;text-align: center;font-size: 20px;margin-top: 8%;}
+.titles3 {text-align: center;}
+.subheading3 {display: inline-block;width: 100%;font-size: 30px;color: white;font-weight: normal;padding-top:2%;}
+p span {background-color: #FFCA03;}
+.alert {display: inline-block;background-color: #D10E02;font-size: 25px;color: white;font-weight: normal;text-align: justify;margin: 1% 0 0 0;}
+.author:before,.author:after{content: "";border-top: 2px solid;margin: 0 20px 0 0;flex: 1 0 20px;}
+.author:after {margin: 0 0 0 20px;}
+.heading2 {font-size: 75px;display: inline-block;color: white;background-color: #0556F0;}
+.subheading2 {display: inline-block;font-size: 27px;padding: 2% 15% 0 15%;color: white;font-weight: normal;}
+.titles2 {text-align: center;}
+.heading3 {font-size: 50px;display: inline-block;color: white;background-color: #0556F0;}
+a {text-decoration: none;color: white;}
+.space {margin-bottom: 60px;}
+.buttonwrap {text-align: center;}
+.button {display: inline-block;background-color: #FFCA03; border-radius: 5px 5px 5px 5px;font-weight: bold;padding: 1%;}
+
+@media screen and (max-width: 1024px){
+.key {text-align: center;}
+.logo{display: inline-block;filter:drop-shadow(1px 1px 3px gray);}
+.heading {font-size: 60px;display: inline-block;color: white;}
+.heading2 {font-size: 65px;display: inline-block;color: white;background-color: #0556F0;}
+.mobile {padding-top: 55%;}
+.heading3 {font-size: 75px;display: inline-block;color: white;background-color: #0556F0;}
+.titles {text-align: center;position: static;}
+.subheading {display: inline-block;font-size: 30px;color: white;font-weight: normal;}
+.subheading3 {display: inline-block;text-align: center;font-size: 30px;color: white;font-weight: normal;padding-top:2%;}
+p span {background-color: #FFCA03;}
+.titles3 {text-align: center;}
+.alert {display: inline-block;background-color: #D10E02;font-size: 15px;color: white;font-weight: normal;text-align: justify;}
+.author {display: flex;width: 100%;justify-content: center;align-items: center;text-align: center;font-size: 30px;}
+.author:before,.author:after{content: "";border-top: 5px solid;margin: 0 20px 0 0;flex: 1 0 20px;}
+.author:after {margin: 0 0 0 20px;}
+}
+
+@media screen and (max-width: 767px) and (min-width: 375px){
+.heading {font-size: 25px;display: inline-block;padding: 10% 0 0 0;}
+.subheading {display: inline-block;font-size: 17px;color: white;font-weight: normal;}
+.key {text-align: left;}
+p span {background-color: #FFCA03;}
+ .logo{display: inline-block;}
+.titles {text-align: left;}
+.opacity {opacity: 0.7;}
+.heading2 {font-size: 25px;display: inline-block;color: white;background-color: #0556F0;}
+.mobile {padding-top: 75%;}
+.heading3 {font-size: 25px;display: inline-block;color: white;background-color: #0556F0;}
+.subheading2 {display: inline-block;font-size: 17px;color: white;padding: 5% 0 0 0;font-weight: normal;}
+.subheading3 {display: inline-block;text-align: center;font-size: 15px;color: white;font-weight: normal;padding-top: 2%;}
+.alert {display: inline-block;background-color: #D10E02;font-size: 10px;color: white;font-weight: normal;text-align: justify;}
+.titles2 {text-align: center;}
+.titles3 {text-align: center;}
+.heading3 {text-align: center;}
+.buttonwrap {text-align: center;}
+.button {display: inline-block;background-color: #FFCA03; border-radius: 5px 5px 5px 5px;font-weight: bold;color: white;padding: 2%;}
+a {text-decoration: none;color: #CD2A3B;}
+.heading4 {width: 100%;font-size: 40px;font-weight: 200;display: inline-block;}
+.space{display: none;}
+.author {display: flex;width: 50%;justify-content: center;align-items: center;text-align: center;font-size: 15px; }
+.author:before,.author:after {content: "";border-top: 2px solid;}
+.author:after {display: none;}
+}
+
+.panel_text {padding-left: 5%;color: #fff;position: relative;z-index: 2;}
+.panel_bar {background: #f65002;width: 4px;position: absolute;left: 0;top: 3px;height: calc(100% - 8px);}
+.panel_text p {font-weight: 600;font-size: 18px;line-height: 22px;margin: 0;}
+.panel_text h1 {text-transform: uppercase;font-size: 28px;line-height: 28px;margin-bottom: 8px;}
+.vingette-bottom::after, .vingette-both::after {content: "";position: absolute;bottom: -2px;left: 0;width: 100%;height: 50%;background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.7), rgba(0,0,0,1));z-index: 1;}
+.vingette-both::before {content: "";position: absolute;top: 0;left: 0;width: 100%;height: 20%;background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0.8));}
+.true-bottom {position: absolute;bottom: 20px;}
+.true-bottom.cta {bottom: 30px;}
+
+.-a-topcenter {justify-content: center}
+
+.-bc-blacktransparent:before {background-color: #000}
+.-bc-blacktransparent:before {opacity: .6}
+
+.-bg-black {background: #000}
+.-bg-white {background: #fff}
+.-va-topcenter {align-content: flex-start}
+
+.fi-as-text-block.-bc-:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: -20px;
+	bottom: -20px;
+	left: -200px;
+	right: -200px;
+	z-index: -1
+}
+.fi-as-text {display: flex;flex-wrap: wrap;position: relative}
+.fi-as-text-block {position: relative}
+.-a-middlecenter {justify-content: center}
+.-s-100 {width: 100%}
+.-a-middleleft {justify-content: flex-start}
+.fi-as-roofline {display: inline-block;padding: 5px 10px}
+.-c-whiteonblue {color: #fff;background: #0063a7}
+.fi-as-roofline-wrapper {padding-bottom: 15px;font-size: 3.5vw;display: flex}
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<link rel="canonical" href="https://afdsi.com/story-rice/" />
+<title>
+Story Template
+</title>
+</head>
+<body>
+
+<amp-story
+  standalone
+  title="Structured Data Linter Project"
+  publisher="Ontomatica"
+  publisher-logo-src="https://place-hold.it/260x58?text=Ontomatica-logo&bold&fontsize=23"
+  poster-portrait-src="https://place-hold.it/300x400?text=Story-of-Rice&bold&fontsize=23"
+  poster-square-src="https://place-hold.it/300x300?text=Story-of-Rice&bold&fontsize=23"
+  poster-landscape-src="https://place-hold.it/400x300?text=Story-of-Rice&bold&fontsize=23"
+  supports-landscape
+>
+
+<amp-sidebar class="sideBarNav" layout="nodisplay" id="sideBarNav">
+<div class="top-menu">
+<h2>
+Table of Contents
+</h2>
+<h3>
+Structured Data Linter Project
+</h3>
+<button on="tap:sideBarNav.close" class="close"></button>
+</div>
+<div class="bottom-menu">
+<ul>
+<li><a href="#page=slide-00">Opening</a></li>
+<li><a href="#page=slide-01">Page 01 left & right; background preferred blue</a></li>
+<li><a href="#page=slide-02">Page 02 Biologist</a></li>
+<li><a href="#page=slide-03">Page 03 Breeder</a></li>
+<li><a href="#page=slide-04">Page 04 Farmer</a></li>
+<li><a href="#page=slide-05">Page 05 Information Manager</a></li>
+<li><a href="#page=slide-06">Page 06 Trader</a></li>
+<li><a href="#page=slide-07">Page 07 Sociologist</a></li>
+<li><a href="#page=slide-08">Page 08 Food Manufacturer</a></li>
+<li><a href="#page=slide-09">Page 09 Nutritionist</a></li>
+<li><a href="#page=slide-10">Page 10 Chef</a></li>
+<li><a href="#page=slide-11">Page 11 Consumer</a></li>
+<li><a href="#page=slide-12">Page 12 Combination</a></li>
+<li><a href="#page=slide-13">Page 13 Benefits</a></li>
+<li><a href="#page=slide-14">Page 14 All together</a></li>
+<li><a href="#page=slide-15">Page 15 iframe-WEDGE</a></li>
+<li><a href="#page=slide-16">Page 16 iframe-Force Directed Graph</a></li>
+<li><a href="#page=slide-17">Page 17 left-right</a></li>
+<li><a href="#page=slide-18">Page 18 background animated</a></li>
+<li><a href="#page=slide-19">page 19 half-n-half</a></li>
+<li><a href="#page=slide-20">Page 20 video</a></li>
+<li><a href="#page=slide-21">Page 21 background pulse</a></li>
+<li><a href="#page=slide-22">page 22 CTA link</a></li>
+<li><a href="#page=slide-23">page 23 simple</a></li>
+<li><a href="#page=slide-24">page 24 twitter</a></li>
+<li><a href="#page=slide-25">Page 25 gist</a></li>
+<li><a href="#page=slide-26">page 26 background subways</a></li>
+<li><a href="#page=slide-27">page 27 background preferred blue</a></li>
+<li><a href="#page=slide-28">page 28 avocado PDF; bottom-up</a></li>
+<li><a href="#page=slide-29">Page 29 entrance left and right</a></li>
+<li><a href="#page=slide-30">Page 30 (repeat)</a></li>
+<li><a href="#page=slide-31">page 31 failed pseudo class for text background</a></li>
+</ul>
+</div>
+</amp-sidebar>
+
+<amp-story-page id="slide-00">
+
+<amp-story-grid-layer template="vertical">
+<amp-img data-hero id="front" class="" src="_front_w-4945_h-3601_.svg" layout="responsive" width="4945" height="3601"></amp-img>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="gradient--top top" template="vertical">
+<amp-img data-hero id="onto-logo" class="center" src="_ontomatica_w-600_h-135_.svg" layout="fixed" width="600" height="135">
+</amp-img>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="bottom" template="vertical"><div class="content">
+<div class="title_lower_third_cover center">
+<h1 class="onto-edit-medium--48" animate-in="fade-in" animate-in-duration="2500ms">
+Structured Data Linter Project
+</h1>
+<!-- <h2 class="onto-edit-regular--14" animate-in="fade-in" animate-in-duration="2500ms"> -->
+<!-- Part of the Series &quot;Ontologies for Agriculture&quot; -->
+<!-- </h2> -->
+<p class="onto-brand-bold--12" animate-in="fade-in" animate-in-duration="2500ms">
+by Ankita Dhandha
+</p>
+</div>
+</div>
+</amp-story-grid-layer>
+</amp-story-page>
+
+<amp-story-page id="slide-01">
+
+<amp-story-grid-layer template="fill">
+<amp-img
+	src="_background-1F64FF-w1000-h1000_.svg"
+	width="1000"
+	height="1000"
+	layout="responsive"
+	class=""
+></amp-img>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical">
+<div class="logo-wrapper">
+<amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img>
+</div>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer template="thirds" class="vingette-both" >
+<div class="titles2" grid-area="upper-third">
+<h1 class="heading2" animate-in="fly-in-left" animate-in-duration="0.5s">
+Jelly jujubes
+</h1>
+<p class="subheading2" animate-in="whoosh-in-right" animate-in-duration="0.5s">
+Wafer cheesecake lollipop fruitcake danish powder. Pudding croissant biscuit icing. Gummi bears fruitcake cake wafer cake cookie caramels marshmallow bonbon.
+</p>
+</div>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer template="thirds" class="vingette-both" >
+<div class="titles2" grid-area="lower-third">
+<h1 class="heading2" animate-in="fly-in-left" animate-in-duration="0.5s">
+Gingerbread biscuit
+</h1>
+<p class="subheading2" animate-in="whoosh-in-right" animate-in-duration="0.5s">
+Gingerbread biscuit gummies cupcake. Powder sugar plum chocolate cake chocolate cake cake. Marzipan brownie halvah. Marzipan soufflé bear claw gummi bears muffin.
+</p>
+</div>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical">
+<p class="credit">Ankita Dhandha &ndash; Ontomatica</p>
+</amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information" data-title="More information about Rice Biologists" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment>
+</amp-story-page>
+
+<amp-story-page id="slide-02">
+
+<amp-story-grid-layer template="fill"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical">
+<div class="logo-wrapper">
+<amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+<amp-story-grid-layer class="" template="vertical"><amp-img class="" src="_biologist_w-1597_w-1134_.svg" layout="responsive" width="1597" height="1134"></amp-img></amp-story-grid-layer>
+
+<amp-story-grid-layer class="image-gradient" template="vertical"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical"><p class="credit">Ankita Dhandha &ndash; Ontomatica</p></amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information about Rice Biologists" data-title="More information about Rice Biologists" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment>
+</amp-story-page>
+
+<amp-story-page id="slide-03">
+
+<amp-story-grid-layer template="fill"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper">
+<amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img>
+</div>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="" template="vertical"><amp-img class="" src="_breeder_w-1590_h-1127_.svg" layout="responsive" width="1590" height="1127"></amp-img></amp-story-grid-layer>
+
+<amp-story-grid-layer class="image-gradient" template="vertical"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical"><p class="credit">Ankita Dhandha &ndash; Ontomatica</p></amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information about Rice Breeders" data-title="More information about Rice Breeders" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment></amp-story-page>
+
+<amp-story-page id="slide-04">
+
+<amp-story-grid-layer template="fill"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper">
+<amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+<amp-story-grid-layer class="" template="vertical"><amp-img class="" src="_farmer_w-1590_h-1127_.svg" layout="responsive" width="1590" height="1127"></amp-img></amp-story-grid-layer>
+
+<amp-story-grid-layer class="image-gradient" template="vertical"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical"><p class="credit">Ankita Dhandha &ndash; Ontomatica</p></amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information about Rice Farmers" data-title="More information about Rice Farmers" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment></amp-story-page>
+
+<amp-story-page id="slide-05">
+
+<amp-story-grid-layer template="fill"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper"><amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+<amp-story-grid-layer class="" template="vertical"><amp-img class="" src="_information-manager_w-1597_h-1134_.svg" layout="responsive" width="1597" height="1134"></amp-img></amp-story-grid-layer>
+
+<amp-story-grid-layer class="image-gradient" template="vertical"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical"><p class="credit">Ankita Dhandha &ndash; Ontomatica</p></amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information about Rice Information Managers" data-title="More information about Rice Information Managers" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment></amp-story-page>
+
+<amp-story-page id="slide-06">
+
+<amp-story-grid-layer template="fill"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper">
+<amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+<amp-story-grid-layer class="" template="vertical"><amp-img class="" src="_trader_w-1593_h-1127_.svg" layout="responsive" width="1593" height="1127"></amp-img></amp-story-grid-layer>
+
+<amp-story-grid-layer class="image-gradient" template="vertical"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical"><p class="credit">Ankita Dhandha &ndash; Ontomatica</p></amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information about Rice Traders" data-title="More information about Rice Traders" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment></amp-story-page>
+
+<amp-story-page id="slide-07">
+
+<amp-story-grid-layer template="fill"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper">
+<amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+<!-- <amp-story-grid-layer template="thirds"></amp-story-grid-layer> -->
+
+<amp-story-grid-layer class="" template="vertical"><amp-img class="" src="_sociologist_w-1597_h-1134_.svg" layout="responsive" width="1597" height="1134"></amp-img></amp-story-grid-layer>
+
+<amp-story-grid-layer class="image-gradient" template="vertical"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical"><p class="credit">Ankita Dhandha &ndash; Ontomatica</p></amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information about Rice Sociologists" data-title="More information about Rice Sociologists" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment>
+</amp-story-page>
+
+<amp-story-page id="slide-08">
+
+<amp-story-grid-layer template="fill"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper">
+<amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+<!-- <amp-story-grid-layer template="thirds"></amp-story-grid-layer> -->
+
+<amp-story-grid-layer class="" template="vertical"><amp-img class="" src="_food-manufacturer_w-1599_h-1134_.svg" layout="responsive" width="1599" height="1134"></amp-img></amp-story-grid-layer>
+
+<amp-story-grid-layer class="image-gradient" template="vertical"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical"><p class="credit">Ankita Dhandha &ndash; Ontomatica</p></amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information about Rice Manufacturers" data-title="More information about Rice Manufacturers" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment></amp-story-page>
+
+<amp-story-page id="slide-09">
+
+<amp-story-grid-layer template="fill"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper">
+<amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+<amp-story-grid-layer class="" template="vertical"><amp-img class="" src="_nutritionist_w-1597_h-1134_.svg" layout="responsive" width="1597" height="1134"></amp-img></amp-story-grid-layer>
+
+<amp-story-grid-layer class="image-gradient" template="vertical"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical"><p class="credit">Ankita Dhandha &ndash; Ontomatica</p></amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information about Rice Nutritionists" data-title="More information about Rice Nutritionists" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment>
+</amp-story-page>
+
+<amp-story-page id="slide-10">
+
+<amp-story-grid-layer template="fill"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper">
+<amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+<amp-story-grid-layer class="" template="vertical"><amp-img class="" src="_chef_w-1603_h-1134_.svg" layout="responsive" width="1603" height="1134"></amp-img></amp-story-grid-layer>
+
+<amp-story-grid-layer class="image-gradient" template="vertical"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical"><p class="credit">Ankita Dhandha &ndash; Ontomatica</p></amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information about Rice Chefs" data-title="More information about Rice Chefs" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment>
+</amp-story-page>
+
+<amp-story-page id="slide-11">
+
+<amp-story-grid-layer template="fill"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper"><amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+<!-- <amp-story-grid-layer template="thirds"></amp-story-grid-layer> -->
+
+<amp-story-grid-layer class="" template="vertical"><amp-img class="" src="_consumer_w-1590_h-1127_.svg" layout="responsive" width="1597" height="1134"></amp-img></amp-story-grid-layer>
+
+<amp-story-grid-layer class="image-gradient" template="vertical"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical"><p class="credit">Ankita Dhandha &ndash; Ontomatica</p></amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information about Rice Consumers" data-title="More information about Rice Consumers" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment>
+</amp-story-page>
+
+<amp-story-page id="slide-12">
+
+<amp-story-grid-layer template="fill"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper"><amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+<amp-story-grid-layer class="" template="vertical"><amp-img class="" src="_perimeter_w-1591_h-1505_.svg" layout="responsive" width="1591" height="1505"></amp-img></amp-story-grid-layer>
+
+<amp-story-grid-layer class="image-gradient" template="vertical"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical"><p class="credit">Ankita Dhandha &ndash; Ontomatica</p></amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information about the Big Picture" data-title="More information about the Big Picture" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment>
+</amp-story-page>
+
+<amp-story-page id="slide-13">
+
+<amp-story-grid-layer template="fill"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper"><amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+<amp-story-grid-layer class="" template="vertical"><amp-img class="" src="_center_w-1597_h-2253_.svg" layout="responsive" width="1597" height="2253"></amp-img></amp-story-grid-layer>
+
+<amp-story-grid-layer class="image-gradient" template="vertical"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical"><p class="credit">Ankita Dhandha &ndash; Ontomatica</p></amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information about Benefits" data-title="More information about Benefits" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment>
+</amp-story-page>
+
+<amp-story-page id="slide-14">
+
+<amp-story-grid-layer template="fill"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper"><amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+<amp-story-grid-layer class="" template="vertical"><amp-img class="" src="_full_w-1591_h-1505_.svg" layout="responsive" width="1591" height="1505"></amp-img></amp-story-grid-layer>
+
+<amp-story-grid-layer class="image-gradient" template="vertical"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical"><p class="credit">Ankita Dhandha &ndash; Ontomatica</p></amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information about Summary" data-title="More information about Summary" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment>
+</amp-story-page>
+
+<!-- one iframe at a time -->
+<amp-story-page id="slide-15">
+
+<amp-story-grid-layer template="fill"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper"><amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+<amp-story-grid-layer class="" template="vertical">
+<!-- <div class="ap--sampler"> -->
+<!-- <div class="ap-o-sampler"> -->
+<div class="ap-o-sampler-iframe">
+<amp-iframe
+  height="550px"
+  layout="fixed-height"
+  scrolling="yes"
+  sandbox="
+    allow-scripts
+    allow-same-origin
+    allow-popups
+    allow-forms
+    allow-popups-to-escape-sandbox
+    allow-presentation
+    allow-top-navigation
+  "
+  allow="fullscreen"
+  frameborder="0"
+  src="https://wedge.ontomatica.io/Nobel-Prize-Winners_-_19-09-05/Wedge"
+  [src]="sampler[activeSample].embedUrl"
+  title="wedge"
+  class=""
+>
+<!-- <div overflow="" tabindex="0" role="button" aria-label="Show everything">Show everything</div> -->
+<div placeholder="">
+<div class="ap-o-sampler-iframe-source"></div>
+</div>
+</amp-iframe>
+</div>
+<!-- </div> -->
+<!-- </div> -->
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical">
+<p class="credit">Ankita Dhandha &ndash; Ontomatica</p>
+</amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information" data-title="More information about Nobel Prize" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment>
+</amp-story-page>
+
+<!-- one iframe at a time -->
+<amp-story-page id="slide-16">
+
+<amp-story-grid-layer template="fill"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper"><amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+<amp-story-grid-layer class="" template="vertical">
+
+<div class="ap-o-sampler-iframe">
+<amp-iframe
+  height="650px"
+  layout="fixed-height"
+  scrolling="no"
+  sandbox="
+    allow-scripts
+    allow-same-origin
+    allow-popups
+    allow-forms
+    allow-popups-to-escape-sandbox
+    allow-presentation
+    allow-top-navigation
+  "
+  allow="fullscreen"
+  frameborder="0"
+  src="https://benetta.io/graph/fdg-1/"
+  title="force-directed-graph"
+  class=""
+>
+<!-- <div overflow="" tabindex="0" role="button" aria-label="Show everything">Show everything</div> -->
+<div placeholder="">
+<div class="ap-o-sampler-iframe-source"></div>
+</div>
+</amp-iframe>
+</div>
+
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical">
+<p class="credit">Ankita Dhandha &ndash; Ontomatica</p>
+</amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information" data-title="More information about Force Directed Graphs" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment>
+</amp-story-page>
+
+<amp-story-page id="slide-17">
+<!-- inline linear gradient -->
+<amp-story-grid-layer
+  template="fill"
+  style="background-color:white; background-image:linear-gradient(0turn, #fcfcfc 0.43%, #fd174e 100%);"
+></amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper"><amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+<amp-story-grid-layer template="thirds">
+<div class="titles" grid-area="lower-third">
+<h1 class="heading2" animate-in="fly-in-left" >
+Inline linear gradient
+</h1>
+<p class="subheading2" animate-in="whoosh-in-right" >
+Gummi bears dragée donut. Cheesecake chocolate bar candy canes candy tart cotton candy chocolate cake croissant cake. Oat cake cheesecake ice cream cotton candy marzipan pastry.
+</p>
+<p class="alert" animate-in="whoosh-in-right" animate-in-duration="0.5s">
+Dragée toffee cupcake pudding oat cake. Cupcake croissant cake jelly powder apple pie lemon drops cupcake bear claw. Tiramisu jelly sweet roll gummies pie muffin gummi bears oat cake.
+</p>
+</div>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical">
+<p class="credit">Ankita Dhandha &ndash; Ontomatica</p>
+</amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information" data-title="More information about Rice Biologists" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment>
+</amp-story-page>
+
+<amp-story-page id="slide-18">
+
+<amp-story-grid-layer template="fill" >
+<amp-img
+	src="_background-animates-w1440-h560_.svg"
+	width="1440"
+	height="560"
+	layout="responsive"
+	class="opacity2"
+></amp-img>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper"><amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+<amp-story-grid-layer template="thirds">
+<div class="titles2" grid-area="upper-third">
+<h1 class="heading2" animate-in="fly-in-left" animate-in-duration="0.5s">
+Jelly jujubes marshmallow donut.
+</h1>
+<p class="subheading2" animate-in="whoosh-in-right" animate-in-duration="0.5s">
+Wafer cheesecake lollipop fruitcake danish powder. Pudding croissant biscuit icing. Gummi bears fruitcake cake wafer cake cookie caramels marshmallow bonbon.
+</p>
+</div>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical">
+<p class="credit">Ankita Dhandha &ndash; Ontomatica</p>
+</amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information" data-title="More information about Rice Biologists" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment>
+</amp-story-page>
+
+<amp-story-page id="slide-19">
+
+<amp-story-grid-layer
+	template="fill"
+	position="landscape-half-right"
+>
+<amp-img
+	src="https://picsum.photos/720/1020"
+	width="720"
+	height="1020"
+	layout="responsive"
+	class="opacity2"
+></amp-img>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper"><amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+<amp-story-grid-layer template="thirds" position="landscape-half-left">
+<div class="titles mobile" grid-area="upper-third">
+<h1 class="heading2" animate-in="fly-in-left" animate-in-duration="0.5s">
+Gingerbread biscuit gummies cupcake. Powder sugar plum chocolate cake chocolate cake cake. Marzipan brownie halvah.
+</h1>
+</div>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer template="thirds" position="landscape-half-left">
+<div class="titles mobile" grid-area="lower-third">
+<h1 class="heading2" animate-in="fly-in-left" animate-in-duration="0.5s">
+Halvah bear claw cake fruitcake chocolate topping. Cookie topping chocolate cake chocolate topping biscuit caramels lollipop danish.
+</h1>
+</div>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical">
+<p class="credit">Ankita Dhandha &ndash; Ontomatica</p>
+</amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information" data-title="More information about Rice Biologists" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment>
+</amp-story-page>
+
+<amp-story-page id="slide-20">
+
+<amp-story-grid-layer template="fill">
+<amp-video
+	src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+	width="720"
+	height="1280"
+	poster="/static/samples/img/celebration.jpg"
+	layout="responsive"
+	class="opacity2"
+	loop
+	autoplay
+>
+<div fallback>
+<p>
+Your browser doesn"t support HTML5 video.
+</p>
+</div>
+</amp-video>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper"><amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+<amp-story-grid-layer template="thirds">
+<div class="titles" grid-area="lower-third">
+<h1 class="heading2" animate-in="fly-in-left" animate-in-duration="0.5s">
+Be there, with Videos
+</h1>
+<p class="subheading2" animate-in="whoosh-in-right" animate-in-duration="0.5s">
+There is nothing as powerful as sharing your content through video, when you want to capture your customer attention.
+</p>
+</div>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical">
+<p class="credit">Ankita Dhandha &ndash; Ontomatica</p>
+</amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information" data-title="More information about Rice Biologists" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment>
+</amp-story-page>
+
+<amp-story-page id="slide-21">
+
+<amp-story-grid-layer template="fill">
+<amp-img
+	src="_background-electronics-w304-h304_.svg"
+	width="304"
+	height="304"
+	layout="responsive"
+	class="opacity2"
+	animate-in="pulse"
+	animate-in-duration="0.5s"
+></amp-img>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper"><amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+<amp-story-grid-layer template="thirds">
+<div class="titles" grid-area="lower-third">
+<h1 class="heading2" animate-in="fly-in-left" animate-in-duration="0.5s">
+Of course, animations
+</h1>
+</br>
+<p class="subheading2" animate-in="fly-in-left" animate-in-duration="0.5s">
+Animate your content with 18 amazing animations formats.</p>
+<p class="subheading" animate-in="fly-in-right" animate-in-duration="0.5s" animate-in-delay="1.0s"><span>
+style: animate-in-delay="1.0s"
+</span></p> 
+</div>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical">
+<p class="credit">Ankita Dhandha &ndash; Ontomatica</p>
+</amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information" data-title="More information about Rice Biologists" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment>
+</amp-story-page>
+
+<amp-story-page id="slide-22">
+
+<amp-story-grid-layer template="fill">
+<amp-img
+	src="_background-1F64FF-w1000-h1000_.svg"
+	width="1000"
+	height="1000"
+	layout="responsive"
+	class="opacity3"
+></amp-img>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper"><amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+<amp-story-grid-layer template="thirds" >
+<div class="titles" grid-area="upper-third">
+<h1 class="heading2" animate-in="fly-in-left" animate-in-duration="0.5s">
+Logo is fixed!
+</h1>
+</br>
+<p class="subheading2" animate-in="fly-in-left" animate-in-duration="0.5s">
+Add Call-To-Action buttons to your pages, and lead your customers to desired products or links.
+</p>
+</div>
+</amp-story-grid-layer>
+
+<!-- CTA here -->
+<amp-story-cta-layer
+	class="buttonwrap"
+	style="padding-left:90px;"
+>
+<a
+	href="https://afdsi.com/ontomatica-home/"
+	animate-in="drop"
+	animate-in-duration="0.5s"
+	class="button"
+	style="color:white"
+>
+This is a CTA button. Click me.
+</a>
+</amp-story-cta-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical">
+<p class="credit">Ankita Dhandha &ndash; Ontomatica</p>
+</amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information" data-title="More information about Rice Biologists" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment>
+</amp-story-page>
+
+<amp-story-page id="slide-23">
+
+<amp-story-grid-layer template="fill">
+<amp-img
+	src="_background-circuit-board-w1440-h560_.svg"
+	width="1440"
+	height="560"
+	layout="responsive"
+	class="opacity2"
+></amp-img>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper"><amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+<amp-story-grid-layer template="thirds" >
+<div class="titles2" grid-area="middle-third">
+<h1 class="heading2" animate-in="fly-in-left" animate-in-duration="0.5s">
+Extend the page
+</h1>
+</br>
+<p class="subheading2" animate-in="fly-in-left" animate-in-duration="0.5s">
+Probably the best thing right now is the ability to add page attachments, and share more content for your users.
+</p>
+</div>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical">
+<p class="credit">Ankita Dhandha &ndash; Ontomatica</p>
+</amp-story-grid-layer>
+
+<amp-story-page-attachment
+	layout="nodisplay"
+	data-cta-text="Swipe up for attachment"
+	data-title="AMP Story - Page attachment"
+>
+<div class="titles_page">
+<h1 class="heading" style="color: black; padding: 0 5% 1% 5%">
+H1. One really cool feature, right?🤩
+</h1>
+<p class="subheading2" style="color: gray; padding: 0 5% 0 5%">
+subheading2.
+At this moment, page attachments work as internal AMP HTML pages within your AMP Story code, but there are rumors that it would be possible to link external pages too.
+</p>
+</div>
+</amp-story-page-attachment>
+</amp-story-page>
+
+<amp-story-page id="slide-24">
+
+<amp-story-grid-layer template="fill">
+<amp-img
+	src="_grid-w1024-h640_.svg"
+	width="1024"
+	height="640"
+	layout="responsive"
+	class=""
+></amp-img>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper"><amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+<amp-story-grid-layer template="thirds" >
+<div class="titles" grid-area="upper-third">
+<h1 animate-in="fly-in-left" animate-in-duration="0.5s">
+Embed tweets
+</h1>
+<p class="subheading2" animate-in="fly-in-left" animate-in-duration="0.5s">
+<span>
+Click to see the tweet as an interactive component.
+</span>
+</p>
+</br>
+<p
+	class="alert"
+	animate-in="whoosh-in-right"
+	animate-in-duration="0.5s">
+* Only applicable on mobile for now. *
+</p>
+<amp-twitter width="100"
+	height="100"
+	layout="responsive"
+	data-tweetid="1325211019640152066"
+	role="link"
+	data-tooltip-icon="https://ontomatica.io/static/img/onto_symb_w421_h421.png"
+	data-tooltip-text="Expand tweet"
+	interactive
+></amp-twitter>
+</div>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical">
+<p class="credit">Ankita Dhandha &ndash; Ontomatica</p>
+</amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information" data-title="More information about Rice Biologists" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment>
+</amp-story-page>
+
+<amp-story-page id="slide-25">
+
+<amp-story-grid-layer template="fill">
+<amp-img
+	src="_background-1F64FF-w1000-h1000_.svg"
+	width="1000"
+	height="1000"
+	layout="responsive"
+	class="opacity3"
+></amp-img>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper"><amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+<amp-story-grid-layer template="thirds" >
+<div class="titles" grid-area="upper-third">
+<h1 class="heading2" animate-in="fly-in-left" animate-in-duration="0.5s">
+For Developers
+</h1>
+<p
+	class="subheading2"
+	animate-in="fly-in-left"
+	animate-in-duration="0.5s"
+>
+<span>
+Link your Github Gists. Use CTA link to open the target gist.
+</span>
+</p>
+</br>
+	<!-- data-file="hi.c" -->
+<amp-gist
+	data-gistid="c07dd341c7396b3fae03b61c6dba003c"
+	layout="fixed-height"
+	height="100px"
+></amp-gist>
+</div>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical">
+<p class="credit">Ankita Dhandha &ndash; Ontomatica</p>
+</amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information" data-title="More information about Rice Biologists" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment>
+</amp-story-page>
+
+<amp-story-page id="slide-26">
+
+<amp-story-grid-layer template="fill">
+<amp-img
+	src="_tube-map-w3000-h1900_.svg"
+	width="3000"
+	height="1900"
+	layout="responsive"
+	class="opacity2"
+></amp-img>
+</amp-story-grid-layer>
+
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper"><amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+<amp-story-grid-layer template="thirds">
+<div class="titles2" grid-area="lower-third">
+<h1 class="heading2" animate-in="fly-in-left" animate-in-duration="0.5s"><span>
+Extra features:
+</span></h1></br>
+<h4 class="subheading2">
+<span>h4. Story Ads</span></br>
+<span>Localization</span></br>
+<span>Lists</span>
+</h4>
+</div>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical">
+<p class="credit">Ankita Dhandha &ndash; Ontomatica</p>
+</amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information" data-title="More information about Rice Biologists" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment>
+</amp-story-page>
+
+<amp-story-page id="slide-27">
+
+<amp-story-grid-layer template="fill">
+<amp-img
+	src="_background-1F64FF-w1000-h1000_.svg"
+	width="1000"
+	height="1000"
+	layout="responsive"
+	class=""
+></amp-img>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper"><amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+<amp-story-grid-layer template="thirds" >
+<div class="titles2" grid-area="lower-third">
+<h1 class="heading2" animate-in="fly-in-left" animate-in-duration="0.5s"><span>
+Logo is fixed!
+</span></h1></br>
+<h4 class="subheading2">
+<span>
+Social Feedback with reactions
+</span>
+</br>
+<span>
+Page Attachments Remote URLs
+</span>
+<br>
+<span>
+Embedding stories on websites
+</span>
+</h4>
+</div>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical">
+<p class="credit">Ankita Dhandha &ndash; Ontomatica</p>
+</amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information" data-title="More information about Rice Biologists" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment>
+</amp-story-page>
+
+<amp-story-page id="slide-28">
+
+<amp-story-grid-layer template="fill">
+<amp-img
+	src="_background-1F64FF-w1000-h1000_.svg"
+	width="1000"
+	height="1000"
+	layout="responsive"
+	class=""
+></amp-img>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper"><amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+<amp-story-grid-layer template="vertical">
+<div
+	animate-in="fly-in-bottom"
+	animate-in-duration="600ms"
+	animate-in-delay="0"
+>
+<amp-google-document-embed
+    src="https://afdsi.com/reader/pdf/avocado.pdf"
+    height="900"
+    layout="fixed-height"
+></amp-google-document-embed>
+</div>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical">
+<p class="credit">Ankita Dhandha &ndash; Ontomatica</p>
+</amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information" data-title="More information about Rice Biologists" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment>
+</amp-story-page>
+
+<amp-story-page id="slide-29">
+
+<amp-story-grid-layer template="fill">
+<amp-img
+	src="_grid-w1024-h640_.svg"
+	width="1024"
+	height="640"
+	layout="responsive"
+	class="opacity2"
+></amp-img>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper"><amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+<amp-story-grid-layer template="thirds" class="vingette-both" >
+<div class="panel_text true-bottom" grid-area="upper-third">
+<div class="panel_bar" animate-in="fly-in-bottom" animate-in-duration="800ms"></div>
+<div animate-in="fly-in-right" animate-in-duration="800ms">
+<h1>
+Muffin jelly-o wafer
+</h1>
+<h2>
+Cookie fruitcake toffee lemon drops.
+</h2>
+<p animate-in="fly-in-right" animate-in-duration="800ms">
+Halvah bear claw cake fruitcake chocolate topping. Cookie topping chocolate cake chocolate topping biscuit caramels lollipop danish. Jelly-o pastry topping candy. Cotton candy oat cake pastry lemon drops chocolate.
+</p>
+</div>
+</div>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer template="thirds" class="vingette-both" >
+<div class="panel_text true-bottom" grid-area="lower-third">
+<div class="panel_bar" animate-in="fly-in-bottom" animate-in-duration="800ms"></div>
+<div animate-in="fly-in-left" animate-in-duration="800ms">
+<h1>
+Pastry cupcake icing
+</h1>
+<h2>
+Gummies lollipop sweet carrot cake tootsie roll. Brownie apple pie sweet roll soufflé.
+</h2>
+<p animate-in="fly-in-left" animate-in-duration="800ms">
+Tart donut sweet pudding dragée sweet chocolate bar. Croissant tootsie roll cookie lollipop jelly topping apple pie. Danish bear claw sesame snaps toffee. Biscuit brownie brownie.
+</p>
+</div>
+</div>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical">
+<p class="credit">Ankita Dhandha &ndash; Ontomatica</p>
+</amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information" data-title="More information about Rice Biologists" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment>
+</amp-story-page>
+
+<amp-story-page id="slide-30">
+
+<amp-story-grid-layer template="fill"></amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper"><amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+<amp-story-grid-layer template="thirds" class="vingette-both" >
+<div class="panel_text true-bottom" grid-area="lower-third">
+<div class="panel_bar" animate-in="fly-in-bottom" animate-in-duration="800ms"></div>
+<div animate-in="fly-in-right" animate-in-duration="800ms">
+<h1>
+Lemon drops macaroon
+</h1>
+<h2>
+Gummi bears dragée donut.
+</h2>
+<p animate-in="fly-in-right" animate-in-duration="800ms">
+Cheesecake chocolate bar candy canes candy tart cotton candy chocolate cake croissant cake. Oat cake cheesecake ice cream cotton candy marzipan pastry.
+</p>
+</div>
+</div>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical">
+<p class="credit">Ankita Dhandha &ndash; Ontomatica</p>
+</amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information" data-title="More information about Rice Biologists" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment>
+</amp-story-page>
+
+<amp-story-page id="slide-31">
+
+<amp-story-grid-layer
+	template="fill"
+	class="-bg-white"
+>
+<amp-img
+	src="_background-paper-texture-w300-h300_.svg"
+	width="300"
+	height="300"
+	layout="responsive"
+></amp-img>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="logo-layer" template="vertical"><div class="logo-wrapper"><amp-img class="" src="https://ontomatica.io/static/image/onto_symb_w421_h421.png" layout="responsive" width="80" height="80"></amp-img></div></amp-story-grid-layer>
+
+
+<!-- ::before fails -->
+<amp-story-grid-layer
+	template="vertical"
+	class="-va-topcenter"
+>
+<div class="fi-as-text -a-topcenter">
+<div class="-s-100">
+<div
+	class="fi-as-text-block -bc- -bc-blacktransparent"
+	animate-in="fly-in-bottom"
+	animate-in-duration="600ms"
+	animate-in-delay="0"
+>
+<p><strong class="">
+fails: .fi-as-text-block.-bc-:before
+</strong></p>
+</br>
+<p>
+Tart donut sweet pudding dragée sweet chocolate bar. Croissant tootsie roll cookie lollipop jelly topping apple pie. Danish bear claw sesame snaps toffee. Biscuit brownie brownie.
+</p>
+<p>
+Tart donut sweet pudding dragée sweet chocolate bar. Croissant tootsie roll cookie lollipop jelly topping apple pie. Danish bear claw sesame snaps toffee. Biscuit brownie brownie.
+</p>
+<p>
+Tart donut sweet pudding dragée sweet chocolate bar. Croissant tootsie roll cookie lollipop jelly topping apple pie. Danish bear claw sesame snaps toffee. Biscuit brownie brownie.
+</p>
+</div>
+</div>
+</div>
+</amp-story-grid-layer>
+
+<amp-story-grid-layer class="credit-layer" template="vertical">
+<p class="credit">Ankita Dhandha &ndash; Ontomatica</p>
+</amp-story-grid-layer>
+
+<amp-story-page-attachment layout="nodisplay" data-cta-text="More information" data-title="More information about Rice Biologists" id="popup-text"><div><p class="onto-edit-regular--18 popup">There always gonna be another mountain</p><p class="yellow_border_bottom popup"></p><p class="onto-brand-bold--22 tpad20 popup">Abbervail Dream</p><p class="onto-edit-regular--16 pad18 popup">Bacon ipsum dolor amet tenderloin prosciutto turkey ground round, doner filet mignon ham hock. Picanha venison pig turducken shoulder boudin, hamburger chicken spare ribs tenderloin drumstick. Filet mignon pork belly beef, flank ball tip doner alcatra ribeye bresaola leberkas t-bone short ribs ham pastrami jerky. Beef brisket pork loin, turkey cupim chicken cow andouille biltong. Jowl cow cupim, short ribs fatback rump corned beef ball tip frankfurter pork loin ham hock pancetta meatball.</p><p class="onto-brand-bold--22 popup">Blue Diamonds</p><p class="onto-edit-regular--16 pad18 popup">Pork belly ball tip strip steak chuck cupim ham bresaola short ribs chicken tongue frankfurter landjaeger porchetta turkey. Bresaola ball tip fatback sirloin, shoulder prosciutto biltong capicola kielbasa. Alcatra short loin tenderloin, prosciutto chicken brisket kevin biltong. Short ribs tongue pork belly sirloin venison ham. Boudin meatloaf kevin andouille salami short ribs, landjaeger chicken hamburger porchetta strip steak cow spare ribs jowl. Drumstick jerky turkey andouille picanha leberkas shankle rump ball tip beef.</p><p class="onto-brand-bold--22 popup">Caramel Sensation</p><p class="onto-edit-regular--16 pad18 popup">Chicken prosciutto turducken picanha, rump short loin pancetta turkey andouille fatback ham venison tail. Beef ribs short ribs fatback brisket venison pork belly ham. Rump frankfurter pancetta sirloin meatball andouille bresaola shoulder jerky short loin biltong tongue. Pork belly kevin tongue, hamburger salami pork chop andouille bacon pig venison landjaeger. Boudin venison shoulder andouille cupim. Biltong prosciutto tri-tip strip steak, pancetta venison beef ribs shankle andouille ham hock jowl capicola.</p></div></amp-story-page-attachment>
+</amp-story-page>
+
+</amp-story>
+</body></html>
