@@ -1,0 +1,30 @@
+
+GENERALIZE
+	data structure: flare
+	has image links
+=========================
+
+for Rice and Wheat
+	which other phylograms are relevant
+
+document
+data
+	inline JSON
+processors
+	jquery
+	D3
+	greenphyl
+animation
+	collect_pangenomes(tree_data);
+	random_node_switch_callback = setTimeout(random_node_switch, 2000);
+find
+	https://www.greenphyl.org/img/background.jpg
+see
+	https://www.greenphyl.org/css/greenphyl.css
+images, missing
+	https://www.greenphyl.org/img/species/tritu.png
+	https://www.greenphyl.org/img/species/orygl.png
+may need to localize images
+
+JSON
+      "url_picture": "https://www.greenphyl.org/img/species/ambtc.png",

@@ -1,0 +1,51 @@
+
+https://rice-genome-hub.southgreen.fr/oryza_sativa_indica_ZS97
+
+https://rice-genome-hub.southgreen.fr/
+
+http://open-genome.cn/
+
+https://riceome.cn/en/
+
+https://riceome.hzau.edu.cn/
+
+
+
+A super pan-genomic landscape of rice
+s41422-022-00685-z.pdf
+https://www.nature.com/articles/s41422-022-00685-z
+
+
+Assembling the genome of the African wild rice Oryza longistaminata by exploiting synteny in closely related Oryza species
+s42003-018-0171-y.pdf
+https://www.nature.com/articles/s42003-018-0171-y
+
+
+De novo genome assembly of Oryza granulata reveals rapid genome expansion and adaptive evolution
+https://www.nature.com/articles/s42003-018-0089-4
+
+
+Whole-genome sequencing of Oryza brachyantha reveals mechanisms underlying Oryza genome evolution
+https://www.nature.com/articles/ncomms2596
+
+
+Exploration of the genomic atlas of Dof transcription factor family across genus Oryza provides novel insights on rice breeding in changing climate
+https://www.frontiersin.org/articles/10.3389/fpls.2022.1004359/full
+
+Genomes of 13 domesticated and wild rice relatives highlight genetic conservation, turnover and innovation across the genus Oryza
+https://www.nature.com/articles/s41588-018-0040-0
+
+Pan-genome analysis highlights the extent of genomic variation in cultivated and wild rice
+https://www.nature.com/articles/s41588-018-0041-z
+
+De novo assembly of two chromosome-level rice genomes and bin-based QTL mapping reveal genetic diversity of grain weight trait in rice
+https://www.frontiersin.org/articles/10.3389/fpls.2022.995634/full
+
+
+Analysis of Rice Transcriptome Reveals the LncRNA/CircRNA Regulation in Tissue Development
+https://thericejournal.springeropen.com/articles/10.1186/s12284-021-00455-2
+
+
+The Gap-free Rice Genomes Provide Insights for Centromere Structure and Function Exploration and Graph-based Pan-genome Construction
+https://www.biorxiv.org/content/10.1101/2020.12.24.424073v1.full
+

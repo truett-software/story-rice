@@ -1,0 +1,17 @@
+
+test harness: has templates and constellation
+	https://afdsi.com/___supplier/paula-perez/story-template/
+
+InfoMgr rice equivalents on right; yellow sociologist; better farmer; attachments
+	https://afdsi.com/amp-story/story-rice-22-08-05/
+
+no additional desirable features
+	https://afdsi.com/___supplier/paula-perez/rice-22-06-23/
+
+page-0 successfully injects SVG; wokrs on servre, not client
+	https://afdsi.com/___supplier/paula-perez/rice-22-10-17/
+
+issues
+	missing color chef function
+	sociologist world map
+
